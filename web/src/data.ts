@@ -13,6 +13,29 @@ const SERVER = 'github';
 interface McpLike {
   callTool(server: string, tool: string, input?: unknown, options?: unknown): Promise<{ content?: unknown; payload?: unknown }>;
   invalidate(server?: string, tool?: string, input?: unknown): Promise<void>;
+  listTools(server?: string): Promise<{ servers: { server: string; authStatus: string; tools: { name: string }[] }[] }>;
+}
+
+/** Progress lines for the loading card, so a stall says where it is stuck. */
+type StatusListener = (line: string) => void;
+let listener: StatusListener = () => undefined;
+export function onStatus(fn: StatusListener): void {
+  listener = fn;
+}
+function status(line: string): void {
+  listener(line);
+}
+
+const CALL_TIMEOUT_MS = 20_000;
+
+function withTimeout<T>(p: Promise<T>, ms: number, what: string): Promise<T> {
+  return new Promise<T>((resolve, reject) => {
+    const t = setTimeout(() => reject(new DataError('timeout', `${what} did not answer within ${Math.round(ms / 1000)} seconds.`)), ms);
+    p.then(
+      (v) => { clearTimeout(t); resolve(v); },
+      (e) => { clearTimeout(t); reject(e); },
+    );
+  });
 }
 interface PermissionsLike {
   state(name: string): Promise<string>;
@@ -41,9 +64,34 @@ function claude(): ClaudeLike | undefined {
 function mcp(): Promise<McpLike | null> {
   if (!mcpPromise) {
     const c = claude();
-    mcpPromise = c && typeof c.use === 'function' ? (c.use('mcp') as Promise<McpLike | null>).catch(() => null) : Promise.resolve(null);
+    if (c && typeof c.use === 'function') {
+      status('Connecting to the claude.ai runtime…');
+      mcpPromise = (c.use('mcp') as Promise<McpLike | null>)
+        .then((m) => {
+          status(m ? 'Runtime ready.' : 'Runtime has no connector access here; falling back to the site files.');
+          return m;
+        })
+        .catch(() => null);
+    } else {
+      mcpPromise = Promise.resolve(null);
+    }
   }
   return mcpPromise;
+}
+
+let checked = false;
+/** One-time report of what the runtime sees for the GitHub connector. */
+async function describeConnector(m: McpLike): Promise<void> {
+  if (checked) return;
+  checked = true;
+  try {
+    const { servers } = await withTimeout(m.listTools(SERVER), 10_000, 'Connector listing');
+    const gh = servers.find((x) => x.server.toLowerCase() === SERVER);
+    if (!gh) status('GitHub connector: not listed for this viewer.');
+    else status(`GitHub connector: ${gh.authStatus}, ${gh.tools.length} tool${gh.tools.length === 1 ? '' : 's'} allowed.`);
+  } catch (e) {
+    status(`GitHub connector check failed: ${(e as Error).message}`);
+  }
 }
 
 export function viaConnector(): boolean {
@@ -65,7 +113,12 @@ async function ensureConsent(): Promise<void> {
     const perms = (await c.use('permissions')) as PermissionsLike | null;
     if (!perms) return;
     const state = await perms.state(`mcp:${SERVER}`).catch(() => 'unavailable');
-    if (state === 'prompt') await perms.request([`mcp:${SERVER}`]);
+    status(`GitHub permission: ${state}.`);
+    if (state === 'prompt') {
+      status('Waiting for you to allow GitHub…');
+      const result = await withTimeout(perms.request([`mcp:${SERVER}`]), 90_000, 'The permission prompt').catch(() => ({}) as Record<string, string>);
+      status(`GitHub permission: ${result[`mcp:${SERVER}`] ?? 'undecided'}.`);
+    }
   } catch {
     /* consent stays lazy; the call itself will ask */
   }
@@ -106,14 +159,28 @@ export async function loadJson<T>(path: string, fresh = false): Promise<T> {
   const m = await mcp();
   if (m) {
     await ensureConsent();
+    await describeConnector(m);
     const call = () =>
-      m.callTool(SERVER, 'get_file_contents', { ...REPO, path }, { cache: fresh ? { staleTime: 0, refresh: true } : { staleTime: 60_000 } });
+      withTimeout(
+        m.callTool(
+          SERVER,
+          'get_file_contents',
+          { ...REPO, path },
+          { cache: fresh ? { staleTime: 0, refresh: true } : { staleTime: 60_000 }, signal: AbortSignal.timeout(CALL_TIMEOUT_MS) },
+        ),
+        CALL_TIMEOUT_MS + 2_000,
+        `Reading ${path}`,
+      );
     let attempt = 0;
     for (;;) {
       try {
-        return parseFileResult(await call()) as T;
+        status(`Reading ${path}${attempt ? ' (retry)' : ''}…`);
+        const parsed = parseFileResult(await call()) as T;
+        status(`Loaded ${path}.`);
+        return parsed;
       } catch (e) {
         const err = e as { code?: string; message?: string; retryable?: boolean; retryAfterMs?: number };
+        status(`Reading ${path} failed: ${err.code ?? 'error'} — ${err.message ?? ''}`);
         // The runtime marks a call retryable when, for example, consent could
         // not be asked at that instant. One retry after its suggested delay.
         if (err.retryable && attempt === 0) {
@@ -152,7 +219,12 @@ export function explain(e: unknown): string {
       return 'GitHub access for this page is not confirmed yet. Tap Refresh; if a permission prompt appears, allow GitHub.';
     case 'server_unavailable':
     case 'rate_limited':
+    case 'timeout':
+    case 'cancelled':
       return 'GitHub did not answer in time. Tap Refresh to try again.';
+    case 'capability_disabled':
+    case 'capability_removed':
+      return 'This Claude app cannot reach connectors from an artifact yet. Open the same link in a browser at claude.ai.';
     case '404':
       return 'That game is not published yet.';
     default:

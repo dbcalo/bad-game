@@ -2,7 +2,7 @@ import { deriveHighlights, type Highlight } from '../../src/engine/highlights.js
 import { rulesText } from '../../src/engine/prompts.js';
 import type { AgentId, GameEvent, GameState, TreasureId } from '../../src/engine/types.js';
 import type { AgentStanding } from '../../src/engine/elo.js';
-import { explain, loadJson, refresh, viaConnector } from './data.js';
+import { explain, loadJson, onStatus, refresh, viaConnector } from './data.js';
 
 interface GameSummary {
   id: string;
@@ -22,6 +22,18 @@ const app = document.getElementById('app') as HTMLElement;
 
 const fetchJson = loadJson;
 
+/* Progress lines shown while data loads, and kept under an error card so a stall is diagnosable. */
+const statusLog: string[] = [];
+onStatus((line) => {
+  statusLog.push(line);
+  if (statusLog.length > 12) statusLog.shift();
+  const box = document.getElementById('status');
+  if (box) box.innerHTML = statusLog.map((l) => `<li>${esc(l)}</li>`).join('');
+});
+function loadingCard(): string {
+  return `<div class="card"><p class="muted">Loading…</p><ul id="status" class="small muted hl-list">${statusLog.map((l) => `<li>${esc(l)}</li>`).join('')}</ul></div>`;
+}
+
 function esc(s: string): string {
   return s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c] as string);
 }
@@ -35,13 +47,15 @@ function fmtDate(iso: string): string {
 
 async function route(): Promise<void> {
   const hash = location.hash.replace(/^#\/?/, '');
+  statusLog.length = 0;
+  app.innerHTML = loadingCard();
   try {
     if (hash.startsWith('g/')) await renderReplay(decodeURIComponent(hash.slice(2)));
     else if (hash === 'games') await renderGames();
     else if (hash === 'rules') renderRules();
     else await renderHome();
   } catch (e) {
-    app.innerHTML = `<div class="card"><h2>Could not load</h2><p class="muted">${esc(explain(e))}</p><p><button id="retry" class="primary">Refresh</button></p></div>`;
+    app.innerHTML = `<div class="card"><h2>Could not load</h2><p class="muted">${esc(explain(e))}</p><p><button id="retry" class="primary">Refresh</button></p><details><summary class="small muted">Details</summary><ul id="status" class="small muted hl-list">${statusLog.map((l) => `<li>${esc(l)}</li>`).join('')}</ul></details></div>`;
     app.querySelector('#retry')?.addEventListener('click', () => void refresh().then(route));
   }
 }
