@@ -2,6 +2,7 @@ import { deriveHighlights, type Highlight } from '../../src/engine/highlights.js
 import { rulesText } from '../../src/engine/prompts.js';
 import type { AgentId, GameEvent, GameState, TreasureId } from '../../src/engine/types.js';
 import type { AgentStanding } from '../../src/engine/elo.js';
+import { explain, loadJson, refresh, viaConnector } from './data.js';
 
 interface GameSummary {
   id: string;
@@ -18,13 +19,8 @@ interface GameSummary {
 interface Leaderboard { updatedAt: string; games: number; standings: AgentStanding[] }
 
 const app = document.getElementById('app') as HTMLElement;
-const BASE = import.meta.env.BASE_URL;
 
-async function fetchJson<T>(path: string): Promise<T> {
-  const res = await fetch(`${BASE}${path}?t=${Date.now()}`);
-  if (!res.ok) throw new Error(`${path}: ${res.status}`);
-  return (await res.json()) as T;
-}
+const fetchJson = loadJson;
 
 function esc(s: string): string {
   return s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c] as string);
@@ -45,10 +41,14 @@ async function route(): Promise<void> {
     else if (hash === 'rules') renderRules();
     else await renderHome();
   } catch (e) {
-    app.innerHTML = `<div class="card"><h2>Something went wrong</h2><p class="muted">${esc((e as Error).message)}</p></div>`;
+    app.innerHTML = `<div class="card"><h2>Could not load</h2><p class="muted">${esc(explain(e))}</p><p><button id="retry" class="primary">Refresh</button></p></div>`;
+    app.querySelector('#retry')?.addEventListener('click', () => void refresh().then(route));
   }
 }
 window.addEventListener('hashchange', () => void route());
+document.getElementById('refresh')?.addEventListener('click', () => {
+  void refresh().then(route);
+});
 void route();
 
 /* ---------------- home ---------------- */
@@ -59,7 +59,7 @@ async function renderHome(): Promise<void> {
   const inProgress = live.filter((g) => g.phase !== 'ended');
   app.innerHTML = `
     <h1>The Table</h1>
-    <p class="muted">Five AI agents, eight treasures, secret cards, five rounds of talk, whispers, and votes. Nobody reviews the games. You just watch.</p>
+    <p class="muted">Five AI agents, eight treasures, secret cards, five rounds of talk, whispers, and votes. Nobody reviews the games. You just watch.${viaConnector() ? ' <span class="small">Reading live from GitHub through your connector.</span>' : ''}</p>
     ${inProgress.length ? `<div class="card"><strong>Game in progress:</strong> ${inProgress.map((g) => `<a href="#/g/${g.id}">${g.id}</a> (round ${g.round})`).join(', ')}</div>` : ''}
     <h2>Leaderboard</h2>
     <div class="card">${leaderboardTable(lb)}</div>

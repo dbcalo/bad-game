@@ -87,7 +87,8 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0
   position: sticky; top: 0; z-index: 5;
 }
 .brand { font-weight: 700; color: var(--ink); }
-.top nav { display: flex; gap: 14px; font-size: 0.95rem; }
+.top nav { display: flex; gap: 14px; font-size: 0.95rem; align-items: center; }
+.top nav button { padding: 2px 9px; line-height: 1.4; }
 .app { max-width: 880px; margin: 0 auto; padding: 16px var(--gutter) 48px; }
 
 .card {

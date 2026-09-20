@@ -16,6 +16,7 @@
     "sync-data": "node scripts/sync-data.mjs",
     "dev": "npm run sync-data && vite --config web/vite.config.ts",
     "build": "npm run sync-data && vite build --config web/vite.config.ts && cp dist/index.html dist/404.html",
+    "build:artifact": "npm run build && node scripts/build-artifact.mjs",
     "check": "npm run lint && npm run typecheck && npm test && npm run build"
   },
   "devDependencies": {
