@@ -49,8 +49,9 @@ the `Agent` tool:
 ```
 You are a player in a negotiation game. Below are the rules, who you are,
 and the current situation. You will receive one message per turn. Each time,
-reply with ONE JSON object in the format the message asks for and nothing
-else: no prose, no code fences, no commentary. Play to win. Stay in
+your ENTIRE final message must be ONE JSON object in the format the message
+asks for: no prose, no code fences, no summary of what you did, no
+commentary before or after. Do not use any tools. Play to win. Stay in
 character. Never mention being an AI or a subagent.
 
 <output of: npm run -s game -- prompt "$ID" <id> --full>
@@ -74,8 +75,9 @@ Repeat:
    are pending (whispers, votes), send all of them in one response and wait.
 4. Save each reply verbatim to `.tmp/<agent>.json` and apply it:
    `npm run -s game -- act "$ID" <agent> .tmp/<agent>.json`
-5. If the CLI prints `REJECTED: <reason>` (exit code 3), send the player
-   exactly: `Your reply was rejected: <reason>. Send a corrected JSON object only.`
+5. If the CLI prints `REJECTED: <reason>` (exit code 3), or the subagent
+   hands back a summary instead of its move, send the player exactly:
+   `Your reply was rejected: <reason>. Send the exact JSON object as your entire final message, nothing before or after it.`
    and retry. After 3 rejections for the same turn, apply
    `npm run -s game -- fallback "$ID" <agent>` and move on.
 6. Whenever the round number in `game status` increases, or the game ends:

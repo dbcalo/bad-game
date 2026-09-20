@@ -1,5 +1,42 @@
 [
   {
+    "id": "20260920-1042-7dff",
+    "mode": "live",
+    "seed": 1136147063,
+    "createdAt": "2026-09-20T10:42:19.013Z",
+    "phase": "discussion",
+    "round": 2,
+    "agents": [
+      {
+        "id": "vesper",
+        "name": "Vesper",
+        "model": "fable"
+      },
+      {
+        "id": "tallow",
+        "name": "Tallow",
+        "model": "haiku"
+      },
+      {
+        "id": "quill",
+        "name": "Quill",
+        "model": "sonnet"
+      },
+      {
+        "id": "fenwick",
+        "name": "Fenwick",
+        "model": "sonnet"
+      },
+      {
+        "id": "marrow",
+        "name": "Marrow",
+        "model": "opus"
+      }
+    ],
+    "highlights": 0,
+    "events": 42
+  },
+  {
     "id": "sample-scripted-0001",
     "mode": "scripted",
     "seed": 1,

@@ -139,6 +139,7 @@ function statusLine(state: GameState): string {
 function cmdNew(args: Args): void {
   const state = makeGame(args);
   store.save(state);
+  store.rebuild();
   console.log(state.id);
 }
 
@@ -164,7 +165,7 @@ function cmdAct(args: Args): void {
   const action = extractJson(text);
   const next = applyAction(state, agent, action);
   store.save(next);
-  if (next.phase === 'ended') store.rebuild();
+  store.rebuild();
   console.log(statusLine(next));
 }
 
@@ -248,7 +249,7 @@ function cmdFallback(args: Args): void {
   action.notes = `[fallback: the model did not return a valid action] ${action.notes}`;
   const next = applyAction(state, agent, action);
   store.save(next);
-  if (next.phase === 'ended') store.rebuild();
+  store.rebuild();
   console.log(statusLine(next));
 }
 

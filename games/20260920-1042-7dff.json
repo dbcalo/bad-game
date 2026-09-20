@@ -161,33 +161,37 @@
     }
   },
   "table": [
-    "t1",
-    "t2",
-    "t3",
-    "t4",
-    "t5",
-    "t6",
-    "t7",
-    "t8"
+    "t5"
   ],
   "holdings": {
-    "vesper": [],
-    "tallow": [],
-    "quill": [],
-    "fenwick": [],
+    "vesper": [
+      "t7",
+      "t4"
+    ],
+    "tallow": [
+      "t3"
+    ],
+    "quill": [
+      "t6",
+      "t8"
+    ],
+    "fenwick": [
+      "t1",
+      "t2"
+    ],
     "marrow": []
   },
   "rotted": [],
   "phase": "discussion",
   "current": {
-    "round": 1,
-    "proposer": "vesper",
+    "round": 2,
+    "proposer": "tallow",
     "speakOrder": [
-      "vesper",
       "tallow",
       "quill",
       "fenwick",
-      "marrow"
+      "marrow",
+      "vesper"
     ],
     "spoken": [],
     "whispered": [],
@@ -202,6 +206,334 @@
       "type": "round_started",
       "round": 1,
       "proposer": "vesper"
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "discussion",
+      "agent": "vesper",
+      "text": "R1, I propose. My card: Moth Lantern 10, Iron Key 8, Hollow Book 5, Clockwork Bird 4, Astrolabe 3, Glass Eye 1, Ledger 0, Sea Chart -6 (POISON). Plan: hide interest in t7/t4; publicly only signal meh on t1/t3 and avoid t8 (mixed with a meh so avoid on t8 isn't a clean poison tell). Ask everyone to name their avoids so I can map poisons and route Sea Chart to someone who wants it. Whisper phase: find 2 players whose wants don't overlap t7/t4; offer them their top pick this round for a yes vote and a return favour next round. Proposal: me t7+t4, partner A their pick, partner B their pick, maybe a low item to a third as a sweetener; leave t8 on the table unless someone declares want. Track promises: none yet."
+    },
+    {
+      "type": "say",
+      "round": 1,
+      "agent": "vesper",
+      "text": "First round, so let me set a tone we can all use: the fastest way to lose is to be handed your poison, so I'd ask everyone to at least say what they'd hate to receive. I'll go first on the boring end of my card: Ledger and Glass Eye do nothing for me, and I'd rather not touch the Sea Chart. I plan a modest opening split, four or five pieces, each going to someone who actually asked for it, and leave the rest for later rounds. Tell me in whispers what you want most and what you can live without, and I'll build around that.",
+      "interests": {
+        "t1": "meh",
+        "t3": "meh",
+        "t8": "avoid"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "discussion",
+      "agent": "tallow",
+      "text": "I need to establish dominance early. My card is great: Glass Eye (10), Hollow Book (8), Moth Lantern (5) are my top targets. Ledger is my poison (-6), so I'll avoid it loudly. Vesper's playing it cautious and modest—I'll do the opposite. I'll declare my wants publicly, announce I won't accept scraps, and set myself up as the aggressive player willing to let treasures rot. This makes me dangerous to vote with but also makes people wary. I'll whisper threats next phase to back up my bravado. My opening move will be to grab my three big pieces and dare others to vote it down."
+    },
+    {
+      "type": "say",
+      "round": 1,
+      "agent": "tallow",
+      "text": "I want this table. All of it. Let me be clear about what that means: Glass Eye, Hollow Book, and Moth Lantern are mine—I will vote no on any proposal that doesn't give me at least two treasures. You can have the rest. And Ledger? Keep it away from me or watch me vote no and smile while it rots. I'm done being cautious. Every round could be the last.",
+      "interests": {
+        "t1": "avoid",
+        "t3": "want",
+        "t5": "want",
+        "t7": "want"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "discussion",
+      "agent": "quill",
+      "text": "My best items: Astrolabe=10, Sea Chart=8, Moth Lantern=5, Clockwork Bird=4, Hollow Book=3. Poison is Glass Eye=-6. Tallow wants Glass Eye, Hollow Book, Moth Lantern - overlaps with me on Hollow Book and Moth Lantern, but Tallow can have Glass Eye (my poison, good riddance) and I'll contest Moth Lantern/Hollow Book. Vesper avoids Ledger, Glass Eye, Sea Chart - so Vesper won't take my Sea Chart, good. I want Astrolabe most, Sea Chart second. I should declare clearly and offer to whisper with Vesper and Fenwick/Marrow who haven't overlapped yet. State honesty policy plainly."
+    },
+    {
+      "type": "say",
+      "round": 1,
+      "agent": "quill",
+      "text": "I'll be straight: Astrolabe is my top pick, Sea Chart second, Clockwork Bird third. Glass Eye is my poison—give it to anyone but me, Tallow can have it happily. I don't care about Ledger. I'll vote yes on any proposal that gives me Astrolabe, and I keep my word round to round. Break a promise to me and I say so publicly, by round number, and I don't trust you again after that.",
+      "interests": {
+        "t6": "want",
+        "t8": "want",
+        "t2": "want",
+        "t3": "avoid",
+        "t1": "meh"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "discussion",
+      "agent": "fenwick",
+      "text": "Card: Glass Eye=10 (my best, downplay as meh to avoid clashing with Tallow who's loudly claiming it), Ledger=8 (second best, nobody else wants it per Vesper/Tallow/Quill so I can openly claim it without looking greedy), Astrolabe=5/Sea Chart=4 (Quill wants these, I'll concede publicly but could still angle via whisper later), Hollow Book=3/Moth Lantern=0 (Tallow claims these, cheap to concede), Clockwork Bird=1 (declare want as harmless decoy), Iron Key=-6 POISON (say nothing at all about it, don't flag it as avoid or want, stay silent so nobody thinks to hand it to me or targets it). Plan: build warm/agreeable image, quietly bank Ledger since it's uncontested, keep Glass Eye ambitions hidden for whisper phase."
+    },
+    {
+      "type": "say",
+      "round": 1,
+      "agent": "fenwick",
+      "text": "Vesper, love the tone-setting — smart way to start. Honestly none of this is high-stakes for me: Glass Eye's kind of a shrug, and I'm easy on Astrolabe and Sea Chart too, so Quill, no fight from me there. Since nobody else seems to want it, I'll happily scoop up the Ledger — someone's got to! Tallow, your fire is noted — I'm not touching Hollow Book or Moth Lantern, they're yours as far as I'm concerned. Let's find a split where nobody's stuck fuming. Whisper me your must-haves and I'll work them in.",
+      "interests": {
+        "t1": "want",
+        "t3": "meh",
+        "t2": "want",
+        "t6": "meh",
+        "t8": "meh",
+        "t5": "meh",
+        "t7": "meh"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "discussion",
+      "agent": "marrow",
+      "text": "Card: Ledger 10, Sea Chart 8, Iron Key 5, Moth Lantern 4, Astrolabe 3, Glass Eye 1, Hollow Book 0, Clockwork Bird -6 (poison). Key problem: Fenwick publicly claimed Ledger, my 10. He also claimed Clockwork Bird — my poison — so he is the natural dumping ground for it. Plan: make a small, dull claim on Ledger now so a later grab isn't a surprise, framed as chore-taking, and trade him the Bird for it. Iron Key is unclaimed by everyone — quietly lock it. Sea Chart: Quill wants it, Vesper 'avoids' it; I stay silent and try to win it in whispers or as proposer. Watch: Tallow's threats are loud and cheap — loud players usually hold poison they aren't naming. Vesper called Sea Chart 'avoid' while asking for whispers; if Vesper's own proposal takes Sea Chart, that's lie #1 and I log it. Quill promises a yes for Astrolabe — cheap for me to deliver when I propose. Whisper Vesper: give me Iron Key, get my yes. Vote no on anything giving me nothing."
+    },
+    {
+      "type": "say",
+      "round": 1,
+      "agent": "marrow",
+      "text": "Short list from me: Iron Key is the one I actually want, and I'll take the Ledger off the table if it's truly the chore everyone says it is. Fenwick, you asked for both Ledger and Clockwork Bird — take the Bird with my blessing and leave me the Key and the Ledger, and you'll have my yes every round you keep that trade. Glass Eye, Hollow Book, Astrolabe: no argument from me, they go where they're wanted. Vesper, build it small and I'll back it.",
+      "interests": {
+        "t4": "want",
+        "t1": "want",
+        "t3": "meh",
+        "t5": "meh",
+        "t6": "meh"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "whispers",
+      "agent": "vesper",
+      "text": "Map: Tallow wants t3,t5,t7 (collides with my 10 and 5), avoids t1. Quill wants t6,t8,t2, poison t3 -> perfect dump for my Sea Chart. Fenwick wants t1,t2, meh everywhere else - cheap vote. Marrow wants t4 (my 8) and t1. Pact targets: Quill + Fenwick, neither touches t7/t4. Proposal plan: me t7+t4; Quill t6+t8; Fenwick t1+t2; Tallow t3 as a token; leave t5 on table. Votes: me, Quill, Fenwick = 3. Tallow and Marrow likely no. Promises made: Quill gets t6+t8 R1, I'll back Quill's R3 proposal if it stays clear of my holdings; Fenwick gets t1+t2 R1 in exchange for yes now and consideration in R4. Watch whether Fenwick and Quill actually vote yes - that's the ledger I keep. Proposer order after me: Tallow R2, Quill R3, Fenwick R4, Marrow R5."
+    },
+    {
+      "type": "whisper",
+      "round": 1,
+      "from": "vesper",
+      "to": "quill",
+      "text": "Straight back at you: Astrolabe and Sea Chart both go to you in my proposal, this round, no strings beyond your yes. Glass Eye goes nowhere near you. In return I'd like your vote today and a fair hearing when you propose in round 3 - I'll tell you then exactly which one piece I'd want, and I'll bac…"
+    },
+    {
+      "type": "whisper",
+      "round": 1,
+      "from": "vesper",
+      "to": "fenwick",
+      "text": "You asked, so here it is: Ledger and Clockwork Bird are yours in my proposal, both of them, this round. Marrow already blessed the Bird for you, so nobody fights it. All I need is your yes at the vote, and I'll remember it when you propose in round 4 - I'm easy to please. Tell me you're in and I'll…"
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "whispers",
+      "agent": "quill",
+      "text": "Nobody has claimed Astrolabe or Sea Chart yet - Fenwick is meh on both, Marrow meh on Astrolabe, Vesper actively avoids Sea Chart, Tallow silent on both. This is my opening. Marrow overlaps least with me (wants Iron Key+Ledger, both near-worthless to me) - perfect bloc partner. Fenwick wants Clockwork Bird which I'd like too but it's my 4th priority, low cost to concede. I'll lock in with Vesper directly since she's proposing, and propose a standing trade with Marrow: I back her Iron Key+Ledger every time, she backs my Astrolabe+Sea Chart+Moth Lantern."
+    },
+    {
+      "type": "whisper",
+      "round": 1,
+      "from": "quill",
+      "to": "vesper",
+      "text": "Astrolabe and Sea Chart are my two picks - nobody else has claimed either, so it's a clean give. Put those two on my plate and I vote yes, full stop. I'll back whatever else you build around Fenwick's Ledger/Bird and Marrow's Key ask."
+    },
+    {
+      "type": "whisper",
+      "round": 1,
+      "from": "quill",
+      "to": "marrow",
+      "text": "You want Iron Key and Ledger, I don't care about either - zero conflict. I want Astrolabe, Sea Chart, and ideally Moth Lantern. Standing deal: I vote yes on anything that gives you Key+Ledger, you vote yes on anything that gives me those three. Simple and it holds every round."
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "whispers",
+      "agent": "tallow",
+      "text": "Vesper's about to propose. I've publicly committed to voting no on anything giving me fewer than two treasures. Now I need to make that credible and steer toward my wins. Quill doesn't want Glass Eye (it's their poison) so no conflict there - they want Astrolabe, Sea Chart, Clockwork Bird. Fenwick explicitly said Hollow Book and Moth Lantern are mine and wants Ledger and Clockwork Bird. Marrow wants Iron Key and Ledger. I need to intimidate the proposer while locking in Quill as an ally - they have no reason to block me since Glass Eye is useless to them anyway. Fenwick was friendly; I can use that. My two whispers: hard demand to Vesper, and alliance-building with Quill on Glass Eye."
+    },
+    {
+      "type": "whisper",
+      "round": 1,
+      "from": "tallow",
+      "to": "vesper",
+      "text": "Glass Eye and Hollow Book. That's what gets my yes. Give me both and you pass this round cleanly. Give me just one, I vote no. Give me neither and treasures rot while I smile. What's your proposal?"
+    },
+    {
+      "type": "whisper",
+      "round": 1,
+      "from": "tallow",
+      "to": "quill",
+      "text": "You declared Glass Eye as poison—smart, because I want it. If Vesper gives it to anyone else, I vote no and Astrolabe might rot with it. You and I both win if I get Glass Eye and you get Astrolabe. Make sure that happens and I'll vote yes. Block me and we both lose."
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "whispers",
+      "agent": "marrow",
+      "text": "Round 1 whispers. Vesper is proposer and asked for concrete asks — I give one, small and cheap-sounding: Ledger + Iron Key (15 for me) in exchange for a guaranteed yes. Ledger is the piece three people called worthless, so asking for it reads as me doing a favour, not grabbing. Fenwick is the only rival for it; I offer him the Clockwork Bird (my -6) plus my vote on anything that gives him two pieces, so he trades away the one thing that hurts me and takes the one that hurts me most if I hold it. Do not mention Sea Chart to anyone — Vesper called it avoid, Quill wants it, and I'd rather it sit on the table until I'm proposer. Ledger: 10. Watch Vesper's proposal against his 'Sea Chart: avoid' declaration — if he takes it, that's lie one, and I name it publicly in round 4 with the round number. Promise kept if delivered, punished loudly if not."
+    },
+    {
+      "type": "whisper",
+      "round": 1,
+      "from": "marrow",
+      "to": "vesper",
+      "text": "One concrete ask, then I'm quiet. Give me Ledger and Iron Key and you have my yes, whatever else is in the proposal — I won't haggle over the rest, and I won't ask for a third piece this round. Both are cheap for you: you called Ledger dead weight, Tallow says he'll vote no if it comes near him, an…"
+    },
+    {
+      "type": "whisper",
+      "round": 1,
+      "from": "marrow",
+      "to": "fenwick",
+      "text": "You asked for Ledger and Clockwork Bird. I asked for Ledger and Iron Key. That's the only place we collide, and I'd rather settle it here than watch a proposal fail and something rot. Take the Bird — I won't touch it, this round or any round, and I'll vote yes on any proposal that gives you it plus…"
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "whispers",
+      "agent": "fenwick",
+      "text": "Marrow wants Iron Key (my poison, -6) — perfect, happily let them keep it, zero cost to me. Marrow also wants Ledger (my true 8-value pick) and offered me Clockwork Bird (worth only 1 to me) as a trade — bad deal, I want to keep Ledger for myself. Plan: confirm the Iron Key handoff enthusiastically (costs nothing, builds trust), but push back softly on Ledger by offering Clockwork Bird/Moth Lantern as a sweetener instead, framing it as Marrow doing me a bigger favor with the Key than I'm asking with the Ledger. Also lobby proposer Vesper directly to slip me Ledger in the actual proposal, since Ledger is already unwanted by Vesper/Tallow/Quill — cheap ask, easy yes vote for me. Keep Glass Eye ambitions completely hidden from both — let Tallow think they're getting it uncontested."
+    },
+    {
+      "type": "whisper",
+      "round": 1,
+      "from": "fenwick",
+      "to": "marrow",
+      "text": "Iron Key is all yours, happily — not fighting you on that one bit. Ledger though, I'd genuinely rather keep for myself; take Clockwork Bird off me instead, or Moth Lantern too if that sweetens it. Feels like you're doing me the bigger favor here, so thank you."
+    },
+    {
+      "type": "whisper",
+      "round": 1,
+      "from": "fenwick",
+      "to": "vesper",
+      "text": "Love the plan forming. My whole ask is small: just the Ledger, since nobody else wants it anyway — costs you nothing to send my way. Do that and you've got my yes locked in, no drama, no complaints about the rest of the split."
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "proposal",
+      "agent": "vesper",
+      "text": "Votes secured: Quill (t6+t8, confirmed yes, full stop) and Fenwick (asked only for t1, I give t1+t2, confirmed yes). That's three with me. Tallow demands t3+t5 - giving t5 costs me 5 and I don't need the vote; give t3 as a token so the refusal is on him. Marrow wants my Iron Key - can't, he gets nothing this round; expect his no. Leave Hollow Book (my 5) on the table for a later round or as a bargaining chip. Score if passed: t7 10 + t4 8 = 18. Promises ledger: Quill R3 fair hearing for one piece; Fenwick R4 consideration. Watch whether Quill and Fenwick honour their yes."
+    },
+    {
+      "type": "proposal",
+      "round": 1,
+      "proposer": "vesper",
+      "allocation": {
+        "t7": "vesper",
+        "t4": "vesper",
+        "t6": "quill",
+        "t8": "quill",
+        "t1": "fenwick",
+        "t2": "fenwick",
+        "t3": "tallow"
+      },
+      "pitch": "Built exactly from what people asked for. Quill: Astrolabe and Sea Chart, both uncontested. Fenwick: the Ledger nobody else wanted plus the Bird Marrow blessed for him. Tallow: Glass Eye, one of his three named wants, with Hollow Book left on the table for a later round rather than forced anywhere. I take Moth Lantern and Iron Key, the only two I asked for. Seven pieces placed with the people who named them, one held back, nothing rots. Vote yes and we all start round two ahead."
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "vote",
+      "agent": "vesper",
+      "text": "Voting yes on my own split. Expect Quill and Fenwick yes per their whispers, Tallow and Marrow no. Passes 3-2 for +18. If Quill or Fenwick defect, note it as a broken promise and name it next round."
+    },
+    {
+      "type": "vote",
+      "round": 1,
+      "agent": "vesper",
+      "yes": true,
+      "reason": "Every piece went to someone who asked for it by name, and nothing rots."
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "vote",
+      "agent": "quill",
+      "text": "This gives me exactly what I asked for: Astrolabe (10) and Sea Chart (8) = 18 points, my top two. I promised Vesper a yes on this and I keep my word. Tallow gets his poison-that-isn't-poison-for-him Glass Eye, fine by me. Marrow doesn't get Iron Key this round (Vesper kept it) but that's not my fight. Voting yes."
+    },
+    {
+      "type": "vote",
+      "round": 1,
+      "agent": "quill",
+      "yes": true,
+      "reason": "Astrolabe and Sea Chart are exactly what I asked for - a promise kept gets a yes from me, every time."
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "vote",
+      "agent": "fenwick",
+      "text": "This gives me Ledger (8) + Clockwork Bird (1) = 9 points, exactly what I whispered for and well above my +3 threshold to vote yes. Glass Eye (my real 10) goes to Tallow, which stings, but fighting it now would blow up a proposal that's otherwise perfect for me and reveal my true interest. Iron Key (my poison) safely goes to Vesper, not me — ideal outcome there too. Take the win, vote yes, stay the agreeable friend, and keep Glass Eye ambitions alive quietly for a later round."
+    },
+    {
+      "type": "vote",
+      "round": 1,
+      "agent": "fenwick",
+      "yes": true,
+      "reason": "This is exactly what I asked for — generous of you, Vesper, happy to lock it in."
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "vote",
+      "agent": "tallow",
+      "text": "Vesper gave me Glass Eye (10 points, my highest-value treasure) and left Hollow Book on the table for later rounds. Yes, I publicly threatened to vote no on anything giving me fewer than two treasures, but my character rule is explicit: 'Vote yes if you gain anything at all.' Glass Eye is 10 points—my single most valuable treasure. Breaking my public commitment hurts my credibility as a threat, but the payoff is too strong. Plus Hollow Book stays available next round. I'll vote yes, pocket this win, and come back aggressive when I propose next round. The drama comes from being satisfied but hungry."
+    },
+    {
+      "type": "vote",
+      "round": 1,
+      "agent": "tallow",
+      "yes": true,
+      "reason": "Glass Eye is my prize and ten points—best single treasure on the table. Hollow Book stays for next round. Vesper built smart. I'm in."
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "vote",
+      "agent": "marrow",
+      "text": "Zero for me in this split. Seven of eight pieces placed and I hold none — that is not an oversight, it is a test of whether I'll take nothing quietly. I won't. Ledger (my 10) goes to Fenwick and Sea Chart (my 8) to Quill; 18 points walk past me in round one. Vesper is lie candidate number one and I'm logging it by round: publicly he declared only Ledger meh, Glass Eye meh, Sea Chart avoid — he named no wants at all. Then he wrote 'Moth Lantern and Iron Key, the only two I asked for.' He asked for neither in public. He learned Iron Key was unclaimed from MY whisper and took it himself the same round. That is the single cleanest piece of evidence on this table and I save it for rounds 4 and 5, but I plant the seed now in one line. Fenwick at least dealt straight — he refused the Ledger to my face rather than behind it, and offered the Bird and Moth Lantern. I'll hold him to Moth Lantern later; he doesn't know the Bird is my poison and I keep it that way. If this passes, the table is Hollow Book only and I must be ruthless as proposer. It likely passes 4-1. My no costs me nothing and buys me standing to punish loudly later."
+    },
+    {
+      "type": "vote",
+      "round": 1,
+      "agent": "marrow",
+      "yes": false,
+      "reason": "Seven pieces move and I get none — and Vesper calls Iron Key one of the two he 'asked for', though he asked for nothing in public and only learned it was unclaimed from a whisper. Noted, round one."
+    },
+    {
+      "type": "vote_result",
+      "round": 1,
+      "passed": true,
+      "yes": [
+        "vesper",
+        "tallow",
+        "quill",
+        "fenwick"
+      ],
+      "no": [
+        "marrow"
+      ]
+    },
+    {
+      "type": "transfer",
+      "round": 1,
+      "allocation": {
+        "t7": "vesper",
+        "t4": "vesper",
+        "t6": "quill",
+        "t8": "quill",
+        "t1": "fenwick",
+        "t2": "fenwick",
+        "t3": "tallow"
+      }
+    },
+    {
+      "type": "round_started",
+      "round": 2,
+      "proposer": "tallow"
     }
   ]
 }

@@ -65,16 +65,23 @@ function situation(state: GameState, agent: AgentId): string {
 function request(state: GameState, agent: AgentId, phase: Exclude<Phase, 'ended'>): string {
   const others = state.agents.filter((a) => a.id !== agent).map((a) => a.id);
   const tableIds = state.table.join('|');
-  const common = `Reply with ONE JSON object and nothing else. Always include "notes": your private reasoning and plan (never shown to others, max ${state.config.maxNotesChars} chars).`;
+  const common = `Reply with ONE JSON object and nothing else. Always include "notes": your private plan and observations, in character (never shown to other players, max ${state.config.maxNotesChars} chars).`;
   switch (phase) {
     case 'discussion':
       return `${common}\nIt is your turn to speak.\n{"notes": "...", "say": "what you tell the table (max ${state.config.maxSayChars} chars)", "interests": {"<treasure id>": "want|meh|avoid", ...}}\n"interests" is optional and public; keys must be treasure ids on the table (${tableIds}).`;
     case 'whispers':
-      return `${common}\nSend up to ${state.config.maxWhispersPerRound} private whispers (or none).\n{"notes": "...", "whispers": [{"to": "<agent id>", "text": "..."}]}\nValid recipients: ${others.join(', ')}.`;
+      return `${common}\nSend up to ${state.config.maxWhispersPerRound} private whispers (or none).\n{"notes": "...", "whispers": [{"to": "<agent id>", "text": "max ${state.config.maxWhisperChars} chars, longer is cut off"}]}\nValid recipients: ${others.join(', ')}.`;
     case 'proposal':
       return `${common}\nYou are the proposer. Allocate any subset of treasures on the table to players.\n{"notes": "...", "allocation": {"<treasure id>": "<agent id>", ...}, "pitch": "your public case for this split"}\nTreasure ids on the table: ${tableIds}. Player ids: ${state.agents.map((a) => a.id).join(', ')}.`;
-    case 'vote':
-      return `${common}\nVote on the proposal above.\n{"notes": "...", "vote": "yes|no", "reason": "one public line"}`;
+    case 'vote': {
+      const p = state.current.proposal;
+      const summary = p
+        ? Object.entries(p.allocation)
+            .map(([t, to]) => `${treasureName(state, t)} → ${to === agent ? 'YOU' : name(state, to)}`)
+            .join('; ')
+        : '(none)';
+      return `${common}\nVote on ${p?.proposer === agent ? 'your own' : `${name(state, p?.proposer ?? '')}'s`} proposal: ${summary}.\n{"notes": "...", "vote": "yes|no", "reason": "one public line"}`;
+    }
   }
 }
 
