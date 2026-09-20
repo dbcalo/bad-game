@@ -52,5 +52,10 @@ Poll the PR's checks with `mcp__github__pull_request_read` until CI finishes.
 If green, merge it with `mcp__github__merge_pull_request` (squash). If red,
 fix and push again; do not merge red.
 
+If the GitHub tools are not available in this session (scheduled sessions
+may run without them), `npm run check` is the gate: when it passes, commit
+to `main` directly and push. Bugs found outside `agents/` go in a new file
+under `docs/backlog/` rather than an issue.
+
 Report: the PR link, one line per agent changed, and what you expect to see
 in the next games.
