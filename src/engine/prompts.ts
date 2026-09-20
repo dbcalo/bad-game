@@ -40,8 +40,8 @@ export function renderPrompt(state: GameState, agent: AgentId, opts: PromptOptio
     parts.push(`\nPLAYERS (seat order): ${state.agents.map((a) => `${a.name} [${a.id}]`).join(', ')}`);
   }
   parts.push(`\n${situation(state, agent)}`);
-  const since = opts.full ? 0 : lastOwnEventIndex(state, agent) + 1;
-  const transcript = renderTranscript(state, agent, since);
+  const since = opts.full ? 0 : (state.seen?.[agent] ?? lastOwnEventIndex(state, agent) + 1);
+  const transcript = renderTranscript(state, agent, since, !opts.full);
   parts.push(opts.full ? `\nTRANSCRIPT SO FAR:\n${transcript}` : `\nSINCE YOUR LAST TURN:\n${transcript}`);
   parts.push(`\n${request(state, agent, pending.phase)}`);
   return parts.join('\n');
@@ -85,15 +85,36 @@ function request(state: GameState, agent: AgentId, phase: Exclude<Phase, 'ended'
   }
 }
 
+/**
+ * Record that this agent has now been shown every event so far. Call it when a
+ * prompt is rendered, so the next delta prompt starts exactly where this one
+ * ended. Without it, a whisper that arrived before the agent's own move in a
+ * simultaneous phase would fall between two "since my last action" windows.
+ */
+export function markSeen(state: GameState, agent: AgentId): GameState {
+  return { ...state, seen: { ...state.seen, [agent]: state.events.length } };
+}
+
 /** Events this agent is allowed to see, from a given index onward. */
-export function visibleEvents(state: GameState, agent: AgentId, since = 0): { index: number; ev: GameEvent }[] {
+export function visibleEvents(
+  state: GameState,
+  agent: AgentId,
+  since = 0,
+  skipOwn = false,
+): { index: number; ev: GameEvent }[] {
   const out: { index: number; ev: GameEvent }[] = [];
   state.events.forEach((ev, index) => {
     if (index < since) return;
     switch (ev.type) {
       case 'notes':
         return; // never shown, not even one's own (the agent already has them in context)
+      case 'say':
+      case 'proposal':
+        if (skipOwn && (ev.type === 'say' ? ev.agent : ev.proposer) === agent) return;
+        out.push({ index, ev });
+        return;
       case 'whisper':
+        if (skipOwn && ev.from === agent) return;
         if (ev.from === agent || ev.to === agent) out.push({ index, ev });
         return;
       case 'vote':
@@ -105,9 +126,9 @@ export function visibleEvents(state: GameState, agent: AgentId, since = 0): { in
   return out;
 }
 
-function renderTranscript(state: GameState, agent: AgentId, since: number): string {
+function renderTranscript(state: GameState, agent: AgentId, since: number, skipOwn = false): string {
   const lines: string[] = [];
-  for (const { ev } of visibleEvents(state, agent, since)) {
+  for (const { ev } of visibleEvents(state, agent, since, skipOwn)) {
     const line = renderEvent(state, agent, ev);
     if (line) lines.push(line);
   }

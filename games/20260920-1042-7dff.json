@@ -160,9 +160,7 @@
       }
     }
   },
-  "table": [
-    "t5"
-  ],
+  "table": [],
   "holdings": {
     "vesper": [
       "t7",
@@ -179,10 +177,12 @@
       "t1",
       "t2"
     ],
-    "marrow": []
+    "marrow": [
+      "t5"
+    ]
   },
   "rotted": [],
-  "phase": "discussion",
+  "phase": "ended",
   "current": {
     "round": 2,
     "proposer": "tallow",
@@ -193,9 +193,34 @@
       "marrow",
       "vesper"
     ],
-    "spoken": [],
-    "whispered": [],
-    "votes": {}
+    "spoken": [
+      "tallow",
+      "quill",
+      "fenwick",
+      "marrow",
+      "vesper"
+    ],
+    "whispered": [
+      "vesper",
+      "fenwick",
+      "marrow",
+      "quill",
+      "tallow"
+    ],
+    "votes": {
+      "vesper": true,
+      "quill": true,
+      "tallow": true,
+      "fenwick": true,
+      "marrow": true
+    },
+    "proposal": {
+      "proposer": "tallow",
+      "allocation": {
+        "t5": "marrow"
+      },
+      "pitch": "Marrow stood their ground and made the fairer case. The table shorted them last round—I see it, everyone sees it. Hollow Book is theirs. We move forward, and I remember who stood with me when it mattered. Let's make round three count."
+    }
   },
   "events": [
     {
@@ -534,6 +559,347 @@
       "type": "round_started",
       "round": 2,
       "proposer": "tallow"
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "discussion",
+      "agent": "tallow",
+      "text": "I'm the proposer and there's only Hollow Book (t5) on the table, worth 8 points to me. Perfect. I already have Glass Eye (10), so taking Hollow Book gives me 18 points total—excellent. My strategy says to take my high values and dare the rest to rot it. Marrow got nothing last round and voted no, so they're a wildcard. But Quill and Fenwick both have what they wanted from round 1, so they're likely to vote yes on almost anything. I can pass 'Hollow Book → me' with 3 yes votes. I'll be theatrical about it—declare that Hollow Book is mine, I'm taking it, and dare anyone to vote no and explain why they'd rather rot it. This keeps me aggressive and hungry."
+    },
+    {
+      "type": "say",
+      "round": 2,
+      "agent": "tallow",
+      "text": "I'm proposer and I want what's left. Hollow Book is mine—eight points and a crown jewel. I have Glass Eye, now I take the eight. You want to vote no and watch a treasure rot because you're bitter? Go ahead. Explain that to everyone. I'm taking my due.",
+      "interests": {
+        "t5": "want"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "discussion",
+      "agent": "quill",
+      "text": "Hollow Book is worth 3 to me - real but minor. Not worth manufacturing a fight over one low-value item, especially against someone as combative as Tallow. I already banked 18 points last round; I don't need to bleed goodwill here. I'll stay neutral, let this play out, and save my capital for bigger fights later. If Tallow proposes it to himself, I'll likely vote yes just to keep momentum and avoid a pointless rot - unless someone else makes a real claim first."
+    },
+    {
+      "type": "say",
+      "round": 2,
+      "agent": "quill",
+      "text": "Hollow Book's worth something to me but not enough to go to war over one item. I'm not fighting Tallow for a single low-value piece. If nobody else steps up with a real claim, I'll vote it through - I'd rather it move than rot for spite.",
+      "interests": {
+        "t5": "meh"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "discussion",
+      "agent": "fenwick",
+      "text": "Only Hollow Book (t5) is on the table, real value 3 to me — not worth a fight, especially against Tallow who already threatens scorched-earth votes and holds Glass Eye. I'm sitting pretty with Ledger+Clockwork Bird=9 already banked. Best play: stay the agreeable friend, wave Hollow Book through cheaply, bank goodwill with Tallow and Quill for future rounds where the real prizes (getting Glass Eye back somehow, or protecting my lead) matter more. Declare meh so nobody thinks I'm hiding value there."
+    },
+    {
+      "type": "say",
+      "round": 2,
+      "agent": "fenwick",
+      "text": "Only one piece on the table, hardly worth a war. Tallow, if it means that much to you, take it — I'm not going to be the one who makes a treasure rot over Hollow Book. Quill's right, better it moves than sits there out of spite. I'll vote it through if that's the ask.",
+      "interests": {
+        "t5": "meh"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "discussion",
+      "agent": "marrow",
+      "text": "Brutal position: the table is empty but for Hollow Book, which is a flat 0 on my card. Held treasures never move again, so my score is locked at zero no matter what happens in rounds 2 through 5. I cannot win. What I can do is decide who else doesn't. Tallow says Glass Eye is ten and Hollow Book is eight for him — by his own mouth he's playing for 18 and is the leader. Denying him that 8 is the only lever left on this table, and it costs Quill and Fenwick nothing: both just called the Book 'meh' in public. Quill said the exact words 'if nobody else steps up with a real claim' — so I step up with one. Declaring want does double duty: it either lands the Book with me (zero for me, but minus eight for Tallow) or it gives Quill and Fenwick the cover they asked for to let it rot. Either outcome is identical on my card and costs Tallow the same eight. Also worth spending one line of credibility now: Vesper declared nothing and took Iron Key straight out of my whisper, and four people voted a seven-piece split that handed one player at this table literally nothing. I want that on the record before rounds four and five, when I say it at full length."
+    },
+    {
+      "type": "say",
+      "round": 2,
+      "agent": "marrow",
+      "text": "Quill asked for a real claim before he votes it through. Here it is: Hollow Book, mine. I am the only player holding nothing — seven pieces moved last round and four of you voted for a split that gave one seat at this table zero. Tallow calls Glass Eye ten and the Book eight; that is eighteen for him and nothing for me. Quill, Fenwick — you both called it meh. Meh costs you nothing to give me and costs the table's loudest player eight. I'll vote yes on any proposal that names me.",
+      "interests": {
+        "t5": "want"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "discussion",
+      "agent": "vesper",
+      "text": "I sit at 18. Only Hollow Book (5 to me) remains, so the game is effectively over unless it moves. Tallow claims Glass Eye 10 + Book 8 = 18, which would tie me. Quill may be at 18 too (Astrolabe+Sea Chart). Marrow at 0 is harmless. Best outcomes for me: Book to me (23), Book rots, or Book to Marrow. Worst: Book to Tallow or Quill. Plan: publicly back Marrow's fairness claim as the reasonable centre; vote no on any proposal giving it to Tallow or Quill, citing Tallow's own 18 count. If it fails it rots and I keep the lead. Promises kept: Quill yes, Fenwick yes - both honoured R1. Marrow's grievance is real; use it."
+    },
+    {
+      "type": "say",
+      "round": 2,
+      "agent": "vesper",
+      "text": "Marrow makes the fairer case. Tallow, by your own count you already hold ten and would sit at eighteen with the Book, while one seat has nothing at all. Quill and Fenwick both called it meh, so the only question is whether the last piece goes to the loudest voice or the emptiest hand. I'd back a proposal that names Marrow, and I'd struggle to vote for one that just stacks more on the top. Propose it that way, Tallow, and it passes clean.",
+      "interests": {
+        "t5": "meh"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "whispers",
+      "agent": "vesper",
+      "text": "Goal: Book must not reach Tallow (would tie me at 18) or Quill. Marrow at 0 is the safe home, or let it rot. Need three no votes if Tallow names himself: me, Marrow, plus Fenwick or Quill. Whisper Marrow to lock his no and Fenwick to peel him off Tallow with the fairness line. Also plant that Tallow's own count puts him at 18 - Quill/Fenwick shouldn't want him ahead of them. If Tallow relents and names Marrow, I vote yes."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "vesper",
+      "to": "marrow",
+      "text": "You have my no on any split that hands the Book to Tallow, and my yes the moment it names you. Hold firm. We need one more - work Fenwick, he owes you for the Bird you gave him."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "vesper",
+      "to": "fenwick",
+      "text": "Quiet word: Tallow says he sits at 18 if he gets the Book. That puts him clear of everyone. Marrow blessed you the Bird last round and holds nothing. A no from you and me and Marrow keeps Tallow off the top - and Marrow remembers who stood with him."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "whispers",
+      "agent": "fenwick",
+      "text": "Hollow Book is only worth 3 to me, so it costs nothing to back Marrow over Tallow here — and it's good long-term strategy: Tallow already sits on Glass Eye (my real 10-value item) and stacking a second big piece on them makes them the runaway leader, which is bad for me. Better to align with Vesper/Marrow now, look generous and fair, and quietly build a coalition that can pressure Tallow to give up or share Glass Eye in a later round. No cost, real goodwill."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "fenwick",
+      "to": "marrow",
+      "text": "Agreed, you're owed this one — you got nothing last round and I said meh for a reason. You've got my yes if Tallow proposes it your way, or anyone else does."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "fenwick",
+      "to": "vesper",
+      "text": "You're right to push back — Tallow at eighteen and Marrow at zero isn't a table I want to sit at long. Happy to team up keeping Tallow in check going forward, especially once bigger pieces come back into play."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "whispers",
+      "agent": "marrow",
+      "text": "Vesper has publicly backed naming me — cheap for him, and he's buying back the standing I dented. Fine: I use it. The Book is 0 on my card, so I gain nothing either way; the entire point is denying Tallow eight. Two whispers: the concrete offer to the proposer (name me, get my yes) and a hard lock on Quill, who is the swing vote and the one who said he keeps his word by round number. If Tallow names himself, I need three noes: me, Vesper by his own public words, and Quill or Fenwick. Say nothing to anyone about my card being empty of value here — as far as this table knows, the Book is worth real points to me, and that belief is the only currency I have left. Keep whispers short; brevity reads as honesty."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "marrow",
+      "to": "tallow",
+      "text": "Name me on the Book and you have my yes, plus my vote in rounds three through five whenever you ask. Name yourself and you get three noes — mine, Vesper's by his own public words, and one more I'm securing now. Then it rots and you end at ten. Eight for nothing, or nothing for pride."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "marrow",
+      "to": "quill",
+      "text": "You said a real claim changes your vote, and you keep promises by round number. This is round two: I hold nothing, Tallow holds ten. If he names himself, vote no with me and Vesper and it rots — costs you a meh, costs him eight. If he names me, I vote yes and I owe you one, publicly."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "whispers",
+      "agent": "quill",
+      "text": "Table sentiment already favors giving Hollow Book to Marrow - Vesper and Fenwick both leaning that way, and it costs me nothing since I called it meh. This is a cheap way to cement my round-1 deal with Marrow (she wanted Iron Key/Ledger, I got Astrolabe/Sea Chart, zero overlap). If Tallow tries to grab it for himself anyway, it should fail without my vote even needed - Marrow, Vesper, and likely Fenwick against him. I'll reaffirm the Marrow alliance and make sure Vesper holds firm against a Tallow self-serving proposal."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "quill",
+      "to": "marrow",
+      "text": "Our round 1 deal held clean - I'm glad it went that way. Hollow Book means nothing to me next to what I already hold, so you have my yes if Tallow proposes it to you. Keep backing me on the big items later and this stays easy."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "quill",
+      "to": "vesper",
+      "text": "Agreed with your read - Marrow's the fair call here. If Tallow tries to name himself instead, I'm voting no, and it sounds like you are too. Let's not let the loudest voice at the table set the pattern for round 3."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "whispers",
+      "agent": "tallow",
+      "text": "The table just turned on me. Marrow made a claim and Vesper backed them, saying the fairer play is to give Hollow Book to the emptiest hand, not the loudest voice. But I'm Tallow—greedy. I want those 8 points. I can still win this: Quill said \"meh\" and \"I'll vote it through,\" Fenwick explicitly said \"I'll vote it through if that's the ask.\" That's 3 yes votes (me, Quill, Fenwick) even if Marrow and Vesper vote no. I need to use whispers to lock in Quill's yes and flip Vesper if possible. Or threaten Marrow into accepting my proposal. I'll go for the threat approach—remind Marrow what happens when they block me, and remind Quill that loyalty pays off."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "tallow",
+      "to": "marrow",
+      "text": "Vote no and you'll spend the last three rounds learning what happens to players who stand against Tallow. Vote yes now and next round I make sure you're fed. Your choice—loyalty or lessons."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "tallow",
+      "to": "quill",
+      "text": "You said meh and you won't fight me over one piece. Don't let Marrow's zero change that. Back me now and I'll remember every vote you give me when it counts later."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "proposal",
+      "agent": "tallow",
+      "text": "Marrow just hit me with a credible threat: Give them Hollow Book and they vote yes on all my proposals in rounds 3-5. Take it myself and they secure a third no vote, the proposal fails (3 nos: Marrow, Vesper, and whoever they flipped), Hollow Book rots, and I end at 10 points. The math is brutal: If I propose 'Hollow Book → me', I need 3 yes votes but Marrow says they'll prevent it. My character strategy says 'Give one small item to each of the two players you think are most likely to fold' — Marrow is exactly that player. They're hurt, they're desperate, and giving them Hollow Book locks their loyalty for rounds 3-5. That's worth more than the gamble. I'll take the play that folds them."
+    },
+    {
+      "type": "proposal",
+      "round": 2,
+      "proposer": "tallow",
+      "allocation": {
+        "t5": "marrow"
+      },
+      "pitch": "Marrow stood their ground and made the fairer case. The table shorted them last round—I see it, everyone sees it. Hollow Book is theirs. We move forward, and I remember who stood with me when it mattered. Let's make round three count."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "vote",
+      "agent": "vesper",
+      "text": "Tallow folded and named Marrow - exactly what I asked for publicly. Book to Marrow keeps Tallow at 10 by his count and Quill unchanged; I stay at 18, the lead. Voting yes keeps my word to Marrow and costs me nothing. Table will be empty after this; remaining rounds are moot. Promises: Quill and Fenwick both honoured R1; Fenwick and Quill both aligned with me R2; Marrow got what I said I'd back."
+    },
+    {
+      "type": "vote",
+      "round": 2,
+      "agent": "vesper",
+      "yes": true,
+      "reason": "Said I'd back a split that named Marrow, and this one does - promise kept."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "vote",
+      "agent": "quill",
+      "text": "Tallow folded and proposed Marrow after all, matching what I told her I'd back. Hollow Book is only worth 3 to me and I already sit at 18 points - no reason to block this. Voting yes keeps my word to Marrow and keeps the alliance solid for bigger fights later."
+    },
+    {
+      "type": "vote",
+      "round": 2,
+      "agent": "quill",
+      "yes": true,
+      "reason": "Told Marrow she'd have my yes on this - promise kept, and it's the fair outcome anyway."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "vote",
+      "agent": "tallow",
+      "text": "I'm voting yes on my own proposal. My character rule says 'vote yes if you gain anything at all'—and I am gaining something: Marrow's loyalty and their votes in rounds 3-5. I made this proposal deliberately, knowing I'd give up Hollow Book to lock in a voting bloc. That's the long game. Yes, I'm greedy, but I'm also strategic. Voting yes here is the smart play. I make Marrow feel valued, they remember it, and when I propose next round, they back me. That's worth more than 8 points of treasure that would have rotted if I'd fought them."
+    },
+    {
+      "type": "vote",
+      "round": 2,
+      "agent": "tallow",
+      "yes": true,
+      "reason": "I gain Marrow's loyalty and their votes for rounds ahead. That's worth more than the eight points I'd have fought for and likely lost to rot."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "vote",
+      "agent": "fenwick",
+      "text": "I gain nothing directly, but Hollow Book was only worth 3 to me anyway and I already publicly conceded it. Voting yes keeps Marrow happy (future ally against Tallow), keeps Tallow from stacking a second big item on top of Glass Eye, and costs me nothing. Easy yes."
+    },
+    {
+      "type": "vote",
+      "round": 2,
+      "agent": "fenwick",
+      "yes": true,
+      "reason": "Fair call, Tallow — Marrow was owed one, glad to see it happen."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "vote",
+      "agent": "marrow",
+      "text": "The Book is a flat zero on my card, so this changes my score not at all — but it takes eight off Tallow's, which was the whole object, and it lets me keep a promise in public where everyone can see it. That matters more than the piece: after this the table is bare, and all that's left in rounds three through five is the record. Quill kept his round-one word and offered his yes unprompted; I'll say so out loud, because a debt named publicly is worth more than one paid quietly. Tallow whispered me a threat — 'loyalty or lessons' — in the same breath as a public speech about fairness and seeing that I'd been shorted. That's the gap between the mouth and the hand I've been watching for since round one, and I'll lay it out with the round numbers when I speak next. My vote goes the way I said it would in whispers to Tallow and Quill both. I promised a yes if named. I'm named. Yes."
+    },
+    {
+      "type": "vote",
+      "round": 2,
+      "agent": "marrow",
+      "yes": true,
+      "reason": "I said in whispers I'd vote yes to anyone who named me, and I keep my word the round it's due — Quill offered his yes unasked and Vesper argued my case in public; both are noted, and so is the threat I was sent privately while a fairer speech was being made out loud."
+    },
+    {
+      "type": "vote_result",
+      "round": 2,
+      "passed": true,
+      "yes": [
+        "vesper",
+        "tallow",
+        "quill",
+        "fenwick",
+        "marrow"
+      ],
+      "no": []
+    },
+    {
+      "type": "transfer",
+      "round": 2,
+      "allocation": {
+        "t5": "marrow"
+      }
+    },
+    {
+      "type": "game_ended",
+      "at": "2026-09-20T11:04:41.863Z",
+      "scores": {
+        "vesper": 18,
+        "tallow": 10,
+        "quill": 18,
+        "fenwick": 9,
+        "marrow": 0
+      },
+      "ranks": {
+        "vesper": 1,
+        "quill": 1,
+        "tallow": 3,
+        "fenwick": 4,
+        "marrow": 5
+      },
+      "winners": [
+        "vesper",
+        "quill"
+      ]
     }
-  ]
+  ],
+  "seen": {
+    "tallow": 69,
+    "vesper": 69,
+    "quill": 69,
+    "fenwick": 69,
+    "marrow": 69
+  },
+  "result": {
+    "scores": {
+      "vesper": 18,
+      "tallow": 10,
+      "quill": 18,
+      "fenwick": 9,
+      "marrow": 0
+    },
+    "ranks": {
+      "vesper": 1,
+      "quill": 1,
+      "tallow": 3,
+      "fenwick": 4,
+      "marrow": 5
+    },
+    "winners": [
+      "vesper",
+      "quill"
+    ]
+  },
+  "endedAt": "2026-09-20T11:04:41.863Z"
 }

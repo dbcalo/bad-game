@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { applyAction, pendingActions } from '../engine/game.js';
 import { deriveHighlights } from '../engine/highlights.js';
-import { renderPrompt, visibleEvents } from '../engine/prompts.js';
+import { markSeen, renderPrompt, visibleEvents } from '../engine/prompts.js';
 import { computeResult } from '../engine/scoring.js';
 import { CARD_VALUES, createGame } from '../engine/setup.js';
 import { RuleError, type GameState } from '../engine/types.js';
@@ -171,6 +171,27 @@ describe('prompts', () => {
     const d1 = renderPrompt(s, a1, { persona: '', full: false });
     expect(d1).not.toContain('"first"');
     expect(d1).toContain('second');
+  });
+});
+
+describe('seen cursor', () => {
+  it('shows a whisper that arrived before my own move in the same phase', () => {
+    let s = fresh();
+    for (const id of s.current.speakOrder) s = applyAction(s, id, { notes: '', say: 'x' });
+    const b = s.current.proposer; // will be prompted again for the proposal
+    const a = s.agents.map((x) => x.id).find((id) => id !== b) as string;
+    // Both are prompted for whispers at the same moment.
+    s = markSeen(markSeen(s, a), b);
+    s = applyAction(s, a, { notes: '', whispers: [{ to: b, text: 'secret for b' }] });
+    s = applyAction(s, b, { notes: '', whispers: [{ to: a, text: 'secret for a' }] });
+    for (const id of s.agents.map((x) => x.id).filter((id) => id !== a && id !== b)) s = applyAction(s, id, { notes: '', whispers: [] });
+    // b's next prompt must include a's whisper even though a acted before b did.
+    const promptB = renderPrompt(s, b, { persona: '', full: false });
+    expect(promptB).toContain('secret for b');
+    expect(promptB).not.toContain('secret for a'); // own whisper is not repeated
+    const seenA = visibleEvents(s, a, s.seen?.[a], true).map(({ ev }) => ev);
+    expect(seenA.some((ev) => ev.type === 'whisper' && ev.text === 'secret for a')).toBe(true);
+    expect(seenA.some((ev) => ev.type === 'whisper' && ev.text === 'secret for b')).toBe(false);
   });
 });
 

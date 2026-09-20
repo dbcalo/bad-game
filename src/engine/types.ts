@@ -95,6 +95,8 @@ export interface GameState {
   phase: Phase;
   current: RoundState;
   events: GameEvent[];
+  /** Per agent: index of the first event not yet shown to them. Maintained by markSeen. */
+  seen?: Record<AgentId, number>;
   result?: GameResult;
 }
 

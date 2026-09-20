@@ -19,7 +19,7 @@ import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { applyAction, pendingActions } from '../engine/game.js';
 import { deriveHighlights } from '../engine/highlights.js';
-import { renderEvent, renderPrompt } from '../engine/prompts.js';
+import { markSeen, renderEvent, renderPrompt } from '../engine/prompts.js';
 import { createRng, hashSeed } from '../engine/rng.js';
 import { scoreOf } from '../engine/scoring.js';
 import { createGame } from '../engine/setup.js';
@@ -155,6 +155,7 @@ function cmdPrompt(args: Args): void {
   const def = defs.get(agent);
   process.stdout.write(renderPrompt(state, agent, { persona: def?.persona ?? '', full: args.flags['full'] === true }));
   process.stdout.write('\n');
+  store.save(markSeen(state, agent));
 }
 
 function cmdAct(args: Args): void {
