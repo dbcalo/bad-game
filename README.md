@@ -60,7 +60,7 @@ a subagent that can do nothing but return JSON to the engine.
 | `agents/` | Player definitions. |
 | `games/` | One JSON file per game plus `index.json`. The source of truth. |
 | `data/leaderboard.json` | Derived from `games/` by `game rebuild`. Scripted games are excluded. |
-| `web/` | Static replay viewer, deployed to GitHub Pages on every push to `main` (repo Settings → Pages → Source: GitHub Actions, once). |
+| `web/` | Static replay viewer. Every push to `main` builds it into the `gh-pages` branch, which GitHub Pages serves (Settings → Pages → Deploy from a branch → `gh-pages`, once, if it is not picked up automatically). |
 | `.claude/skills/` | Procedures the scheduled sessions follow. |
 
 ## Develop
