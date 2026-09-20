@@ -14,6 +14,10 @@ interface McpLike {
   callTool(server: string, tool: string, input?: unknown, options?: unknown): Promise<{ content?: unknown; payload?: unknown }>;
   invalidate(server?: string, tool?: string, input?: unknown): Promise<void>;
 }
+interface PermissionsLike {
+  state(name: string): Promise<string>;
+  request(names?: readonly string[]): Promise<Record<string, string>>;
+}
 interface ClaudeLike {
   use(name: string): Promise<unknown>;
 }
@@ -45,6 +49,29 @@ function mcp(): Promise<McpLike | null> {
 export function viaConnector(): boolean {
   return Boolean(claude()?.use);
 }
+
+let consentAsked = false;
+
+/**
+ * Ask the viewer to allow the GitHub connector for this page before the first
+ * call, so the runtime never has to refuse a call for lack of consent. Safe to
+ * call repeatedly: a decision made this page load is not re-asked.
+ */
+async function ensureConsent(): Promise<void> {
+  const c = claude();
+  if (!c?.use || consentAsked) return;
+  consentAsked = true;
+  try {
+    const perms = (await c.use('permissions')) as PermissionsLike | null;
+    if (!perms) return;
+    const state = await perms.state(`mcp:${SERVER}`).catch(() => 'unavailable');
+    if (state === 'prompt') await perms.request([`mcp:${SERVER}`]);
+  } catch {
+    /* consent stays lazy; the call itself will ask */
+  }
+}
+
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 /** Pull JSON out of a get_file_contents result, whose text block starts with a short preamble. */
 function parseFileResult(result: { content?: unknown; payload?: unknown }): unknown {
@@ -78,17 +105,24 @@ function parseFileResult(result: { content?: unknown; payload?: unknown }): unkn
 export async function loadJson<T>(path: string, fresh = false): Promise<T> {
   const m = await mcp();
   if (m) {
-    try {
-      const result = await m.callTool(
-        SERVER,
-        'get_file_contents',
-        { ...REPO, path },
-        { cache: fresh ? { staleTime: 0, refresh: true } : { staleTime: 60_000 } },
-      );
-      return parseFileResult(result) as T;
-    } catch (e) {
-      const err = e as { code?: string; message?: string };
-      throw new DataError(err.code ?? 'upstream_error', err.message ?? 'Connector call failed.');
+    await ensureConsent();
+    const call = () =>
+      m.callTool(SERVER, 'get_file_contents', { ...REPO, path }, { cache: fresh ? { staleTime: 0, refresh: true } : { staleTime: 60_000 } });
+    let attempt = 0;
+    for (;;) {
+      try {
+        return parseFileResult(await call()) as T;
+      } catch (e) {
+        const err = e as { code?: string; message?: string; retryable?: boolean; retryAfterMs?: number };
+        // The runtime marks a call retryable when, for example, consent could
+        // not be asked at that instant. One retry after its suggested delay.
+        if (err.retryable && attempt === 0) {
+          attempt = 1;
+          await sleep(Math.min(err.retryAfterMs ?? 1500, 10_000) + Math.random() * 500);
+          continue;
+        }
+        throw new DataError(err.code ?? 'upstream_error', err.message ?? 'Connector call failed.');
+      }
     }
   }
   const base = import.meta.env.BASE_URL;
@@ -112,7 +146,10 @@ export function explain(e: unknown): string {
     case 'needs_reauth':
       return 'Your GitHub connector needs to be reconnected in claude.ai Settings → Connectors.';
     case 'not_in_manifest':
+    case 'consent_required':
       return 'GitHub access was declined for this page. Allow it when asked, or reload to be asked again.';
+    case 'upstream_error':
+      return 'GitHub access for this page is not confirmed yet. Tap Refresh; if a permission prompt appears, allow GitHub.';
     case 'server_unavailable':
     case 'rate_limited':
       return 'GitHub did not answer in time. Tap Refresh to try again.';
