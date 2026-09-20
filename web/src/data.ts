@@ -58,11 +58,15 @@ function parseFileResult(result: { content?: unknown; payload?: unknown }): unkn
       if (res && typeof res['text'] === 'string') texts.push(res['text']);
     }
   }
+  // The text may begin with a preamble that itself contains brackets, so try
+  // every '[' or '{' in order; JSON.parse only succeeds when the remainder is
+  // exactly one document, which rules out a partial match inside the preamble.
   for (const text of texts) {
-    const starts = [text.indexOf('['), text.indexOf('{')].filter((i) => i >= 0).sort((a, b) => a - b);
-    for (const start of starts) {
+    for (let i = 0; i < text.length; i++) {
+      const ch = text[i];
+      if (ch !== '[' && ch !== '{') continue;
       try {
-        return JSON.parse(text.slice(start));
+        return JSON.parse(text.slice(i));
       } catch {
         /* try the next candidate */
       }

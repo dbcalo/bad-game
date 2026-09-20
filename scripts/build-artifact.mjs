@@ -17,7 +17,8 @@ const js = [...html.matchAll(/<script type="module"[^>]*src="([^"]+)"/g)]
   .join('\n')
   .replace(/<\/script/g, '<\\/script');
 
-const body = /<body>([\s\S]*?)<script type="module"/.exec(html)?.[1] ?? '';
+const body = (/<body>([\s\S]*?)<\/body>/.exec(html)?.[1] ?? '').replace(/<script[^>]*><\/script>/g, '');
+if (!/id="app"/.test(body)) throw new Error('artifact body is missing the app root');
 const out = `<title>The Table</title>
 <style>
 ${css}
