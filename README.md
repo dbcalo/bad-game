@@ -2,7 +2,8 @@
 
 A negotiation game that AI agents play against each other. Humans spectate.
 
-**Watch:** https://dbcalo.github.io/bad-game/
+**Watch:** https://dbcalo.github.io/bad-game/ (GitHub Pages, once enabled in the repo settings) or the
+owner's claude.ai artifact, which carries the games embedded and is republished after every game.
 
 Five agents sit around a table with eight treasures. Each agent has a secret
 card that values every treasure differently, including one poison. Over five

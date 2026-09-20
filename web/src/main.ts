@@ -2,7 +2,7 @@ import { deriveHighlights, type Highlight } from '../../src/engine/highlights.js
 import { rulesText } from '../../src/engine/prompts.js';
 import type { AgentId, GameEvent, GameState, TreasureId } from '../../src/engine/types.js';
 import type { AgentStanding } from '../../src/engine/elo.js';
-import { explain, loadJson, onStatus, refresh, viaConnector } from './data.js';
+import { explain, isLive, loadJson, onStatus, refresh, snapshotTakenAt, useSnapshotAgain, viaConnector } from './data.js';
 
 interface GameSummary {
   id: string;
@@ -55,8 +55,10 @@ async function route(): Promise<void> {
     else if (hash === 'rules') renderRules();
     else await renderHome();
   } catch (e) {
-    app.innerHTML = `<div class="card"><h2>Could not load</h2><p class="muted">${esc(explain(e))}</p><p><button id="retry" class="primary">Refresh</button></p><details><summary class="small muted">Details</summary><ul id="status" class="small muted hl-list">${statusLog.map((l) => `<li>${esc(l)}</li>`).join('')}</ul></details></div>`;
+    const canFallBack = snapshotTakenAt() !== null && isLive();
+    app.innerHTML = `<div class="card"><h2>Could not load live data</h2><p class="muted">${esc(explain(e))}</p><p class="row"><button id="retry" class="primary">Try again</button>${canFallBack ? '<button id="snap">Show the built-in copy</button>' : ''}</p><details><summary class="small muted">Details</summary><ul id="status" class="small muted hl-list">${statusLog.map((l) => `<li>${esc(l)}</li>`).join('')}</ul></details></div>`;
     app.querySelector('#retry')?.addEventListener('click', () => void refresh().then(route));
+    app.querySelector('#snap')?.addEventListener('click', () => { useSnapshotAgain(); void route(); });
   }
 }
 window.addEventListener('hashchange', () => void route());
@@ -73,7 +75,8 @@ async function renderHome(): Promise<void> {
   const inProgress = live.filter((g) => g.phase !== 'ended');
   app.innerHTML = `
     <h1>The Table</h1>
-    <p class="muted">Five AI agents, eight treasures, secret cards, five rounds of talk, whispers, and votes. Nobody reviews the games. You just watch.${viaConnector() ? ' <span class="small">Reading live from GitHub through your connector.</span>' : ''}</p>
+    <p class="muted">Five AI agents, eight treasures, secret cards, five rounds of talk, whispers, and votes. Nobody reviews the games. You just watch.</p>
+    ${sourceNote()}
     ${inProgress.length ? `<div class="card"><strong>Game in progress:</strong> ${inProgress.map((g) => `<a href="#/g/${g.id}">${g.id}</a> (round ${g.round})`).join(', ')}</div>` : ''}
     <h2>Leaderboard</h2>
     <div class="card">${leaderboardTable(lb)}</div>
@@ -81,6 +84,15 @@ async function renderHome(): Promise<void> {
     <div class="games">${(live.length ? live : games).slice(0, 6).map(gameCard).join('') || '<p class="muted">No games yet.</p>'}</div>
     <p class="small"><a href="#/games">All games →</a></p>
   `;
+}
+
+function sourceNote(): string {
+  const taken = snapshotTakenAt();
+  if (taken && !isLive()) {
+    return `<p class="small muted">Showing the copy published with this page (${esc(fmtDate(taken))}).${viaConnector() ? ' Tap ↻ to read the latest from GitHub through your connector.' : ''}</p>`;
+  }
+  if (viaConnector()) return `<p class="small muted">Reading live from GitHub through your connector.</p>`;
+  return '';
 }
 
 function leaderboardTable(lb: Leaderboard): string {

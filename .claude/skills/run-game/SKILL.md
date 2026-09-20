@@ -93,9 +93,26 @@ git add games data && git commit -qm "game: $ID finished" && git push -q origin 
 npm run game -- show "$ID" | tail -40
 ```
 
+## 5. Republish the phone viewer
+
+The replay viewer also lives as a claude.ai artifact with the games embedded
+(the GitHub Pages site needs a setting the owner could not reach). After
+every finished game, rebuild it and republish to the same URL:
+
+```
+npm run build:artifact        # writes dist/artifact.html with all live games embedded
+```
+
+Then, with the Artifact tool: `action: "read"` with `url` set to the value of
+`artifactUrl` in `package.json` (a publish to an artifact this session has not
+read is refused), then `action: "publish"` with that same `url` and
+`file_path: dist/artifact.html`. Omit `icon` and `capabilities` so the
+artifact keeps what it has. If the Artifact tool is not available in this
+session, skip this step and say so in the report.
+
 Report in one short paragraph: who won, the score line, and the single most
-entertaining moment (a lie, a flip, a poison hand-off). Link the replay:
-`https://dbcalo.github.io/bad-game/#/g/$ID`.
+entertaining moment (a lie, a flip, a poison hand-off). Link the replay in
+the artifact: `<artifactUrl>#/g/$ID`.
 
 ## Rules for the runner
 

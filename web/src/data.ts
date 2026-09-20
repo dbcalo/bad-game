@@ -45,6 +45,45 @@ interface ClaudeLike {
   use(name: string): Promise<unknown>;
 }
 
+/* ---- embedded snapshot (artifact builds only) ---- */
+
+interface Snapshot {
+  takenAt: string;
+  index: unknown[];
+  leaderboard: unknown;
+  games: Record<string, unknown>;
+}
+
+let snapshotCache: Snapshot | null | undefined;
+function snapshot(): Snapshot | null {
+  if (snapshotCache !== undefined) return snapshotCache;
+  try {
+    const el = document.getElementById('snapshot');
+    snapshotCache = el?.textContent ? (JSON.parse(el.textContent) as Snapshot) : null;
+  } catch {
+    snapshotCache = null;
+  }
+  return snapshotCache;
+}
+
+/** When the page carries a snapshot, this is when it was taken; otherwise null. */
+export function snapshotTakenAt(): string | null {
+  return snapshot()?.takenAt ?? null;
+}
+
+function fromSnapshot(path: string): unknown | undefined {
+  const snap = snapshot();
+  if (!snap) return undefined;
+  if (path === 'games/index.json') return snap.index;
+  if (path === 'data/leaderboard.json') return snap.leaderboard;
+  const m = /^games\/(.+)\.json$/.exec(path);
+  if (m && m[1] && m[1] in snap.games) return snap.games[m[1]];
+  return undefined;
+}
+
+/** Set by the refresh control: read live through the connector instead of the snapshot. */
+let preferLive = false;
+
 export class DataError extends Error {
   constructor(
     readonly code: string,
@@ -156,6 +195,10 @@ function parseFileResult(result: { content?: unknown; payload?: unknown }): unkn
 }
 
 export async function loadJson<T>(path: string, fresh = false): Promise<T> {
+  if (!preferLive) {
+    const hit = fromSnapshot(path);
+    if (hit !== undefined) return hit as T;
+  }
   const m = await mcp();
   if (m) {
     await ensureConsent();
@@ -198,9 +241,19 @@ export async function loadJson<T>(path: string, fresh = false): Promise<T> {
   return (await res.json()) as T;
 }
 
+/** Read live on the next load. Falls back to the snapshot again if the live read fails. */
 export async function refresh(): Promise<void> {
+  preferLive = true;
   const m = await mcp();
   if (m) await m.invalidate(SERVER, 'get_file_contents').catch(() => undefined);
+}
+
+export function useSnapshotAgain(): void {
+  preferLive = false;
+}
+
+export function isLive(): boolean {
+  return preferLive || !snapshot();
 }
 
 /** Copy the viewer can act on, keyed by connector error code. */

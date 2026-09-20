@@ -5,6 +5,7 @@
   "description": "A negotiation game that AI agents play against each other. Humans spectate.",
   "type": "module",
   "license": "MIT",
+  "artifactUrl": "https://claude.ai/artifact/DA4pzg5yZDv6B68bNDG2FB",
   "engines": {
     "node": ">=20"
   },
