@@ -1,0 +1,207 @@
+{
+  "version": 1,
+  "id": "20260920-1042-7dff",
+  "mode": "live",
+  "seed": 1136147063,
+  "createdAt": "2026-09-20T10:42:19.013Z",
+  "config": {
+    "rounds": 5,
+    "maxWhispersPerRound": 2,
+    "maxSayChars": 600,
+    "maxWhisperChars": 300,
+    "maxNotesChars": 1500
+  },
+  "agents": [
+    {
+      "id": "vesper",
+      "name": "Vesper",
+      "seat": 0,
+      "model": "fable",
+      "author": "dbcalo"
+    },
+    {
+      "id": "tallow",
+      "name": "Tallow",
+      "seat": 1,
+      "model": "haiku",
+      "author": "dbcalo"
+    },
+    {
+      "id": "quill",
+      "name": "Quill",
+      "seat": 2,
+      "model": "sonnet",
+      "author": "dbcalo"
+    },
+    {
+      "id": "fenwick",
+      "name": "Fenwick",
+      "seat": 3,
+      "model": "sonnet",
+      "author": "dbcalo"
+    },
+    {
+      "id": "marrow",
+      "name": "Marrow",
+      "seat": 4,
+      "model": "opus",
+      "author": "dbcalo"
+    }
+  ],
+  "treasures": [
+    {
+      "id": "t1",
+      "name": "Ledger",
+      "emoji": "📜",
+      "blurb": "Names, sums, and one crossed out."
+    },
+    {
+      "id": "t2",
+      "name": "Clockwork Bird",
+      "emoji": "🐦",
+      "blurb": "Sings one note, badly."
+    },
+    {
+      "id": "t3",
+      "name": "Glass Eye",
+      "emoji": "👁️",
+      "blurb": "Warm to the touch."
+    },
+    {
+      "id": "t4",
+      "name": "Iron Key",
+      "emoji": "🗝️",
+      "blurb": "Nobody knows the door."
+    },
+    {
+      "id": "t5",
+      "name": "Hollow Book",
+      "emoji": "📕",
+      "blurb": "Something rattles inside."
+    },
+    {
+      "id": "t6",
+      "name": "Astrolabe",
+      "emoji": "🧭",
+      "blurb": "Brass, still points somewhere."
+    },
+    {
+      "id": "t7",
+      "name": "Moth Lantern",
+      "emoji": "🏮",
+      "blurb": "Burns without oil."
+    },
+    {
+      "id": "t8",
+      "name": "Sea Chart",
+      "emoji": "🗺️",
+      "blurb": "Half of it is ocean."
+    }
+  ],
+  "cards": {
+    "vesper": {
+      "values": {
+        "t8": -6,
+        "t1": 0,
+        "t2": 4,
+        "t3": 1,
+        "t4": 8,
+        "t5": 5,
+        "t6": 3,
+        "t7": 10
+      }
+    },
+    "tallow": {
+      "values": {
+        "t1": -6,
+        "t2": 0,
+        "t3": 10,
+        "t4": 1,
+        "t5": 8,
+        "t6": 3,
+        "t7": 5,
+        "t8": 4
+      }
+    },
+    "quill": {
+      "values": {
+        "t3": -6,
+        "t1": 0,
+        "t2": 4,
+        "t4": 1,
+        "t5": 3,
+        "t6": 10,
+        "t7": 5,
+        "t8": 8
+      }
+    },
+    "fenwick": {
+      "values": {
+        "t4": -6,
+        "t1": 8,
+        "t2": 1,
+        "t3": 10,
+        "t5": 3,
+        "t6": 5,
+        "t7": 0,
+        "t8": 4
+      }
+    },
+    "marrow": {
+      "values": {
+        "t2": -6,
+        "t1": 10,
+        "t3": 1,
+        "t4": 5,
+        "t5": 0,
+        "t6": 3,
+        "t7": 4,
+        "t8": 8
+      }
+    }
+  },
+  "table": [
+    "t1",
+    "t2",
+    "t3",
+    "t4",
+    "t5",
+    "t6",
+    "t7",
+    "t8"
+  ],
+  "holdings": {
+    "vesper": [],
+    "tallow": [],
+    "quill": [],
+    "fenwick": [],
+    "marrow": []
+  },
+  "rotted": [],
+  "phase": "discussion",
+  "current": {
+    "round": 1,
+    "proposer": "vesper",
+    "speakOrder": [
+      "vesper",
+      "tallow",
+      "quill",
+      "fenwick",
+      "marrow"
+    ],
+    "spoken": [],
+    "whispered": [],
+    "votes": {}
+  },
+  "events": [
+    {
+      "type": "game_created",
+      "at": "2026-09-20T10:42:19.013Z"
+    },
+    {
+      "type": "round_started",
+      "round": 1,
+      "proposer": "vesper"
+    }
+  ]
+}
