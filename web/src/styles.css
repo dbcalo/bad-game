@@ -1,0 +1,160 @@
+:root {
+  --bg: #f6f3ee;
+  --bg-2: #ffffff;
+  --ink: #1d1a17;
+  --ink-2: #5d564e;
+  --line: #e3ddd4;
+  --accent: #b5471d;
+  --accent-ink: #ffffff;
+  --note: #f1ebdf;
+  --whisper: #ebe6f5;
+  --whisper-ink: #4a3b7a;
+  --good: #2e7d4f;
+  --bad: #b3261e;
+  --warn: #9a6b00;
+  --shadow: 0 1px 2px rgb(0 0 0 / 6%);
+  --radius: 12px;
+  --gutter: 16px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #17151a;
+    --bg-2: #201d24;
+    --ink: #f2eee8;
+    --ink-2: #aaa39a;
+    --line: #322d38;
+    --accent: #f08a5c;
+    --accent-ink: #1d1a17;
+    --note: #262129;
+    --whisper: #29233a;
+    --whisper-ink: #c9bdf0;
+    --good: #6cc48f;
+    --bad: #f28b82;
+    --warn: #e6b450;
+  }
+}
+:root[data-theme='dark'] {
+  --bg: #17151a;
+  --bg-2: #201d24;
+  --ink: #f2eee8;
+  --ink-2: #aaa39a;
+  --line: #322d38;
+  --accent: #f08a5c;
+  --accent-ink: #1d1a17;
+  --note: #262129;
+  --whisper: #29233a;
+  --whisper-ink: #c9bdf0;
+  --good: #6cc48f;
+  --bad: #f28b82;
+  --warn: #e6b450;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.45 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+button {
+  font: inherit;
+  color: var(--ink);
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+button[aria-pressed='true'], button.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+button:disabled { opacity: 0.5; cursor: default; }
+h1, h2, h3 { line-height: 1.2; margin: 0 0 8px; }
+h1 { font-size: 1.6rem; }
+h2 { font-size: 1.2rem; margin-top: 24px; }
+h3 { font-size: 1rem; }
+.muted { color: var(--ink-2); }
+.small { font-size: 0.85rem; }
+code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9em; }
+
+.top {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 12px var(--gutter);
+  border-bottom: 1px solid var(--line);
+  background: var(--bg-2);
+  position: sticky; top: 0; z-index: 5;
+}
+.brand { font-weight: 700; color: var(--ink); }
+.top nav { display: flex; gap: 14px; font-size: 0.95rem; }
+.app { max-width: 880px; margin: 0 auto; padding: 16px var(--gutter) 48px; }
+
+.card {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  box-shadow: var(--shadow);
+}
+.stack > * + * { margin-top: 10px; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.grow { flex: 1; }
+
+table.board { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.board th, .board td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); }
+.board th { font-size: 0.8rem; color: var(--ink-2); font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; }
+.board td.num, .board th.num { text-align: right; }
+.board tr:last-child td { border-bottom: 0; }
+
+.games { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.game-card { display: block; color: inherit; }
+.game-card:hover { text-decoration: none; border-color: var(--accent); }
+.badge { display: inline-block; font-size: 0.72rem; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--line); color: var(--ink-2); }
+.badge.live { border-color: var(--good); color: var(--good); }
+.badge.scripted { border-color: var(--warn); color: var(--warn); }
+
+/* replay */
+.replay-head { position: sticky; top: 52px; z-index: 4; background: var(--bg); padding: 8px 0; margin: -8px 0 8px; }
+.players { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px; }
+.player { padding: 10px; cursor: pointer; }
+.player.active { outline: 2px solid var(--accent); }
+.player .name { font-weight: 700; display: flex; justify-content: space-between; gap: 6px; }
+.player .score { font-variant-numeric: tabular-nums; }
+.player .held { min-height: 1.4em; font-size: 1.1rem; letter-spacing: 2px; }
+.player .cardvals { display: none; font-size: 0.78rem; margin-top: 6px; }
+.player.revealed .cardvals { display: block; }
+.cardvals span { display: inline-block; margin: 1px 6px 1px 0; }
+.cardvals .poison { color: var(--bad); font-weight: 700; }
+.cardvals .prize { color: var(--good); font-weight: 700; }
+
+.table-strip { display: flex; gap: 6px; flex-wrap: wrap; }
+.treasure { border: 1px solid var(--line); border-radius: 8px; padding: 4px 8px; font-size: 0.9rem; background: var(--bg-2); }
+.treasure.rotted { opacity: 0.45; text-decoration: line-through; }
+
+.controls { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.controls input[type='range'] { flex: 1 1 160px; min-width: 120px; }
+
+.feed { display: flex; flex-direction: column; gap: 8px; }
+.ev { padding: 10px 12px; border-radius: var(--radius); border: 1px solid var(--line); background: var(--bg-2); }
+.ev .who { font-weight: 700; }
+.ev .meta { color: var(--ink-2); font-size: 0.8rem; margin-left: 6px; }
+.ev.notes { background: var(--note); border-style: dashed; font-style: italic; color: var(--ink-2); font-size: 0.92rem; }
+.ev.whisper { background: var(--whisper); color: var(--whisper-ink); border-color: transparent; }
+.ev.round { background: transparent; border: 0; text-align: center; color: var(--ink-2); font-weight: 600; padding: 14px 0 2px; }
+.ev.proposal { border-color: var(--accent); }
+.ev.result.passed { border-color: var(--good); }
+.ev.result.failed { border-color: var(--bad); }
+.ev.rot { color: var(--bad); }
+.ev.end { border-color: var(--accent); background: var(--note); }
+.ev.current { box-shadow: 0 0 0 2px var(--accent); }
+.interests { margin-top: 4px; font-size: 0.8rem; color: var(--ink-2); }
+.interests .want { color: var(--good); }
+.interests .avoid { color: var(--bad); }
+.alloc { margin: 6px 0 0; padding-left: 18px; }
+.flag { display: inline-block; margin-left: 6px; font-size: 0.75rem; padding: 1px 7px; border-radius: 999px; background: var(--bad); color: #fff; }
+.flag.info { background: var(--warn); }
+
+.hl-list { margin: 0; padding-left: 18px; }
+.hl-list li { margin: 4px 0; }
+pre.rules { white-space: pre-wrap; font: inherit; margin: 0; }

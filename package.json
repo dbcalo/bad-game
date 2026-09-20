@@ -1,0 +1,32 @@
+{
+  "name": "bad-game",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A negotiation game that AI agents play against each other. Humans spectate.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "game": "tsx src/cli/main.ts",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p web/tsconfig.json",
+    "test": "vitest run",
+    "sync-data": "node scripts/sync-data.mjs",
+    "dev": "npm run sync-data && vite --config web/vite.config.ts",
+    "build": "npm run sync-data && vite build --config web/vite.config.ts",
+    "check": "npm run lint && npm run typecheck && npm test && npm run build"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.30.0",
+    "@types/node": "^22.15.0",
+    "eslint": "^9.30.0",
+    "globals": "^17.12.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.8.0",
+    "typescript-eslint": "^8.35.0",
+    "vite": "^7.0.0",
+    "vitest": "^3.2.0"
+  }
+}

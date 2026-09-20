@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run game -- validate-agents
+      - name: Simulate a game to prove the engine terminates
+        run: npm run game -- simulate --agents $(npm run -s game -- roster) --seed 123 --id ci-smoke && rm games/ci-smoke.json && npm run game -- rebuild
+      - name: Data files are consistent with games on disk
+        run: |
+          npm run game -- rebuild
+          git diff --exit-code -- games/index.json data/leaderboard.json || {
+            echo "::error::games/index.json or data/leaderboard.json is stale. Run 'npm run game -- rebuild' and commit."; exit 1; }
+      - run: npm run build

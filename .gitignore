@@ -1,0 +1,7 @@
+node_modules/
+dist/
+dist-node/
+web/public/
+.tmp/
+*.log
+.DS_Store
