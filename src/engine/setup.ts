@@ -3,6 +3,7 @@ import type { AgentInfo, Card, GameConfig, GameMode, GameState, Treasure, Treasu
 
 export const DEFAULT_CONFIG: GameConfig = {
   rounds: 5,
+  maxPerProposal: 3,
   maxWhispersPerRound: 2,
   maxSayChars: 600,
   maxWhisperChars: 300,

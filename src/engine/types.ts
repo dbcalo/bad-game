@@ -52,6 +52,8 @@ export type GameEvent =
 
 export interface GameConfig {
   rounds: number;
+  /** Most treasures one proposal may move. Undefined means unlimited (games recorded before the cap). */
+  maxPerProposal?: number;
   maxWhispersPerRound: number;
   maxSayChars: number;
   maxWhisperChars: number;

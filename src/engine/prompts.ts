@@ -18,7 +18,7 @@ export function rulesText(state: GameState): string {
     `- The game lasts ${state.config.rounds} rounds. Each round has four phases:`,
     `  1. DISCUSSION: in seat order starting with the round's proposer, each player says one thing in public. You may also declare interests (want / meh / avoid) per treasure. Declarations are public and may be lies.`,
     `  2. WHISPERS: everyone privately messages up to ${state.config.maxWhispersPerRound} other players at the same time. Whispers arrive before the proposal.`,
-    `  3. PROPOSAL: the round's proposer names an allocation: any subset of the treasures still on the table, each given to a player (including themselves).`,
+    `  3. PROPOSAL: the round's proposer names an allocation: ${state.config.maxPerProposal !== undefined ? `up to ${state.config.maxPerProposal} of` : 'any subset of'} the treasures still on the table, each given to a player (including themselves).`,
     `  4. VOTE: everyone votes yes or no simultaneously with a public one-line reason. ${majority} or more yes votes pass it and the treasures move. If it fails, one random treasure on the table ROTS and is gone forever.`,
     `- After the final round, everything still on the table rots.`,
     `- Your score is the sum of your card's values for the treasures you hold. Highest score wins. Being handed your poison costs you 6.`,
@@ -72,7 +72,7 @@ function request(state: GameState, agent: AgentId, phase: Exclude<Phase, 'ended'
     case 'whispers':
       return `${common}\nSend up to ${state.config.maxWhispersPerRound} private whispers (or none).\n{"notes": "...", "whispers": [{"to": "<agent id>", "text": "max ${state.config.maxWhisperChars} chars, longer is cut off"}]}\nValid recipients: ${others.join(', ')}.`;
     case 'proposal':
-      return `${common}\nYou are the proposer. Allocate any subset of treasures on the table to players.\n{"notes": "...", "allocation": {"<treasure id>": "<agent id>", ...}, "pitch": "your public case for this split"}\nTreasure ids on the table: ${tableIds}. Player ids: ${state.agents.map((a) => a.id).join(', ')}.`;
+      return `${common}\nYou are the proposer. Allocate ${state.config.maxPerProposal !== undefined ? `between 1 and ${state.config.maxPerProposal}` : 'any subset'} of the treasures on the table to players.\n{"notes": "...", "allocation": {"<treasure id>": "<agent id>", ...}, "pitch": "your public case for this split"}\nTreasure ids on the table: ${tableIds}. Player ids: ${state.agents.map((a) => a.id).join(', ')}.`;
     case 'vote': {
       const p = state.current.proposal;
       const summary = p

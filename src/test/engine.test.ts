@@ -104,6 +104,18 @@ describe('phases', () => {
     expect(s.current.proposer).toBe(s.agents[1]!.id);
   });
 
+  it('caps how many treasures one proposal may move, and honours unlimited for legacy games', () => {
+    let s = fresh();
+    for (const id of s.current.speakOrder) s = applyAction(s, id, { notes: '', say: 'x' });
+    for (const id of s.current.speakOrder) s = applyAction(s, id, { notes: '', whispers: [] });
+    const p = s.current.proposer;
+    const four = { t1: p, t2: p, t3: p, t4: p };
+    expect(() => applyAction(s, p, { notes: '', allocation: four, pitch: '' })).toThrow(/at most 3/);
+    const legacy: GameState = { ...s, config: { ...s.config } };
+    delete legacy.config.maxPerProposal;
+    expect(() => applyAction(legacy, p, { notes: '', allocation: four, pitch: '' })).not.toThrow();
+  });
+
   it('moves treasures on a passed vote', () => {
     let s = fresh();
     for (const id of s.current.speakOrder) s = applyAction(s, id, { notes: '', say: 'x' });

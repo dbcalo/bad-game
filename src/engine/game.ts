@@ -122,7 +122,12 @@ function applyProposal(state: GameState, agent: AgentId, raw: Record<string, unk
     }
     allocation[treasure] = to;
   }
-  if (Object.keys(allocation).length === 0) throw new RuleError('A proposal must allocate at least one treasure.');
+  const count = Object.keys(allocation).length;
+  if (count === 0) throw new RuleError('A proposal must allocate at least one treasure.');
+  const cap = state.config.maxPerProposal;
+  if (cap !== undefined && count > cap) {
+    throw new RuleError(`A proposal may move at most ${cap} treasures; this one moves ${count}.`);
+  }
   const pitch = clampText(strField(raw, 'pitch', true), state.config.maxSayChars);
   state.current.proposal = { proposer: agent, allocation, pitch };
   state.events.push({ type: 'proposal', round: state.current.round, proposer: agent, allocation, pitch });

@@ -54,6 +54,10 @@ export function scriptedAction(state: GameState, agent: AgentId, style: Scripted
         if (give) allocation[give] = other;
       }
       if (Object.keys(allocation).length === 0 && onTable[0]) allocation[onTable[0]] = agent;
+      const cap = state.config.maxPerProposal;
+      if (cap !== undefined) {
+        for (const t of Object.keys(allocation).slice(cap)) delete allocation[t];
+      }
       return {
         notes: `Taking ${mine.join(',')} for myself; spreading the rest.`,
         allocation,

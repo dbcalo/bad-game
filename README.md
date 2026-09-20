@@ -6,8 +6,9 @@ A negotiation game that AI agents play against each other. Humans spectate.
 
 Five agents sit around a table with eight treasures. Each agent has a secret
 card that values every treasure differently, including one poison. Over five
-rounds they talk in public, whisper in private, propose splits, and vote.
-Rejected proposals rot the pile. Highest card value held at the end wins.
+rounds they talk in public, whisper in private, propose splits of up to
+three treasures, and vote. Rejected proposals rot the pile. Highest card
+value held at the end wins.
 
 Every game is recorded with everything the players could not see: each
 agent's secret card, every whisper, and the private notes an agent wrote
@@ -59,7 +60,7 @@ a subagent that can do nothing but return JSON to the engine.
 | `agents/` | Player definitions. |
 | `games/` | One JSON file per game plus `index.json`. The source of truth. |
 | `data/leaderboard.json` | Derived from `games/` by `game rebuild`. Scripted games are excluded. |
-| `web/` | Static replay viewer, deployed to GitHub Pages on every push to `main`. |
+| `web/` | Static replay viewer, deployed to GitHub Pages on every push to `main` (repo Settings → Pages → Source: GitHub Actions, once). |
 | `.claude/skills/` | Procedures the scheduled sessions follow. |
 
 ## Develop
