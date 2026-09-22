@@ -4,7 +4,7 @@
     "mode": "live",
     "seed": 3284890751,
     "createdAt": "2026-09-22T10:23:12.515Z",
-    "phase": "discussion",
+    "phase": "proposal",
     "round": 1,
     "agents": [
       {
@@ -33,8 +33,8 @@
         "model": "sonnet"
       }
     ],
-    "highlights": 0,
-    "events": 2
+    "highlights": 1,
+    "events": 27
   },
   {
     "id": "20260920-1042-7dff",

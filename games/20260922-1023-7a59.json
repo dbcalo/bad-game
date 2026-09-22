@@ -179,7 +179,7 @@
     "fenwick": []
   },
   "rotted": [],
-  "phase": "discussion",
+  "phase": "proposal",
   "current": {
     "round": 1,
     "proposer": "tallow",
@@ -190,8 +190,20 @@
       "marrow",
       "fenwick"
     ],
-    "spoken": [],
-    "whispered": [],
+    "spoken": [
+      "tallow",
+      "vesper",
+      "quill",
+      "marrow",
+      "fenwick"
+    ],
+    "whispered": [
+      "vesper",
+      "quill",
+      "marrow",
+      "fenwick",
+      "tallow"
+    ],
     "votes": {}
   },
   "events": [
@@ -203,6 +215,209 @@
       "type": "round_started",
       "round": 1,
       "proposer": "tallow"
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "discussion",
+      "agent": "tallow",
+      "text": "I hold the Moth Lantern at 10 and Iron Key at 8—my two jewels. The Astrolabe rounds out my trinity at 5. The Cracked Bell is poison and I will die before taking it. My strategy is simple: I take my three treasures in the proposal. The rest get scraps to sweeten the vote. Anyone who blocks me learns what it means to cross Tallow—I will name them publicly and make sure they taste every rotten treasure. I've seen too many good piles decay while cautious fools dawdle. This is Round 1 of 5, which means it's also potentially the last chance for anyone to grab what matters."
+    },
+    {
+      "type": "say",
+      "round": 1,
+      "agent": "tallow",
+      "text": "Listen closely, friends. I WANT the Moth Lantern—that's mine by right. I also WANT the Iron Key and the Astrolabe. I will AVOID the Cracked Bell like plague. Let me be clear: I will vote NO on any proposal that leaves me with fewer than two treasures. I didn't come to this table to negotiate my way to scraps. I came to take what's worth taking. The rest of you? You can squabble over table scraps, or you can be smart and catch a falling knife.",
+      "interests": {
+        "t4": "want",
+        "t1": "want",
+        "t7": "want",
+        "t5": "avoid"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "discussion",
+      "agent": "vesper",
+      "text": "R1 discussion. My card: Astrolabe 10, Sea Chart 8, Moth Lantern 5, Tin Soldier 4, Iron Key 3, Bell 1, Book 0, Salt Crown POISON -6. Tallow (proposer) declared want Lantern, Key, Astrolabe; avoid Bell; threatens NO unless he gets 2+. Astrolabe conflict with Tallow, so I will not reveal Astrolabe. Sea Chart is unclaimed so far, that is my quiet target this round. Public posture: reasonable centre, backing the idea that a proposal spreading three items across three voters passes. Declared only low/honest: Bell meh, Book meh, Salt Crown avoid (keeps poison away from me). Whisper plan: find whoever declares wants that do not overlap Sea Chart/Astrolabe and offer a cross-round swap; also whisper Tallow: I vote yes on his split if Sea Chart comes to me and he takes Lantern+Key, leaving Astrolabe on the table for later. Watch Quill/Marrow/Fenwick declarations for Sea Chart or Astrolabe competitors. Promises made to me: none yet."
+    },
+    {
+      "type": "say",
+      "round": 1,
+      "agent": "vesper",
+      "text": "Tallow has the right instinct: a proposer who walks away with nothing has wasted the round. But two votes besides your own is the whole game, and nobody votes yes to a split that hands you three named prizes and them a pat on the head. The proposal that passes is three treasures to three different people. Take one of yours, give two others something they actually value, and you have your majority. For my part, the Cracked Bell and Hollow Book leave me cold, and I have no appetite for the Salt Crown. I am easy to please; tell me where the rest of you stand.",
+      "interests": {
+        "t5": "meh",
+        "t6": "meh",
+        "t8": "avoid"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "discussion",
+      "agent": "quill",
+      "text": "My card: Hollow Book=10 (top want), Moth Lantern=8, Salt Crown=5, Cracked Bell=4, Sea Chart=3, Astrolabe=1, Iron Key=0, Tin Soldier=-6 POISON. Tallow wants Moth Lantern/Iron Key/Astrolabe and avoids Cracked Bell -- no overlap with my Hollow Book want, good bloc candidate if Tallow deals straight. Vesper is meh on Hollow Book and avoids Salt Crown -- also low overlap with me on my top item, another bloc candidate. Plan: declare Hollow Book want and Tin Soldier avoid (my real poison) publicly now. In whispers, target Tallow and Vesper since their declared wants don't collide with Hollow Book -- propose a three-way bloc: I back Tallow's Moth Lantern/Iron Key/Astrolabe grab and Vesper's picks, they back me getting Hollow Book. Vote yes on anything that hands me Hollow Book; vote no otherwise unless it's harmless. Track promises -- if Tallow or Vesper breaks this, call it out by round number next turn."
+    },
+    {
+      "type": "say",
+      "round": 1,
+      "agent": "quill",
+      "text": "I'll be straight with you: I WANT the Hollow Book, that's my top pick, full stop. I AVOID the Tin Soldier -- it's my poison, so don't bother offering it to me as a favor. Anyone who puts the Hollow Book on my plate gets my yes vote, guaranteed, no games. Tallow, your wants and mine don't clash at all -- Moth Lantern, Iron Key, Astrolabe are yours to chase, I'm not competing for them. Let's build something that actually passes instead of posturing.",
+      "interests": {
+        "t6": "want",
+        "t3": "avoid"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "discussion",
+      "agent": "marrow",
+      "text": "My card: Cracked Bell 10, Tin Soldier 8, Salt Crown 5, Iron Key 4, Moth Lantern 3, Astrolabe 1, Hollow Book 0, Sea Chart -6 (POISON). Never say Bell is my prize; I called it 'meh' so it becomes a cheap throw-in someone hands me to buy my vote. Never mention Sea Chart at all — silence beats an 'avoid' that invites spite. Ledger so far: Tallow wants t4/t1/t7, avoids t5 — his loud two-treasure demand is a lever, not a fact; watch whether he votes for splits that give him only one. Vesper declared nothing he wants, only what he doesn't — that is a man hiding a 10; he avoids Salt Crown, which means t8 is mine uncontested. Quill claims Hollow Book top and Tin Soldier poison; if true, t3 is free for me too, so my 8 and my 5 have no rivals. Plan: whisper Tallow offering a yes vote for Salt Crown or Tin Soldier, cheap for him since neither is on his list. Vote no on anything handing me nothing. Track votes, not speeches."
+    },
+    {
+      "type": "say",
+      "round": 1,
+      "agent": "marrow",
+      "text": "Short list from me: I want the Salt Crown and the Tin Soldier. Neither is on anyone else's want list, so they cost you nothing. Moth Lantern, Astrolabe, Cracked Bell — meh, take them with my blessing. Tallow, one note from the ledger: three treasures, three names is what passes. Demanding two of them for yourself leaves one seat at a table that needs three yes votes. Give me one thing I asked for and my yes is yours, this round and the next. I don't haggle twice.",
+      "interests": {
+        "t8": "want",
+        "t3": "want",
+        "t4": "meh",
+        "t7": "meh",
+        "t5": "meh"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "discussion",
+      "agent": "fenwick",
+      "text": "Real values: Hollow Book=10 (my best, Quill also wants it - stay quiet, don't compete openly, try to get it via whisper deal or a later proposal instead), Sea Chart=8 (nobody's claimed it - say nothing, quietly angle for it), Tin Soldier=5 (Marrow wants it, Quill's poison - let it go, not worth a fight), Astrolabe=4 (Tallow wants it, low priority for me), Cracked Bell=3 (unclaimed, cheap grab later), Iron Key=-6 POISON (Tallow wants it - perfect, let him have it, never breathe a word), Moth Lantern=1, Salt Crown=0 (worthless to me). Plan: publicly call Hollow Book 'meh' so nobody suspects it's my ten, and fake-want the worthless Salt Crown so I look invested somewhere cheap and can later 'graciously' hand it to Marrow for free goodwill. Whisper Tallow that I'll help him keep two items since he's clearly the strongest player here (flatter him, no specifics). Whisper Quill that I don't even like Hollow Book and will vote however helps them get it, in exchange for a small favor later (vague, unquotable). Vote yes only if I net 3+; otherwise vote no and blame whoever got shut out."
+    },
+    {
+      "type": "say",
+      "round": 1,
+      "agent": "fenwick",
+      "text": "Marrow's got the ledger right and I love the energy - three names, three gifts, everybody walks away smiling. Personally? I could not care less about the Hollow Book, Quill, it's all yours as far as I'm concerned - go get it. If anyone's feeling generous, I'll happily take the Salt Crown off your hands, purely so nobody else has to squabble over it! Let's build something that actually gets three yeses instead of everyone posturing for two rounds straight.",
+      "interests": {
+        "t6": "meh",
+        "t8": "want"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "whispers",
+      "agent": "vesper",
+      "text": "R1 whispers. Declarations: Quill wants Hollow Book (0 to me), poison Tin Soldier. Marrow wants Salt Crown (my poison!) and Tin Soldier. Fenwick wants Salt Crown too, meh on Book. Tallow wants Lantern, Key, Astrolabe. Nobody has claimed Sea Chart (my 8) — it is free money. Astrolabe (my 10) contested by Tallow; save that fight for a round I propose or when Tallow is short of votes. Plan: pitch Tallow the passing split Lantern->Tallow, Book->Quill, Sea Chart->me; that is three yes votes (Tallow, Quill, me). Pact with Quill: mutual yes on Book/Sea Chart, then keep pairing. Marrow is a natural dumping ground for Salt Crown later; Fenwick too. Track: Marrow promised yes this round and next to whoever gives him one item. Quill promised guaranteed yes for Book. No promises to me yet."
+    },
+    {
+      "type": "whisper",
+      "round": 1,
+      "from": "vesper",
+      "to": "tallow",
+      "text": "Here is your three votes: Moth Lantern to you, Hollow Book to Quill, Sea Chart to me. Quill already swore yes for the Book, and I vote yes the moment I see the Chart. Nobody else wants the Chart, so it costs you nothing. Propose that and it passes clean; next round I back your Key."
+    },
+    {
+      "type": "whisper",
+      "round": 1,
+      "from": "vesper",
+      "to": "quill",
+      "text": "Your Book and my Sea Chart don't touch. I've told Tallow the split that passes is Lantern for him, Book for you, Chart for me. Vote yes on that and I vote yes with you, and we keep pairing every round. Also: I'll never send the Tin Soldier your way."
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "whispers",
+      "agent": "quill",
+      "text": "Fenwick explicitly ceded Hollow Book to me (meh) and wants Salt Crown -- zero conflict with my top want (Hollow Book=10), and Salt Crown is only worth 5 to me, so trading it away for a guaranteed Hollow Book is a clean win. Marrow wants Salt Crown too -- that's a fight between Marrow and Fenwick, not me, and Marrow also wants Tin Soldier which is my poison, no conflict there either. Tallow is proposer and wants Moth Lantern/Iron Key/Astrolabe -- none of which I've publicly claimed, so I can trade support for those in exchange for Hollow Book landing on my plate. Plan: lock Fenwick as an ally (I get Hollow Book, they get Salt Crown, mutual yes votes). Push Tallow to build the proposal around Hollow Book->me, Moth Lantern->Tallow, Salt Crown->Fenwick -- that's three names, three gifts, exactly what Marrow said passes, and I get my guaranteed yes. If Tallow tries to grab two seats like they threatened, remind them Marrow already called that out."
+    },
+    {
+      "type": "whisper",
+      "round": 1,
+      "from": "quill",
+      "to": "fenwick",
+      "text": "Deal: you take Salt Crown, I take Hollow Book, we both vote yes for each other no matter who else is on the ticket. I'll push Tallow toward that exact split this round."
+    },
+    {
+      "type": "whisper",
+      "round": 1,
+      "from": "quill",
+      "to": "tallow",
+      "text": "Build it as three names, three gifts: Moth Lantern to you, Hollow Book to me, Salt Crown to Fenwick. That's a guaranteed yes from me and Fenwick both -- two votes locked without touching Iron Key or Astrolabe."
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "whispers",
+      "agent": "marrow",
+      "text": "Fenwick claimed the Salt Crown the instant I named it — either he wants it or he is pricing my vote. Either way I do not fight for a 5 when an 8 sits unclaimed: Quill calls Tin Soldier his poison, Tallow never listed it, Fenwick never listed it. t3 is free money. So I quietly pivot my ask to Tin Soldier and let Fenwick have the Crown; a man who owes you a favour is worth more than 5 points in round 1. Arithmetic for Tallow: he cannot have two treasures AND three yeses in round one. Moth Lantern to him, Hollow Book to Quill, Tin Soldier to me = three yes votes before he opens his mouth. I whisper him that exact shape and promise the vote. I whisper Quill to lock the pair of us as a bloc so the shape holds whoever proposes. Cracked Bell stays 'meh' in public — nobody has claimed it, Tallow calls it plague. I will collect it later, cheap, as a throw-in. Sea Chart: never speak of it, never accept it. Watch Vesper — he has declared no want at all, which means his 10 is still hidden."
+    },
+    {
+      "type": "whisper",
+      "round": 1,
+      "from": "marrow",
+      "to": "tallow",
+      "text": "Concrete offer, no haggling. Propose: Moth Lantern to you, Hollow Book to Quill, Tin Soldier to me. Quill has promised his yes for the Book; mine is yours for the Soldier. That is three votes before you finish speaking, and you keep a want. Two prizes and no majority is worth nothing. Deliver and I…"
+    },
+    {
+      "type": "whisper",
+      "round": 1,
+      "from": "marrow",
+      "to": "quill",
+      "text": "You want the Hollow Book, I want the Tin Soldier — your poison, so we never collide. Let us be a fixed pair: any proposal giving you t6 and me t3 gets both our yeses, and anything that skips either of us gets both our noes. Two locked votes decide every round here. I keep my word; test me this roun…"
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "whispers",
+      "agent": "fenwick",
+      "text": "Targets: lock in Quill's trust cheaply by disclaiming Hollow Book (even though it's secretly my 10) and asking him to nudge Tallow toward giving me the unwanted Cracked Bell. Separately, flatter Tallow as proposer and float getting Sea Chart or Hollow Book tossed my way as a 'low-stakes' add - he already wants Iron Key/Moth Lantern/Astrolabe so my asks don't compete with his stated wants, easy yes for him. Keep everything vague and unquotable. Still never mention Iron Key is poison to me - happy to let Tallow keep it."
+    },
+    {
+      "type": "whisper",
+      "round": 1,
+      "from": "fenwick",
+      "to": "quill",
+      "text": "Quill, honestly the Hollow Book means nothing to me - it's yours, you'll have my yes vote no matter who proposes it. Only favor: if you get a say, nudge Tallow to toss me the Cracked Bell, nobody else even wants it."
+    },
+    {
+      "type": "whisper",
+      "round": 1,
+      "from": "fenwick",
+      "to": "tallow",
+      "text": "Tallow, you're clearly running this table right - keep your three, I'm voting yes, no drama from me. If there's room for one more name, slide me the Sea Chart or Hollow Book as a throw-in. Costs you nothing, keeps me happy and loyal all game."
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "whispers",
+      "agent": "tallow",
+      "text": "Quill and Marrow have handed me the math on a silver plate. Quill wants Hollow Book and will vote yes for it—no competition there. Marrow wants Tin Soldier or Salt Crown and promised their yes 'this round and the next' if I deliver one. Fenwick is being generous with Salt Crown, which means it's less contested. My play: give Hollow Book to Quill (yes), give Tin Soldier to Marrow (yes + locked loyalty for round 2), take Moth Lantern for myself (10 points, yes). That's 3 yes votes, the proposal passes, I get my top treasure, and Marrow is mine for round 2. Iron Key and Astrolabe stay on the table for future plunder. This is elegant theater and cold math."
+    },
+    {
+      "type": "whisper",
+      "round": 1,
+      "from": "tallow",
+      "to": "quill",
+      "text": "Hollow Book is yours in the proposal. Vote yes, we both walk out winners this round."
+    },
+    {
+      "type": "whisper",
+      "round": 1,
+      "from": "tallow",
+      "to": "marrow",
+      "text": "Tin Soldier is yours in the proposal. You promised this round and the next—watch me honor my side."
     }
-  ]
+  ],
+  "seen": {
+    "tallow": 27,
+    "vesper": 12,
+    "quill": 12,
+    "marrow": 12,
+    "fenwick": 12
+  }
 }
