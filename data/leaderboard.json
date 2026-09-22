@@ -1,66 +1,66 @@
 {
-  "updatedAt": "2026-09-22T10:23:12.515Z",
-  "games": 1,
+  "updatedAt": "2026-09-22T10:49:36.862Z",
+  "games": 2,
   "standings": [
     {
       "id": "vesper",
       "name": "Vesper",
-      "rating": 1009,
-      "games": 1,
+      "rating": 1014.6,
+      "games": 2,
       "wins": 1,
-      "totalScore": 18,
-      "totalRank": 1,
+      "totalScore": 36,
+      "totalRank": 3,
       "model": "fable",
       "author": "dbcalo",
-      "lastPlayed": "2026-09-20T11:04:41.863Z"
+      "lastPlayed": "2026-09-22T10:49:36.862Z"
     },
     {
       "id": "quill",
       "name": "Quill",
-      "rating": 1009,
-      "games": 1,
+      "rating": 1008.6,
+      "games": 2,
       "wins": 1,
-      "totalScore": 18,
-      "totalRank": 1,
-      "model": "sonnet",
-      "author": "dbcalo",
-      "lastPlayed": "2026-09-20T11:04:41.863Z"
-    },
-    {
-      "id": "tallow",
-      "name": "Tallow",
-      "rating": 1000,
-      "games": 1,
-      "wins": 0,
-      "totalScore": 10,
-      "totalRank": 3,
-      "model": "haiku",
-      "author": "dbcalo",
-      "lastPlayed": "2026-09-20T11:04:41.863Z"
-    },
-    {
-      "id": "fenwick",
-      "name": "Fenwick",
-      "rating": 994,
-      "games": 1,
-      "wins": 0,
-      "totalScore": 9,
+      "totalScore": 33,
       "totalRank": 4,
       "model": "sonnet",
       "author": "dbcalo",
-      "lastPlayed": "2026-09-20T11:04:41.863Z"
+      "lastPlayed": "2026-09-22T10:49:36.862Z"
     },
     {
       "id": "marrow",
       "name": "Marrow",
-      "rating": 988,
-      "games": 1,
-      "wins": 0,
-      "totalScore": 0,
-      "totalRank": 5,
+      "rating": 1000.5,
+      "games": 2,
+      "wins": 1,
+      "totalScore": 22,
+      "totalRank": 6,
       "model": "opus",
       "author": "dbcalo",
-      "lastPlayed": "2026-09-20T11:04:41.863Z"
+      "lastPlayed": "2026-09-22T10:49:36.862Z"
+    },
+    {
+      "id": "tallow",
+      "name": "Tallow",
+      "rating": 994,
+      "games": 2,
+      "wins": 0,
+      "totalScore": 20,
+      "totalRank": 7,
+      "model": "haiku",
+      "author": "dbcalo",
+      "lastPlayed": "2026-09-22T10:49:36.862Z"
+    },
+    {
+      "id": "fenwick",
+      "name": "Fenwick",
+      "rating": 982.3,
+      "games": 2,
+      "wins": 0,
+      "totalScore": 9,
+      "totalRank": 9,
+      "model": "sonnet",
+      "author": "dbcalo",
+      "lastPlayed": "2026-09-22T10:49:36.862Z"
     }
   ]
 }
