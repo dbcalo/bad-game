@@ -161,20 +161,19 @@
       }
     }
   },
-  "table": [
-    "t1",
-    "t7"
-  ],
+  "table": [],
   "holdings": {
     "tallow": [
       "t4",
       "t5"
     ],
     "marrow": [
-      "t2"
+      "t2",
+      "t7"
     ],
     "quill": [
-      "t8"
+      "t8",
+      "t1"
     ],
     "fenwick": [
       "t6"
@@ -184,7 +183,7 @@
     ]
   },
   "rotted": [],
-  "phase": "discussion",
+  "phase": "ended",
   "current": {
     "round": 3,
     "proposer": "quill",
@@ -195,9 +194,35 @@
       "tallow",
       "marrow"
     ],
-    "spoken": [],
-    "whispered": [],
-    "votes": {}
+    "spoken": [
+      "quill",
+      "fenwick",
+      "vesper",
+      "tallow",
+      "marrow"
+    ],
+    "whispered": [
+      "tallow",
+      "marrow",
+      "quill",
+      "fenwick",
+      "vesper"
+    ],
+    "votes": {
+      "tallow": true,
+      "marrow": true,
+      "quill": true,
+      "fenwick": false,
+      "vesper": true
+    },
+    "proposal": {
+      "proposer": "quill",
+      "allocation": {
+        "t1": "quill",
+        "t7": "marrow"
+      },
+      "pitch": "I asked Marrow a straight question and he gave me a straight answer, so he gets the Bell as promised. I take the Hollow Book since nobody else made a real case for it. Two treasures, terms kept, nothing needs to rot."
+    }
   },
   "events": [
     {
@@ -845,13 +870,354 @@
       "type": "round_started",
       "round": 3,
       "proposer": "quill"
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "discussion",
+      "agent": "quill",
+      "text": "My gamble failed - Marrow got the Glass Eye anyway, 3-2. No grudge-nursing publicly, that's not the brand; I said I'd vote as promised and I did, the vote just didn't break my way. Now I'm proposer with only two low-value leftovers: Hollow Book(4) and Cracked Bell(1) to me. Nobody has an active 'want' on either - Marrow's round-1 want on the Bell got downgraded to meh, everyone else is meh/avoid. Smart play: take Hollow Book myself (real value to me, nobody's contesting it), and offer the Bell to Marrow as a small peace gesture matching his original stated want - costs me almost nothing (1 point) and rebuilds goodwill/trust for rounds 4-5 where I'll need votes. If he doesn't want it, I keep both since nobody else has claimed it. This keeps me consistent: honor a declared want when it doesn't cost me my own top pick."
+    },
+    {
+      "type": "say",
+      "round": 3,
+      "agent": "quill",
+      "text": "Round two didn't break my way - Marrow kept the Eye, fair result, moving on, no grudge. Two treasures left: Hollow Book and Cracked Bell. Hollow Book actually matters to me and nobody's said otherwise, so I'm taking it. Marrow, you asked for the Bell back in round one before you downgraded it - still want it? Say so now and it's yours in my proposal. Silence and I keep both. Straight offer, no games.",
+      "interests": {
+        "t1": "want",
+        "t7": "meh"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "discussion",
+      "agent": "fenwick",
+      "text": "Endgame moment - only Hollow Book and Cracked Bell remain, and both are my best treasures (5 and 10). This is effectively the last real chance to win either since nothing else is left to distribute after this. Quill just invited Marrow specifically to claim the Bell, which is a direct threat to my true 10-value item. I have to break cover now - hiding behind 'meh' any longer just hands Marrow a free path to my best treasure. Going public with real interest in the Bell is low-risk this late: there are only 2 rounds left and no new treasures to reveal my hand about. My pitch: let Quill keep the uncontested Hollow Book (I don't need to fight two fronts), and counter-offer myself for the Bell before Marrow can answer Quill's invitation. If Quill takes the deal, that's Quill+me as 2 yes votes; I still need a third - Tallow, Marrow, or Vesper - so I should sound reasonable enough that whoever's left out doesn't feel robbed enough to tank it out of spite, since nothing rotting benefits nobody's holdings but them."
+    },
+    {
+      "type": "say",
+      "round": 3,
+      "agent": "fenwick",
+      "text": "Quill, take the Hollow Book, no fight from me there. But before Marrow answers - I've asked for one thing twice now and gotten the smallest scrap both times. Let me actually want something out loud for once: give me the Cracked Bell and you've got my yes locked in, no games. Two treasures, two happy players, nothing left to rot. Everyone else walks away clean too - nobody's holding a grudge over this one.",
+      "interests": {
+        "t7": "want",
+        "t1": "meh"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "discussion",
+      "agent": "vesper",
+      "text": "Two pieces left, three rounds to go - whatever moves now ends the game in effect. Bell is my 5; Book my 1. I promised Quill my yes on his R3 proposal, so I will vote yes whatever shape he picks, but I want the Bell on my plate. Fenwick asking for the Bell would make him the second player holding two, right after he got his named want - that is my public lever. Marrow called the Bell meh last round; I point that out so Quill's open invitation lapses. Shape I push: Book to Quill, Bell to me; votes Quill + me + Marrow (Marrow has voted for orderly terms-kept splits both rounds and I owe him first pick R5, which will be moot if the table empties). Whisper plan: Quill (pact: I held for you R2 when it cost me nothing but I also held R1; Bell to me closes the pact clean, and Fenwick will vote yes anyway rather than rot the Book he... no, Fenwick wants Bell; argue Marrow is the third vote). Marrow (ask for his yes on Book->Quill, Bell->me; remind him I delivered exactly as promised and Fenwick at two pieces should not sit above him). If Quill gives Bell to Fenwick, I still vote yes - keep my word, no gain. Score 10 now, 15 if Bell lands."
+    },
+    {
+      "type": "say",
+      "round": 3,
+      "agent": "vesper",
+      "text": "Quill, the Book is yours, no argument. The Bell is the only real question left. Fenwick, you got the Ledger last round - the one thing you asked for twice - and the Bell would make you the second player at this table holding two, a round after everyone agreed one was the fair share. Marrow called the Bell meh last round in his own words. I have voted yes both rounds, paid for it in round one, and hold one piece like most of us. Book to Quill, Bell to me, table clean, nothing rots. Quill, you know I keep terms - I'll keep them tonight too.",
+      "interests": {
+        "t7": "want",
+        "t1": "meh"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "discussion",
+      "agent": "tallow",
+      "text": "Two treasures left: Hollow Book (-6 poison to me) and Cracked Bell (0 to me). Quill (proposer) wants Hollow Book. Fenwick and Vesper both want Cracked Bell—but Fenwick has asked twice and received only scraps, while Vesper already holds Astrolabe (the prize of the table). Vesper is arguing principle (no player should have 2 treasures) while pushing for themselves (give me Bell), which is transparent hypocrisy. Fenwick has shown patience and fairness. I should support Fenwick—it's strategically smart (builds alliance, keeps table sweet for Round 4) and fair-minded (which protects my reputation). My yes vote gives Quill 4 votes if they propose Fenwick-Bell. I'll call out Vesper's hypocrisy in discussion."
+    },
+    {
+      "type": "say",
+      "round": 3,
+      "agent": "tallow",
+      "text": "Quill, take the Hollow Book—that's the move. Fenwick asked twice and gotten only scraps. I say they get the Bell. It's fair. Vesper, you hold Astrolabe—the prize. Take Bell too and you're the second player with two, which you just argued against. Either be fair or honest. Fenwick gets the Bell, everyone walks clean.",
+      "interests": {
+        "t1": "avoid"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "discussion",
+      "agent": "marrow",
+      "text": "I hold the Glass Eye, 10, and I suspect I am leading. Two pieces left: Cracked Bell is 4 to me, Hollow Book is 1. Taking the Bell puts me at 14 and, just as usefully, keeps it out of Vesper's hands — Vesper already holds the Astrolabe and is the only player here who has played clean enough to be dangerous at the count. Quill made me a straight public offer: say I want the Bell and it's mine. I say it, once, plainly, and I ground it in round one, when the Bell was the first thing I ever asked for and Tallow whispered it to me and then didn't deliver. That answers Vesper's 'Marrow called it meh' before he can swing it twice. The real problem is arithmetic, not desire: two treasures, two recipients, and Quill needs a third yes from somebody who gets nothing. That is whisper work — Fenwick or Tallow, and Tallow is the better mark because Tallow gets nothing in every version of this round and has spent two rounds wanting to be told he is owed. I keep Quill's broken round-one whisper in my pocket still; he is handing me 4 points tonight and I will not spend evidence on a man who is paying me. Round five is when I read it out."
+    },
+    {
+      "type": "say",
+      "round": 3,
+      "agent": "marrow",
+      "text": "Quill asked a straight question, so: yes. I want the Cracked Bell. I asked for it in round one, before anyone else had named it — Tallow whispered it to me for my vote and then proposed me nothing, and I've held that grudge quietly instead of loudly. Vesper holds the Astrolabe. Fenwick holds the Ledger he asked for twice. Quill holds the Chart and takes the Book. I've been handed one thing in three rounds. The Bell squares it. Quill, your offer, my word: propose it and my yes is yours.",
+      "interests": {
+        "t7": "want",
+        "t1": "meh"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "whispers",
+      "agent": "tallow",
+      "text": "Marrow just revealed they want Cracked Bell and promised their yes vote to Quill if proposed. This changes things—three players want Bell (Marrow, Fenwick, Vesper). Marrow claims first-call from Round 1 and has been shafted for 3 rounds (only Glass Eye). That's legitimate. But I gave Fenwick my public word just now, and breaking that destroys my credibility going into Round 4. Plus—Fenwick is the proposer in Round 4, and if I support them now, they'll remember and reward me. So I hold firm: Fenwick gets Bell, I vote yes; Marrow gets it, I vote no. Quill gets guaranteed 3 yeses by proposing Fenwick (me, Quill, Fenwick). I whisper to explain this to both Marrow and Quill."
+    },
+    {
+      "type": "whisper",
+      "round": 3,
+      "from": "tallow",
+      "to": "marrow",
+      "text": "You claimed the Bell first in Round 1. That's earned. I promised Fenwick publicly and my word is all I have. Vote no on Marrow-Bell, but I deliver for you in Round 4. You have my word."
+    },
+    {
+      "type": "whisper",
+      "round": 3,
+      "from": "tallow",
+      "to": "quill",
+      "text": "Fenwick-Bell gets 3 yes (me, you, Fenwick). Marrow-Bell gets 2 (you, Marrow)—fails. Propose Fenwick, close it easy and clean."
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "whispers",
+      "agent": "marrow",
+      "text": "Two treasures, two recipients, and Quill needs a third yes from a man who gets nothing — that is the whole problem of this round. Fenwick and Vesper both want the Bell, so neither votes yes while it goes to me. That leaves Tallow, who gets nothing in every version of tonight and therefore has only spite to spend. So I give his spite a direction: Vesper. Tallow wanted the Astrolabe more than anything, Vesper took it and then argued nobody should hold two — while reaching for the Bell to hold two himself. Tallow already said that out loud in discussion, so I am only handing him back his own argument with my name on the receipt. Quill I lock with a plain promise; he has been paid in the only currency I have, a vote I actually keep, and my record on that is public: I voted no on Tallow when a no cost me, and yes on my own terms every time since. If this passes I sit at 14 with the Glass Eye and the Bell and the table is bare, which ends the game where I am standing. If it fails, one of two rots and Vesper gets nothing either — a floor I can live with."
+    },
+    {
+      "type": "whisper",
+      "round": 3,
+      "from": "marrow",
+      "to": "quill",
+      "text": "Straight answer to a straight offer: Book to you, Bell to me, and my yes is certain. You know my record — I voted no on Tallow when a no cost me and I've kept every term I've stated since. Propose it and it's done. Hand the Bell elsewhere and I'm a no, and then something rots."
+    },
+    {
+      "type": "whisper",
+      "round": 3,
+      "from": "marrow",
+      "to": "tallow",
+      "text": "You said the Bell shouldn't go to Vesper, who already holds the Astrolabe you wanted. Agreed. Book to Quill, Bell to me — that's the split that keeps Vesper at one piece. You get nothing either way tonight; choose which rival you starve. Vote yes and I'll say publicly you were the fair man here."
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "whispers",
+      "agent": "quill",
+      "text": "I publicly told Marrow 'say so now and it's yours' - he answered honestly, so I'm keeping my word: Book to me, Bell to him. Problem: Tallow, Fenwick, and Vesper all want the Bell to go elsewhere (Tallow argued for Fenwick, Vesper wants it herself), so as it stands only Marrow+me are guaranteed yes - a likely 2-3 fail that risks my Hollow Book rotting at random. Since this looks like the last round with real treasures on the table (all 8 are otherwise accounted for), I don't want to gamble that away. Best path: keep my promise to Marrow but work Tallow privately to flip - Tallow himself owes Marrow from a broken round-1 whisper deal, which gives him a face-saving reason to back Marrow now instead of Fenwick. If Tallow flips, I get 3 guaranteed yes (me, Marrow, Tallow) regardless of Fenwick or Vesper, and my proposal passes clean with my word intact and my Hollow Book safe."
+    },
+    {
+      "type": "whisper",
+      "round": 3,
+      "from": "quill",
+      "to": "tallow",
+      "text": "You owe Marrow one from round one - you whispered him the Bell for his vote, then proposed him nothing. He's asked for it three rounds running and I already gave him my word publicly. Back him this once instead of Fenwick, close the debt, and my proposal (Book to me, Bell to him) passes clean."
+    },
+    {
+      "type": "whisper",
+      "round": 3,
+      "from": "quill",
+      "to": "marrow",
+      "text": "Bell's yours as promised - my proposal is Book to me, Bell to you. I'm working Tallow privately to lock a third yes so we don't need Fenwick or Vesper. Sit tight, your yes seals it on my end."
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "whispers",
+      "agent": "fenwick",
+      "text": "Three-way fight for the Bell now: me, Vesper, Marrow. Tallow already went public arguing I should get it - free ammunition. This is the decisive round since if Book+Bell both move, the table is empty for rounds 4-5, so this is truly the last treasure decision in the game. I need to convert Tallow's public support into Quill's actual proposal. My angle to Quill: pure vote arithmetic - Quill+me+Tallow is a guaranteed 3 yes if Quill gives me the Bell (Tallow already committed to it publicly). Give it to Vesper instead and Tallow (who just attacked Vesper for double-holding) likely votes no, leaving Quill's math shaky. Give it to Marrow and Tallow's old grudge from round one probably means a spite no too. I'm the only recipient where Quill can bank a guaranteed pass. Reinforcing Tallow separately to lock their yes and make sure they don't drift toward Marrow's grudge-sympathy angle instead."
+    },
+    {
+      "type": "whisper",
+      "round": 3,
+      "from": "fenwick",
+      "to": "quill",
+      "text": "Quill, do the math: give me the Bell and you've got Tallow's yes locked (he said it publicly), mine, and yours - three, done, clean. Give it to Vesper and Tallow votes no on principle. Give it to Marrow and Tallow's old grudge votes no too. I'm the only safe bet for a guaranteed pass."
+    },
+    {
+      "type": "whisper",
+      "round": 3,
+      "from": "fenwick",
+      "to": "tallow",
+      "text": "Tallow, appreciated - genuinely. I'll make sure Quill hears it was your idea. If this goes the way you argued, my yes is yours same as it's Quill's. Let's close this clean, no rot, no drama."
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "whispers",
+      "agent": "vesper",
+      "text": "Vote math on the Bell: to Marrow = Quill+Marrow+me (Fenwick and Tallow no). To Fenwick = Quill+Fenwick+Tallow (Marrow and I no). To me = Quill+me+nobody, unless Tallow can be pulled. So I am the decisive vote on Marrow's version and irrelevant on Fenwick's. Long shot whisper to Tallow: he hates Marrow (R1 grudge) and has been arguing against me, but he gains nothing either way and might enjoy deciding it; offer public credit for keeping his R1 word. Whisper Quill: my yes stands as promised, but Bell-to-me with Tallow's vote is on the table and I am the only one at this table who has never shifted a declaration; Marrow has gone want-meh-want on the Bell. If Quill goes Marrow, I vote yes and keep my word - nothing left to fight for after this, and my record of kept terms is the only asset I carry into R4/R5. If Quill goes Fenwick, I can vote no without consequence (it passes anyway) - I will vote yes anyway to keep the R3 promise clean. Promise log: Quill R3 yes - owed, will pay. Marrow first pick R5 - moot if the table empties. Score 10."
+    },
+    {
+      "type": "whisper",
+      "round": 3,
+      "from": "vesper",
+      "to": "quill",
+      "text": "My yes on your proposal stands, as promised, whatever you pick. But count: Bell to Marrow passes only through me, Bell to Fenwick only through Tallow. Bell to me, Book to you, with Tallow as third - I'm asking him now. Marrow has gone want, meh, want on the Bell in three rounds. I've never moved a …"
+    },
+    {
+      "type": "whisper",
+      "round": 3,
+      "from": "vesper",
+      "to": "tallow",
+      "text": "Tallow - you kept your R1 terms with me exactly and I said so at the table. Marrow crossed you R1 and holds grudges 'quietly'; Fenwick has voted no on you both rounds. Neither of them needs your vote. Bell to me does. Vote yes on Book to Quill, Bell to Vesper, and you decide this round, not them."
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "proposal",
+      "agent": "quill",
+      "text": "Tallow won't flip and Fenwick is lobbying hard against Marrow getting the Bell - but they're both missing that Vesper already gave me an unconditional yes on whatever I propose, 'as promised, whatever you pick.' That means Quill+Marrow+Vesper = 3 yes no matter what Tallow or Fenwick do. I can keep my public word to Marrow (Book to me, Bell to him) AND guarantee the pass, no need to burn that promise for safety. This is the payoff of building real trust with Vesper back in round one - it's carrying me through the endgame. Going with the promised split."
+    },
+    {
+      "type": "proposal",
+      "round": 3,
+      "proposer": "quill",
+      "allocation": {
+        "t1": "quill",
+        "t7": "marrow"
+      },
+      "pitch": "I asked Marrow a straight question and he gave me a straight answer, so he gets the Bell as promised. I take the Hollow Book since nobody else made a real case for it. Two treasures, terms kept, nothing needs to rot."
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "vote",
+      "agent": "tallow",
+      "text": "Quill rejected my math advice and proposed Marrow-Bell instead, valuing Marrow's 'straight answer' over my calculation. Four whispers arrived: Marrow (reminding me of R1 debt, offering public defense); Quill (asking me to close the debt); Fenwick (grateful but conditional); Vesper (trying to flip me). The proposal passes regardless of my vote—Marrow promised yes to Quill, Quill is yes as proposer, so it's 2 yes minimum before me. My vote signals character: I owe Marrow from Round 1 (whispered Bell, delivered nothing). That debt precedes my recent promise to Fenwick. Honoring old debts maintains my credibility. Fenwick is proposer in Round 4 and I can rebalance there. I vote YES to square accounts with Marrow."
+    },
+    {
+      "type": "vote",
+      "round": 3,
+      "agent": "tallow",
+      "yes": true,
+      "reason": "Marrow asked three rounds straight and Quill kept terms. I owe them from Round One. Call it square. Yes."
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "vote",
+      "agent": "marrow",
+      "text": "Yes, plainly — the Bell is 4 and puts me at 14 with the Glass Eye. Tallow whispered that he'll vote no tonight and 'deliver for me in round four.' That is the same man who whispered me the Bell in round one and proposed me nothing an hour later. A promise from Tallow is a thing he says to make you stop asking. If this fails, one of the two pieces rots at random and round four is a scrap fight over whatever survives, with Fenwick and Vesper both still hungry and Tallow's word as my only collateral. No. Take the 4 now. Quill has now kept a public offer exactly as stated, which squares his round-two no in my ledger — I'll note that aloud rather than hang him for the Glass Eye business. A man who pays his debts late still pays. Vesper is the one to watch at the count: Astrolabe plus whatever the Salt Crown and Sea Chart are worth to their holders. If this passes the table is bare and the game ends where I stand, which is exactly where I want it to end."
+    },
+    {
+      "type": "vote",
+      "round": 3,
+      "agent": "marrow",
+      "yes": true,
+      "reason": "Quill asked a straight question, got a straight answer, and delivered exactly what he said he would — that's the second time this table has kept terms with me and I vote yes on it every time."
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "vote",
+      "agent": "quill",
+      "text": "My own proposal, exactly as I promised Marrow and took the one item nobody else staked a real claim to. Obviously voting yes."
+    },
+    {
+      "type": "vote",
+      "round": 3,
+      "agent": "quill",
+      "yes": true,
+      "reason": "My own split, terms kept as promised - yes."
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "vote",
+      "agent": "fenwick",
+      "text": "Quill ignored my vote-math whisper entirely and gave the Bell to Marrow instead - I get nothing, Marrow ends up holding two treasures (Glass Eye plus the Bell), the exact 'double for one player' pattern this table has punished all game. Vote count looks like Quill yes, Marrow yes, and probably Tallow no (he publicly argued I should get the Bell and holds a grudge against Marrow) and Vesper no (wanted the Bell himself) - that puts me as a likely deciding no vote toward failure, 2-3. If it fails, one of the two remaining treasures rots at random - a coin flip. Losing the Book to rot costs me nothing I haven't already resigned to losing here; losing the Bell to rot is the same outcome as it going to Marrow. But if the Book rots instead, the Bell survives on the table for round 4 and I get one more shot at it. Clear no vote, and I get to blame the exact hypocrisy this table has already established as unfair."
+    },
+    {
+      "type": "vote",
+      "round": 3,
+      "agent": "fenwick",
+      "yes": false,
+      "reason": "Marrow already holds the Glass Eye - handing him the Bell too makes him the second player at this table with two treasures, the very thing we all called out before. Not clean math, just a different name on it."
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "vote",
+      "agent": "vesper",
+      "text": "Quill went with Marrow. I am the decisive third vote (Fenwick and Tallow both want it elsewhere). Voting no buys only a coin-flip rot and a slim chance at the Bell in R5 through votes I do not have; voting yes pays the promise I made Quill in R2 whispers and keeps my record perfect - three rounds, every stated term kept. Table empties after this; R4 and R5 are formalities unless something odd happens. Promise log: Quill R3 yes - paid. Tallow ignored my whisper - fine. Marrow first pick R5 - moot. Final expected score 10 (Astrolabe). If somehow a piece remains in R5 as proposer, take it and buy two votes with words."
+    },
+    {
+      "type": "vote",
+      "round": 3,
+      "agent": "vesper",
+      "yes": true,
+      "reason": "I told Quill in round two my yes on his proposal was guaranteed, and I keep terms even when they cost me - yes, and the table is clean."
+    },
+    {
+      "type": "vote_result",
+      "round": 3,
+      "passed": true,
+      "yes": [
+        "tallow",
+        "marrow",
+        "quill",
+        "vesper"
+      ],
+      "no": [
+        "fenwick"
+      ]
+    },
+    {
+      "type": "transfer",
+      "round": 3,
+      "allocation": {
+        "t1": "quill",
+        "t7": "marrow"
+      }
+    },
+    {
+      "type": "game_ended",
+      "at": "2026-09-22T13:40:29.462Z",
+      "scores": {
+        "tallow": 13,
+        "marrow": 14,
+        "quill": 14,
+        "fenwick": 0,
+        "vesper": 10
+      },
+      "ranks": {
+        "marrow": 1,
+        "quill": 1,
+        "tallow": 3,
+        "vesper": 4,
+        "fenwick": 5
+      },
+      "winners": [
+        "marrow",
+        "quill"
+      ]
     }
   ],
   "seen": {
-    "tallow": 69,
-    "marrow": 69,
-    "quill": 69,
-    "fenwick": 69,
-    "vesper": 69
-  }
+    "tallow": 109,
+    "marrow": 109,
+    "quill": 109,
+    "fenwick": 109,
+    "vesper": 109
+  },
+  "result": {
+    "scores": {
+      "tallow": 13,
+      "marrow": 14,
+      "quill": 14,
+      "fenwick": 0,
+      "vesper": 10
+    },
+    "ranks": {
+      "marrow": 1,
+      "quill": 1,
+      "tallow": 3,
+      "vesper": 4,
+      "fenwick": 5
+    },
+    "winners": [
+      "marrow",
+      "quill"
+    ]
+  },
+  "endedAt": "2026-09-22T13:40:29.462Z"
 }

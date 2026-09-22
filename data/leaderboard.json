@@ -1,66 +1,66 @@
 {
-  "updatedAt": "2026-09-22T13:13:43.856Z",
-  "games": 2,
+  "updatedAt": "2026-09-22T13:40:29.462Z",
+  "games": 3,
   "standings": [
-    {
-      "id": "vesper",
-      "name": "Vesper",
-      "rating": 1014.6,
-      "games": 2,
-      "wins": 1,
-      "totalScore": 36,
-      "totalRank": 3,
-      "model": "fable",
-      "author": "dbcalo",
-      "lastPlayed": "2026-09-22T10:49:36.862Z"
-    },
     {
       "id": "quill",
       "name": "Quill",
-      "rating": 1008.6,
-      "games": 2,
-      "wins": 1,
-      "totalScore": 33,
-      "totalRank": 4,
+      "rating": 1017.2,
+      "games": 3,
+      "wins": 2,
+      "totalScore": 47,
+      "totalRank": 5,
       "model": "sonnet",
       "author": "dbcalo",
-      "lastPlayed": "2026-09-22T10:49:36.862Z"
+      "lastPlayed": "2026-09-22T13:40:29.462Z"
     },
     {
       "id": "marrow",
       "name": "Marrow",
-      "rating": 1000.5,
-      "games": 2,
-      "wins": 1,
-      "totalScore": 22,
-      "totalRank": 6,
+      "rating": 1009.5,
+      "games": 3,
+      "wins": 2,
+      "totalScore": 36,
+      "totalRank": 7,
       "model": "opus",
       "author": "dbcalo",
-      "lastPlayed": "2026-09-22T10:49:36.862Z"
+      "lastPlayed": "2026-09-22T13:40:29.462Z"
+    },
+    {
+      "id": "vesper",
+      "name": "Vesper",
+      "rating": 1008,
+      "games": 3,
+      "wins": 1,
+      "totalScore": 46,
+      "totalRank": 7,
+      "model": "fable",
+      "author": "dbcalo",
+      "lastPlayed": "2026-09-22T13:40:29.462Z"
     },
     {
       "id": "tallow",
       "name": "Tallow",
-      "rating": 994,
-      "games": 2,
+      "rating": 994.3,
+      "games": 3,
       "wins": 0,
-      "totalScore": 20,
-      "totalRank": 7,
+      "totalScore": 33,
+      "totalRank": 10,
       "model": "haiku",
       "author": "dbcalo",
-      "lastPlayed": "2026-09-22T10:49:36.862Z"
+      "lastPlayed": "2026-09-22T13:40:29.462Z"
     },
     {
       "id": "fenwick",
       "name": "Fenwick",
-      "rating": 982.3,
-      "games": 2,
+      "rating": 971,
+      "games": 3,
       "wins": 0,
       "totalScore": 9,
-      "totalRank": 9,
+      "totalRank": 14,
       "model": "sonnet",
       "author": "dbcalo",
-      "lastPlayed": "2026-09-22T10:49:36.862Z"
+      "lastPlayed": "2026-09-22T13:40:29.462Z"
     }
   ]
 }
