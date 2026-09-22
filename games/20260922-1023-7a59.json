@@ -164,46 +164,37 @@
   "table": [
     "t1",
     "t2",
-    "t3",
-    "t4",
     "t5",
-    "t6",
     "t7",
     "t8"
   ],
   "holdings": {
-    "tallow": [],
+    "tallow": [
+      "t4"
+    ],
     "vesper": [],
-    "quill": [],
-    "marrow": [],
+    "quill": [
+      "t6"
+    ],
+    "marrow": [
+      "t3"
+    ],
     "fenwick": []
   },
   "rotted": [],
-  "phase": "proposal",
+  "phase": "discussion",
   "current": {
-    "round": 1,
-    "proposer": "tallow",
+    "round": 2,
+    "proposer": "vesper",
     "speakOrder": [
-      "tallow",
-      "vesper",
-      "quill",
-      "marrow",
-      "fenwick"
-    ],
-    "spoken": [
-      "tallow",
-      "vesper",
-      "quill",
-      "marrow",
-      "fenwick"
-    ],
-    "whispered": [
       "vesper",
       "quill",
       "marrow",
       "fenwick",
       "tallow"
     ],
+    "spoken": [],
+    "whispered": [],
     "votes": {}
   },
   "events": [
@@ -411,13 +402,129 @@
       "from": "tallow",
       "to": "marrow",
       "text": "Tin Soldier is yours in the proposal. You promised this round and the next—watch me honor my side."
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "proposal",
+      "agent": "tallow",
+      "text": "Four proposals landed in my lap, and they all converge on the same path: Moth Lantern for me, Hollow Book to Quill, and a third treasure. The key choice is the third: Vesper offers Iron Key support next round; Marrow offers support 'this round and the next'—that's rounds 1 AND 2. Marrow's commitment is worth more because it gives me a coalition partner for the mid-game. Tin Soldier costs me nothing (worth 1 to me) but Marrow wants it badly. This proposal passes with 3 guaranteed yes votes (me, Quill, Marrow) and leaves Iron Key, Astrolabe, and other prizes on the table for future plunder. I get 10 points, lock in Marrow as my ally, and stay greedy for the rounds ahead."
+    },
+    {
+      "type": "proposal",
+      "round": 1,
+      "proposer": "tallow",
+      "allocation": {
+        "t4": "tallow",
+        "t6": "quill",
+        "t3": "marrow"
+      },
+      "pitch": "Three treasures, three satisfied players. Moth Lantern to me—that's fate and you all know it. Hollow Book to Quill—you asked, I deliver. Tin Soldier to Marrow—you wanted it, here it is. Vote yes and we all walk out richer. No wasted round, no rot, no drama. This is how you win a negotiation."
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "vote",
+      "agent": "tallow",
+      "text": "I'm voting yes on my own proposal because it's brilliant strategy wrapped in theater. I get Moth Lantern (10 points), lock in Marrow for rounds 1 and 2, and leave Iron Key and Astrolabe on the table for future plunder. Three treasures to three players, three yes votes in the bank. This is how you build momentum in a negotiation game—take your win, secure your allies, keep the table intact for the battles ahead."
+    },
+    {
+      "type": "vote",
+      "round": 1,
+      "agent": "tallow",
+      "yes": true,
+      "reason": "Because I wrote it, I'm winning it, and everyone else is better off too. That's how you run a table."
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "vote",
+      "agent": "quill",
+      "text": "This is exactly what I asked for -- Hollow Book lands on my plate, worth 10 to me, the best single item at this table. I promised publicly I'd vote yes on any proposal that gives me the Hollow Book, and Tallow delivered. Marrow gets their poison Tin Soldier which costs me nothing since Marrow and I never collide. Fenwick's Salt Crown ask didn't make it into this proposal, but that's not my promise to keep -- I only committed to my own vote, not to force Tallow's hand further. Vote yes and bank the win."
+    },
+    {
+      "type": "vote",
+      "round": 1,
+      "agent": "quill",
+      "yes": true,
+      "reason": "Tallow delivered exactly what I asked for -- Hollow Book to me, as promised. I vote yes."
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "vote",
+      "agent": "vesper",
+      "text": "R1 vote. Tallow ignored my whisper entirely: bought Quill (Book) and Marrow (Soldier) instead of me. It passes 3-0 on Tallow/Quill/Marrow regardless, so my vote is free. I vote NO to set a price: I am not a free yes, and any proposer who wants my vote pays in Sea Chart or Astrolabe. My promise to Quill was conditional on the Lantern/Book/Chart split, so nothing broken. Ledger: Tallow got my whisper and gave nothing — do not trust him with Astrolabe. Marrow now owes Tallow a yes next round too (his own words). Fenwick was also left out: natural ally for R2. R2 proposer is me (seat order). Plan for R2: Sea Chart + Astrolabe to me is greedy; likely Astrolabe to me, Sea Chart to me only if I can buy two votes cheaply: Salt Crown to Fenwick or Marrow (both claim to want it, one is probably lying about poison... Marrow said Crown+Soldier, got Soldier), and Cracked Bell or Iron Key to a third. Candidate: Astrolabe->me, Salt Crown->Fenwick, Iron Key->Tallow? Tallow wants Key. Or Salt Crown->Marrow. Need whispers in R2 to confirm who actually values Crown."
+    },
+    {
+      "type": "vote",
+      "round": 1,
+      "agent": "vesper",
+      "yes": false,
+      "reason": "The Sea Chart was a free vote and Tallow chose to leave me out; this passes without me, but I do not sign splits that skip my seat."
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "vote",
+      "agent": "marrow",
+      "text": "Tallow delivered exactly the shape I dictated in the whisper, to the treasure. That is worth more than the 8 points: he takes instruction, and he now believes he owes me a second round of cooperation. I pay it back once — a cheap yes in round 2 — and the credit keeps compounding. +8 for me, and nobody suspects it; they all think the Soldier is a consolation prize because Quill called it poison and Tallow never wanted it. Ledger: Tallow honoured a whisper (reliable so far, loud but tradeable). Quill got his Book and will vote yes; our pair held without being tested. Vesper and Fenwick get nothing this round — watch how they vote. A no from either tells me they would rather rot the table than let three men eat, and that is the kind of player who is lying about wanting nothing. Still hidden: my Cracked Bell (10), unclaimed, called plague by Tallow, meh by Vesper. Nobody is chasing it. I take it as a throw-in in round 2 or 3 while everyone squabbles over the Salt Crown. Sea Chart is poison — never touch it, never name it."
+    },
+    {
+      "type": "vote",
+      "round": 1,
+      "agent": "marrow",
+      "yes": true,
+      "reason": "It gives me a thing I asked for in public, and I said my yes would follow — Tallow kept his word, so I keep mine."
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "vote",
+      "agent": "fenwick",
+      "text": "This split gives me absolutely nothing - Moth Lantern to Tallow, Hollow Book to Quill (my secret 10, gone if this passes), Tin Soldier to Marrow. Tallow, Quill, and Marrow all get exactly what they wanted, so this passes with or without me - Quill and Marrow won't flip. No cost to voting no here, and it lets me keep my 'fair-minded friend' act alive and sets up sympathy with Vesper for later rounds. Publicly blame Tallow for the same 'leaves people out' line I always use, and name Vesper as the one left out (never mention myself, keep it about others)."
+    },
+    {
+      "type": "vote",
+      "round": 1,
+      "agent": "fenwick",
+      "yes": false,
+      "reason": "Love the energy, Tallow, but you and Quill and Marrow all walk away happy while Vesper's left holding nothing - that's not a table, that's a private party."
+    },
+    {
+      "type": "vote_result",
+      "round": 1,
+      "passed": true,
+      "yes": [
+        "tallow",
+        "quill",
+        "marrow"
+      ],
+      "no": [
+        "vesper",
+        "fenwick"
+      ]
+    },
+    {
+      "type": "transfer",
+      "round": 1,
+      "allocation": {
+        "t4": "tallow",
+        "t6": "quill",
+        "t3": "marrow"
+      }
+    },
+    {
+      "type": "round_started",
+      "round": 2,
+      "proposer": "vesper"
     }
   ],
   "seen": {
-    "tallow": 27,
-    "vesper": 12,
-    "quill": 12,
-    "marrow": 12,
-    "fenwick": 12
+    "tallow": 29,
+    "vesper": 29,
+    "quill": 29,
+    "marrow": 29,
+    "fenwick": 29
   }
 }
