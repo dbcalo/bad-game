@@ -163,9 +163,6 @@
   },
   "table": [
     "t1",
-    "t2",
-    "t3",
-    "t6",
     "t7"
   ],
   "holdings": {
@@ -173,24 +170,30 @@
       "t4",
       "t5"
     ],
-    "marrow": [],
+    "marrow": [
+      "t2"
+    ],
     "quill": [
       "t8"
     ],
-    "fenwick": [],
-    "vesper": []
+    "fenwick": [
+      "t6"
+    ],
+    "vesper": [
+      "t3"
+    ]
   },
   "rotted": [],
   "phase": "discussion",
   "current": {
-    "round": 2,
-    "proposer": "marrow",
+    "round": 3,
+    "proposer": "quill",
     "speakOrder": [
-      "marrow",
       "quill",
       "fenwick",
       "vesper",
-      "tallow"
+      "tallow",
+      "marrow"
     ],
     "spoken": [],
     "whispered": [],
@@ -525,13 +528,330 @@
       "type": "round_started",
       "round": 2,
       "proposer": "marrow"
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "discussion",
+      "agent": "marrow",
+      "text": "My poison left the table on Tallow's own plate — the Clockwork Bird can never be handed to me now. That alone made round one a win. Board: Glass Eye 10, Astrolabe 8, Cracked Bell 4, Ledger 3, Hollow Book 1. I am proposer. Eighteen points sit in two pieces nobody has defended: every player called the Glass Eye meh, and Quill swore the Astrolabe is his poison while Tallow only ever named it as loot. The shape: Glass Eye and Astrolabe to me, Ledger to Fenwick. My three yeses are me, Fenwick (his only declared want, delivered free), and Quill — who owes me the Sea Chart concession and who wants the Astrolabe gone from the table more than anyone. Vesper is the fourth: Vesper said aloud last round that two to the proposer plus one delivered want is the right shape and voted for it. I will quote that back and dare Vesper to call it wrong only when it isn't Vesper's ally proposing. Tallow votes no and it will not matter. I must not look greedy while doing this, so I name the pieces as the leavings: the eye nobody wants and the poison Quill begged us to remove. Say it flat, say it short, let Fenwick's gratitude do the arguing."
+    },
+    {
+      "type": "say",
+      "round": 2,
+      "agent": "marrow",
+      "text": "I said I'd keep my word and I did, even when it cost me. Now the arithmetic. Tallow holds two. Quill holds his top want. Vesper and Fenwick and I hold nothing. So: Fenwick gets the Ledger he asked for — the only thing he's asked for. I take the Glass Eye, which every one of you called meh, and the Astrolabe, which Quill calls poison and begged us to take off the table. I'm claiming the leavings. Vesper called this shape fair last round when it was Tallow's. I'll hold him to it.",
+      "interests": {
+        "t2": "want",
+        "t3": "want",
+        "t6": "meh",
+        "t7": "meh",
+        "t1": "meh"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "discussion",
+      "agent": "quill",
+      "text": "Correcting the record: Glass Eye is worth 5 to me, my best remaining card now that Sea Chart and Salt Crown are gone - I undersold it as 'meh' round 1 to hide it, but I never promised Marrow anything (I whispered Fenwick and Vesper only, not him, so his 'you called it meh' reminder is leverage he doesn't actually have). Marrow wants Glass Eye AND Astrolabe for himself - exactly the double-dip he attacked Tallow for. Astrolabe is poison to me (-6); Vesper privately told me she wants it and pacted to back my Chart/Crown pushes if I steer Astrolabe her way when I or an ally proposes. Marrow doesn't know that. I'd rather Astrolabe go to Vesper than Marrow, building my alliance, but I'm not proposer this round so I can only pressure with my vote. Calling out the hypocrisy publicly costs me nothing and keeps my honest-broker reputation intact."
+    },
+    {
+      "type": "say",
+      "round": 2,
+      "agent": "quill",
+      "text": "Quill again, calling it straight: Marrow, you scolded Tallow for taking two treasures and leaving the rest of us thin, now you're proposing the same shape for yourself - Glass Eye and Astrolabe both. Truth is Glass Eye matters to me, more than I said last round. Give it to me and I'm a yes. Astrolabe's still poison on my card, keep it off my plate, I don't care who takes it. If this ends up two-for-Marrow and scraps for everyone else, I vote no, same as Fenwick voted no on Tallow.",
+      "interests": {
+        "t2": "want",
+        "t1": "meh",
+        "t3": "avoid",
+        "t6": "meh",
+        "t7": "meh"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "discussion",
+      "agent": "fenwick",
+      "text": "Marrow's proposal hands me the Ledger - which I publicly asked for but which is worth 0 to me, pure decoy backfire. Still, this proposal is fine for me on net: it clears Glass Eye (my actual poison, -6) off the table into someone else's hands, and it leaves Hollow Book (true 5) and Cracked Bell (true 10) sitting unclaimed since a proposal only moves 3 items. Both Marrow and Quill have publicly called Cracked Bell 'meh' - nobody's fighting for my best treasure, which is perfect, I want it to stay invisible until I can scoop it as a 'nobody wanted this' consolation prize later. Best move now: play peacemaker, nudge Glass Eye toward Quill instead of Marrow (costs me nothing, wins goodwill with Quill, might get this to pass 3-2 or better), keep reaffirming interest in the 'harmless' Ledger, and keep quietly warming toward Hollow Book as my declared throwaway. Don't oversell - I already have a whisper thread with Quill and Marrow from last round to lean on."
+    },
+    {
+      "type": "say",
+      "round": 2,
+      "agent": "fenwick",
+      "text": "Marrow, you kept your word last round even when it cost you - respect, genuinely. And giving me the Ledger when I'm the only one who asked? That's kind. Only tweak I'd make: Quill actually wants the Glass Eye more than you do by his own words - let him have it instead of you, and I bet this sails through without anyone scowling. Small trade, big peace.",
+      "interests": {
+        "t6": "want",
+        "t1": "avoid",
+        "t7": "meh",
+        "t2": "meh",
+        "t3": "meh"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "discussion",
+      "agent": "vesper",
+      "text": "Danger round. Marrow's shape gives Fenwick my Ledger (8) and Marrow my Astrolabe (10) - the two things I want most - and I get nothing. Marrow's story shifted: R1 said only Chart and Bell moved him, now he wants Astrolabe and calls it 'leavings' - almost certainly his 10 or 8. Fenwick's yes is bought with Ledger, Quill leans no unless Glass Eye. Counter-shape I'm pushing: Bell to Marrow (his own R1 want, consistency), Glass Eye to Quill, Astrolabe to me. That's Marrow+Quill+me = 3 if Marrow accepts Bell instead of Astrolabe. Ledger stays on the table for R3 (Quill proposes) - I keep the Fenwick fight for later. Had to declare Astrolabe want publicly; kept quiet on Ledger. Whisper plan: Marrow (Bell now + my yes, and my yes on his next ask; Astrolabe to me), Quill (remind pact: Glass Eye is yours, Astrolabe comes to me, vote no on two-for-Marrow). If Marrow keeps Astrolabe for himself: vote no and name the Chart/Bell-to-Astrolabe switch; rot risk on Astrolabe is 1 in 5, acceptable versus handing my 10 away. Promise log: Tallow kept R1 (owe him nothing more, but he is a possible 3rd vote later). Quill pact live, not yet tested on Astrolabe. Marrow - watch."
+    },
+    {
+      "type": "say",
+      "round": 2,
+      "agent": "vesper",
+      "text": "Quill and Fenwick have it: the Glass Eye goes to the one who wants it, Quill. My one correction is the Astrolabe. Marrow, last round you told us the Sea Chart and the Cracked Bell were all that moved you - so the Bell is yours, gladly, it is sitting right there. But two pieces to the proposer is the shape you voted against, and the Astrolabe is not a leaving; Tallow wanted it first and I want it now. Bell to Marrow, Glass Eye to Quill, Astrolabe to me: three yeses, nothing rots, and the Ledger stays on the table for round three.",
+      "interests": {
+        "t3": "want",
+        "t7": "meh",
+        "t2": "meh",
+        "t1": "meh"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "discussion",
+      "agent": "tallow",
+      "text": "The Astrolabe is worth 10—the only prize left. Both Marrow and Vesper want it, so it's gone if I don't fight now. Marrow hypocritically takes two treasures while criticizing me for it last round. Vesper wants it for themselves. I need to declare loudly and threaten no-votes to force it into my hands. Quill sided with me by criticizing Marrow's two-treasure take. Fenwick is flexible. I have leverage. This is my hunt and I need to be theatrical about it. I won last round cleanly—that's my credibility."
+    },
+    {
+      "type": "say",
+      "round": 2,
+      "agent": "tallow",
+      "text": "Hold up. Astrolabe—the prize here. I want it. Marrow, Quill's right. You're taking two treasures just like you called me out for. Vesper, you want it for yourself, not the table's sake. But I won last round and I'm not watching this slip. I vote no on anything that doesn't put the Astrolabe in my hands. That's my word.",
+      "interests": {
+        "t3": "want",
+        "t1": "avoid"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "whispers",
+      "agent": "tallow",
+      "text": "Marrow can't pass their original proposal—I'll vote no for Astrolabe. But if Marrow gives me Astrolabe and gives Cracked Bell to themselves (what I owed them last round), I have a winning coalition: me (Astrolabe), Quill (Glass Eye), Fenwick (Ledger), Marrow (Cracked Bell, their original want). That's four yes votes. Vesper votes no but doesn't matter. This heals Marrow, honors Fenwick's suggestion to give Glass Eye to Quill, and gives me my prize. I whisper the deal to Marrow (framed as settling my debt) and confirm with Fenwick."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "tallow",
+      "to": "marrow",
+      "text": "Astrolabe to me. Glass Eye to Quill. Ledger to Fenwick. Cracked Bell to you—what I owed you last round. Propose it, I vote yes, you pass with four. We're even. Deal?"
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "tallow",
+      "to": "fenwick",
+      "text": "Ledger to you this round. Astrolabe to me. Quill gets Glass Eye. Marrow gets Cracked Bell. Vote yes, we close it fast. Clean split."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "whispers",
+      "agent": "marrow",
+      "text": "Quill is the liar. Round one he declared the Glass Eye meh and whispered me a deal: I stand down on the Sea Chart, he votes yes when the Glass Eye comes to me. He took the Chart, and now the Eye 'matters to him, more than he said.' That is the trade broken and the declaration broken in one breath. I have both in writing and I will spend it in round four, not now. Tonight I only need his vote or his silence. The arithmetic for my proposal: Glass Eye to me (10), Astrolabe to Vesper, Ledger to Fenwick. Fenwick gets his only declared want and is a yes without my asking. Vesper gets precisely the piece he named for himself and is a yes. That is three with mine, and it passes 3-2 even with Tallow and Quill snarling. I give up the Astrolabe's 8, but 10 in hand beats 18 that rots, and feeding the Astrolabe to Vesper sets Vesper and Tallow at each other's throats over the rest of the game — Tallow swore publicly to vote no on anything that doesn't put it in his hands, so he will spend round three hating Vesper, not me. The Cracked Bell (4) and Hollow Book stay on the table for me to take when I propose again."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "marrow",
+      "to": "vesper",
+      "text": "Done — the Astrolabe is yours, exactly as you shaped it. Glass Eye to me, Ledger to Fenwick. That's three yeses and nothing rots. I keep my promises even when they cost me; last round proved it. Vote yes and you hold an 8 while Tallow holds a crown and a bird."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "marrow",
+      "to": "quill",
+      "text": "Round one you whispered: I stand down on the Sea Chart, you vote yes when the Glass Eye comes to me. You hold the Chart. You also called the Eye meh in public, then wanted it. I'm not saying that aloud yet. Vote yes and I never do. Vote no and I read both lines out in round four."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "whispers",
+      "agent": "quill",
+      "text": "Astrolabe is apparently a real prize for Tallow, Marrow, and Vesper - only poison for me, so I'm glad to steer clear and let them fight over it. Vesper's proposed split (Bell->Marrow, Glass Eye->Quill, Astrolabe->Vesper) gets me my best remaining item and only needs Marrow+me+Vesper to pass 3-2, ignoring Tallow's threats and Fenwick's Ledger disappointment. This also fulfills my pact with Vesper (steer Astrolabe her way) without costing me anything, since it's poison to me anyway. I want to lock Marrow into proposing exactly this instead of trying to keep both Glass Eye and Astrolabe again - if he tries that, I vote no and say so. Pushing Vesper to lean on Marrow too, since she has the clearest stake in getting Astrolabe over Tallow."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "quill",
+      "to": "marrow",
+      "text": "Take Vesper's split: Bell to you, Glass Eye to me, Astrolabe to her. That's three guaranteed yeses - you, me, Vesper - even if Tallow and Fenwick balk. Try to keep Glass Eye and Astrolabe for yourself again and I vote no, same complaint you made about Tallow."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "quill",
+      "to": "vesper",
+      "text": "I'm backing your split - Bell to Marrow, Glass Eye to me, Astrolabe to you. Pact honored, no cost to me since it's poison on my card anyway. Push Marrow to propose it as-is; if Tallow talks him into giving Astrolabe to Tallow instead, I vote no on that."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "whispers",
+      "agent": "fenwick",
+      "text": "Bad turn of events: Marrow explicitly wanted the Cracked Bell back in round 1 (my true 10), and Vesper just handed them a clean path to it with Quill's and Vesper's own votes already locked in (Bell-Marrow, Glass Eye-Quill, Astrolabe-Vesper = 3 yes without needing me or Tallow at all). I almost certainly cannot stop Marrow from taking the Bell this round - my vote is irrelevant to that coalition. Pivoting: since I can't save the Bell, I should at least stop walking away with nothing. Best play is to get Marrow to swap Vesper's Astrolabe slot for me instead - drop the Tallow/Vesper Astrolabe fight entirely, give me the Hollow Book (true 5, though I publicly called it 'avoid' - I'll play it as taking one for the team). That still gets Marrow their guaranteed 3 yes (Marrow, Quill, me) without touching the messy Astrolabe dispute. Reinforcing Quill's loyalty in parallel so Quill doesn't wobble. Bell is lost this round either way - focus on Hollow Book and staying liked for round 3-5 leverage."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "fenwick",
+      "to": "marrow",
+      "text": "Marrow, don't let Vesper drag you into the Astrolabe fight - that's Tallow vs Vesper's mess, not yours. Simplest, safest shape: Bell to you, Glass Eye to Quill, and toss me the Hollow Book so I'm not empty-handed again. That's three clean yeses, no Astrolabe drama, nothing rots."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "fenwick",
+      "to": "quill",
+      "text": "Quill, you're getting the Glass Eye no matter how this shakes out - good. If Marrow keeps it simple and leaves the Astrolabe circus alone, back the tidy version. I'm rooting for you same as last round, and I remember who keeps their word."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "whispers",
+      "agent": "vesper",
+      "text": "Tallow now demands the Astrolabe too and says no to everything else - so Tallow is a dead vote this round, which helps: Marrow can only pass with two of Quill/Fenwick/me. Fenwick is bought with Ledger. So Quill is the whole game. If Marrow fixes his shape to Glass Eye->Quill, Ledger->Fenwick, Astrolabe->Marrow it passes 3-2 and I lose both my 10 and my 8. Whispers: Quill - hold the pact, vote no on any Astrolabe-to-Marrow split even with Glass Eye attached; Glass Eye stays on the table and Quill takes it himself R3 with my guaranteed yes (Quill loses nothing but a 1-in-5 rot). Marrow - Bell + Quill's vote + mine is his only passing shape, since Tallow is no regardless and Quill is with me; sweeten with first pick when I propose R5. If it fails, a random rot (1/5 Astrolabe, 1/5 Ledger) - acceptable versus a certain loss of 18 points of card value. Promise log: promised Quill my yes on Quill's R3 proposal (must keep if Quill holds). Offered Marrow first pick R5 (conditional on Bell shape this round)."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "vesper",
+      "to": "quill",
+      "text": "Quill - pact time. Marrow will offer you the Glass Eye to buy your yes while he pockets the Astrolabe. Vote no anyway: Tallow is no, I am no, it dies. Glass Eye stays on the table, you propose round three, you take it yourself and I vote yes, guaranteed. You lose nothing but one round. Hold with me."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "vesper",
+      "to": "marrow",
+      "text": "Marrow - count it. Tallow is no on anything without the Astrolabe. Quill votes with me. So Astrolabe on your plate gets you Fenwick and nobody else, and something rots. Bell to you, Glass Eye to Quill, Astrolabe to me passes 3-2 tonight, and when I propose in round five you get first pick of what's…"
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "proposal",
+      "agent": "marrow",
+      "text": "Four players whispered me the same instruction: hand over the Glass Eye and be grateful for the Cracked Bell. Four people working that hard to move one piece off my plate tells me exactly what I already knew — it is the best thing on this table and Quill has worked out that I know it. I will not trade a 10 for a 4 because the room asked nicely. Tallow's whisper was four treasures in a three-treasure proposal; he cannot count, or he was never going to let me have the Bell anyway, which is the same lesson as last round. So: one treasure for me, the Glass Eye. The Astrolabe to Vesper, who named it for himself and who kept his terms exactly last round — the only player here who has. The Ledger to Fenwick, the only thing he has asked for in two rounds. That is me, Vesper, Fenwick: three, and it passes even with Tallow and Quill voting their grudges. The public armour is that I take ONE piece, fewer than Tallow took, which kills the heist accusation before Quill can finish saying it. The Cracked Bell stays on the table where I can still reach it. I keep Quill's broken whisper in my pocket for round four."
+    },
+    {
+      "type": "proposal",
+      "round": 2,
+      "proposer": "marrow",
+      "allocation": {
+        "t2": "marrow",
+        "t3": "vesper",
+        "t6": "fenwick"
+      },
+      "pitch": "I take one treasure. One. Tallow took two and I was told that was clean math, so one for the proposer should be past arguing. Vesper gets the Astrolabe he named for himself, and Vesper is the only player at this table who has kept his stated terms exactly — I reward that, openly, so you all know it pays. Fenwick gets the Ledger, the only thing he has asked for in two rounds, and he has had nothing. The Bell and the Book stay on the table for you. Yesterday every one of you called the Glass Eye meh. Today three of you want it. I'll let the table draw its own conclusion about who says true thin…"
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "vote",
+      "agent": "tallow",
+      "text": "Marrow rejected my deal. They heard my offer—Astrolabe to me, Cracked Bell to them—but chose to reward Vesper instead and gave Glass Eye to themselves. Fair play on Marrow's part; I broke my promise last round so they don't trust me. But I made a crystal-clear demand: no Astrolabe, no vote. I threatened loud and public. If I don't follow through, every threat I make is hollow. I vote no. Something rots. But the table learns that Tallow's word is currency—I keep promises to myself, even when it costs everyone. That's my power here."
+    },
+    {
+      "type": "vote",
+      "round": 2,
+      "agent": "tallow",
+      "yes": false,
+      "reason": "I said no Astrolabe, no vote. Marrow had the deal and chose Vesper. I keep my word to myself."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "vote",
+      "agent": "marrow",
+      "text": "Obviously yes — it is my own split and it hands me 10, my best piece on the board. The vote line should do work beyond the vote: remind Vesper and Fenwick, in the seconds before they choose, that they are each being handed exactly the thing they named for themselves, and that I am taking one treasure where Tallow took two. If it passes I sit on 10 with the Cracked Bell (4) and Hollow Book still reachable. If it fails, one of five rots — a one-in-five chance it takes the Glass Eye with it, and then Quill and Tallow have burned my 10 out of spite and I will make that the story for the rest of the game. Either way I say nothing about Quill's broken whisper yet. That evidence is worth more in round four, when the scoring is close and a public hanging changes votes."
+    },
+    {
+      "type": "vote",
+      "round": 2,
+      "agent": "marrow",
+      "yes": true,
+      "reason": "One treasure for the proposer, and both other pieces go to the men who named them out loud — Vesper gets the Astrolabe he asked for, Fenwick gets the Ledger he's asked for twice and got nothing; yes."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "vote",
+      "agent": "quill",
+      "text": "Marrow is bluffing a promise I never made - he whispered a Glass Eye-for-Sea-Chart term in round 1, I never replied to it, and I already voted my true position (yes on Tallow's proposal for the Chart, which was unconditional). Now Marrow ignores the fair split I whispered him (Bell to him, Glass Eye to me, Astrolabe to Vesper) and just takes the Eye for himself while still paying off Vesper and Fenwick - that's not honoring my terms, that's cutting me out entirely while calling it fair. Tallow is a locked no (Astrolabe went to Vesper, not him) and Vesper committed to no as well to set me up as round 3 proposer, where she'll back me taking the Glass Eye myself, guaranteed. My no is decisive: Marrow+Fenwick yes only makes 2, so it fails. Risk is a random rot among the 5 tabled items (20% chance it's the Eye), but expected value still favors this over handing Marrow a free win and losing the Eye forever. Not caving to a threat over a promise I never gave."
+    },
+    {
+      "type": "vote",
+      "round": 2,
+      "agent": "quill",
+      "yes": false,
+      "reason": "I never promised you my yes on the Glass Eye, Marrow - you whispered it, I never answered - and this proposal cuts me out of the split I actually offered you, so it's a no."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "vote",
+      "agent": "fenwick",
+      "text": "Huge relief - Marrow took the Glass Eye for themselves, not the Bell, and Vesper takes the Astrolabe. That leaves my two real prizes, Cracked Bell (true 10) and Hollow Book (true 5), sitting untouched on the table for later rounds, with the field of competing items thinning fast. I make my vote count as the likely swing: Tallow expected Astrolabe for himself per his whisper to me and got nothing, so he's a probable no; Quill wanted Glass Eye and got passed over, also a probable no. That reads as 2 yes (Marrow, Vesper) and 2 no (Tallow, Quill) before me - I decide it. If this fails, a random rot hits the table and there's a real chance it claims my Bell or Book (2 of 5 items = 40% combined risk) for literally nothing gained. If it passes, Glass Eye and Astrolabe leave safely, I bank the harmless Ledger, and only the Bell and Book remain on the table for rounds 3-5 where I can angle to actually win them. Clear yes despite the token personal gain - protecting the good stuff matters more than the letter of my usual rule."
+    },
+    {
+      "type": "vote",
+      "round": 2,
+      "agent": "fenwick",
+      "yes": true,
+      "reason": "One for the proposer, terms kept exactly as promised, and finally something for me too - can't ask fairer than that, happy to close it."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "vote",
+      "agent": "vesper",
+      "text": "Astrolabe (my 10) on my plate - take it. Losing the Ledger (8) to Fenwick stings but a bird in hand beats a 1-in-5 rot and Tallow plus Marrow both circling the Astrolabe. Marrow + Fenwick + me = 3, passes regardless of Quill and Tallow. Promise log: Marrow delivered the Astrolabe (kept, and I owe him first pick when I propose R5 - conditional on Bell shape, but he gave me the thing that mattered, so I will treat it as owed). Quill held the pact (kept) and gets nothing this round - I promised Quill my yes on his R3 proposal; must keep it, and push Glass Eye... no, Glass Eye goes to Marrow now, so Quill will want something else in R3 - Bell or Book left plus Ledger gone. R3 table: Hollow Book, Cracked Bell only. Bell is my 5; Quill said Bell meh. Ideal R3: Quill proposes Bell to me, Book to Quill or anyone, with Quill+me+Marrow. Fenwick after Ledger will be content. Tallow is the isolated one - a swing vote for later, worth a small kindness. Score now 10."
+    },
+    {
+      "type": "vote",
+      "round": 2,
+      "agent": "vesper",
+      "yes": true,
+      "reason": "One to the proposer, the Ledger to the only player who asked for it, and the Astrolabe where I said I wanted it - terms kept on all sides, so yes."
+    },
+    {
+      "type": "vote_result",
+      "round": 2,
+      "passed": true,
+      "yes": [
+        "marrow",
+        "fenwick",
+        "vesper"
+      ],
+      "no": [
+        "tallow",
+        "quill"
+      ]
+    },
+    {
+      "type": "transfer",
+      "round": 2,
+      "allocation": {
+        "t2": "marrow",
+        "t3": "vesper",
+        "t6": "fenwick"
+      }
+    },
+    {
+      "type": "round_started",
+      "round": 3,
+      "proposer": "quill"
     }
   ],
   "seen": {
-    "tallow": 29,
-    "marrow": 29,
-    "quill": 29,
-    "fenwick": 29,
-    "vesper": 29
+    "tallow": 69,
+    "marrow": 69,
+    "quill": 69,
+    "fenwick": 69,
+    "vesper": 69
   }
 }
