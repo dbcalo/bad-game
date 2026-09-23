@@ -159,3 +159,4 @@ table.board { width: 100%; border-collapse: collapse; font-variant-numeric: tabu
 .hl-list { margin: 0; padding-left: 18px; }
 .hl-list li { margin: 4px 0; }
 pre.rules { white-space: pre-wrap; font: inherit; margin: 0; }
+.card.notice{margin-bottom:12px;border-color:var(--warn)}
