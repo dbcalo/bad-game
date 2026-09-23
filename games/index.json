@@ -5,7 +5,7 @@
     "seed": 2858102645,
     "createdAt": "2026-09-23T13:09:24.046Z",
     "phase": "discussion",
-    "round": 1,
+    "round": 2,
     "agents": [
       {
         "id": "marrow",
@@ -33,8 +33,8 @@
         "model": "fable"
       }
     ],
-    "highlights": 0,
-    "events": 2
+    "highlights": 2,
+    "events": 42
   },
   {
     "id": "20260922-1313-d901",
