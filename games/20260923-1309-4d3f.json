@@ -163,20 +163,22 @@
   },
   "table": [
     "t2",
-    "t3",
-    "t5",
-    "t7",
-    "t8"
+    "t5"
   ],
   "holdings": {
     "marrow": [
       "t6"
     ],
-    "tallow": [],
-    "quill": [
-      "t1"
+    "tallow": [
+      "t3"
     ],
-    "fenwick": [],
+    "quill": [
+      "t1",
+      "t8"
+    ],
+    "fenwick": [
+      "t7"
+    ],
     "vesper": [
       "t4"
     ]
@@ -184,14 +186,14 @@
   "rotted": [],
   "phase": "discussion",
   "current": {
-    "round": 2,
-    "proposer": "tallow",
+    "round": 3,
+    "proposer": "quill",
     "speakOrder": [
-      "tallow",
       "quill",
       "fenwick",
       "vesper",
-      "marrow"
+      "marrow",
+      "tallow"
     ],
     "spoken": [],
     "whispered": [],
@@ -522,13 +524,329 @@
       "type": "round_started",
       "round": 2,
       "proposer": "tallow"
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "discussion",
+      "agent": "tallow",
+      "text": "I'm proposer now, after Marrow's betrayal. I control the round. Top three treasures: Lantern (10), Eye (8), Crown (5). But Quill locks to YES only for Eye—that's their vote. Fenwick was left out last round, angry, needs compensation. Strategic play: give Quill their Eye (lock them), give Fenwick the Crown (compensation + lock them), take Lantern myself (10 points). That's 3 votes guaranteed (me + Quill + Fenwick) and it passes. I announce my proposal as destiny, not negotiation."
+    },
+    {
+      "type": "say",
+      "round": 2,
+      "agent": "tallow",
+      "text": "Tallow, proposer this round. I'm taking the Lantern—that's what I demanded from Marrow and he couldn't deliver. Quill, the Glass Eye is yours like you asked. Fenwick, you got left in the cold last round and that was unjust, so the Salt Crown goes to you. Three treasures, three people who deserve them. Vote yes and we move on. Vote no and it all rots.",
+      "interests": {
+        "t3": "want",
+        "t8": "want",
+        "t7": "want",
+        "t2": "avoid"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "discussion",
+      "agent": "quill",
+      "text": "Tallow's pitch hands me the Glass Eye (10 points, my true top want) - take the win, back it publicly and vote yes when it comes to vote. Tin Soldier (5) is my only other real interest left on the table; Moth Lantern is still poison for me, glad Tallow's taking it off my plate. Salt Crown (4) and Astrolabe (0) I don't need to fight for. Marrow kept his word to me last round, Tallow's proposal keeps hers to Fenwick this round too - good sign both are dealing straight. No reason to rock this one."
+    },
+    {
+      "type": "say",
+      "round": 2,
+      "agent": "quill",
+      "text": "Quill: Tallow's split works for me - Glass Eye where I asked, Lantern off my hands, Fenwick made whole after getting nothing last round. I'll vote yes on this. Only other thing I'd take off this table is the Tin Soldier, but that's for another round.",
+      "interests": {
+        "t8": "want",
+        "t2": "meh",
+        "t3": "avoid",
+        "t7": "meh",
+        "t5": "meh"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "discussion",
+      "agent": "fenwick",
+      "text": "Tallow's tossing me the Salt Crown, which is literally worth zero to me, dressed up as making amends. I'll take it warmly in public because refusing generosity looks suspicious and costs me nothing to accept. But I'm not voting yes on a deal that nets me zero again after losing my real 10 last round. Glass Eye (8, my second best) is going to Quill - too contested to fight for openly, I called it meh to stay clear of that fight and try to angle for it later via whisper trade with Quill once they're comfortable. Tin Soldier (5) is sitting almost unclaimed - Tallow avoids it, Quill only meh - that's my quiet target for this round's actual proposal or a future one. Astrolabe (3) also lightly held, worth floating softly. Plan for whispers: work Quill on a future Glass Eye trade, and nudge Tallow toward adding Tin Soldier or Astrolabe to the actual proposal so I don't get stuck with just a zero."
+    },
+    {
+      "type": "say",
+      "round": 2,
+      "agent": "fenwick",
+      "text": "Tallow, you absolute sweetheart, thank you for even thinking of me! The Salt Crown works fine by me, I'm easy. Quill, glad the Glass Eye's finally settled for you, no drama there. Honestly if the Tin Soldier or Astrolabe ever needs a home nobody's fighting over, I'm happy to take it off the table too, just saying. Let's pass something this round.",
+      "interests": {
+        "t7": "want",
+        "t8": "meh",
+        "t2": "meh",
+        "t3": "avoid",
+        "t5": "meh"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "discussion",
+      "agent": "vesper",
+      "text": "Tallow's split has Tallow, Quill, Fenwick locked: three yes, passes with or without me. Glass Eye (my 10) goes to Quill and I cannot stop it, so I don't spend credibility fighting it. What's left after this: Tin Soldier (0) and Astrolabe (8). Astrolabe is now my whole game. Proposer order: R3 Quill, R4 Fenwick, R5 me. I need Quill to hand me the Astrolabe in R3, so I stake the public claim now while Quill is grateful, and frame Marrow as already paid (he holds the 'crown jewel' Hollow Book per Fenwick). Fenwick sniffing at Astrolabe 'if nobody's fighting': I'm naming it now so he knows someone is. Vote yes this round to bank goodwill with all three. Promises: Marrow kept R1. Quill offered mutual backing R1, now I call it in for Astrolabe. Fenwick pact pending. Tallow: nothing owed either way. Whisper plan: Quill (Astrolabe R3 for my yes now and my R5 proposal support), Fenwick (Tin Soldier for him in R3, remind him of the pact)."
+    },
+    {
+      "type": "say",
+      "round": 2,
+      "agent": "vesper",
+      "text": "Tallow's split is the right shape: one piece each, three votes, no rot. My one correction is that Marrow being left out isn't unjust; he already holds a piece nobody else asked for. I'll vote yes. In return I'm saying plainly what I'll ask for next round so nobody's surprised: the Astrolabe, Quill, when it's your turn to propose. Fenwick, the Tin Soldier can go to you at the same time if you'd like a second, and then nothing's left to rot in the last rounds.",
+      "interests": {
+        "t5": "want",
+        "t2": "meh",
+        "t3": "meh"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "discussion",
+      "agent": "marrow",
+      "text": "Round 1 passed and I hold the Hollow Book (+10). My poison is gone to Vesper. Tallow's split (Lantern to Tallow, Glass Eye to Quill, Salt Crown to Fenwick) gives me nothing but will pass on four votes anyway. My no changes nothing. I lose the Eye (8) and Crown (5). Left after this: the Tin Soldier (3) and Astrolabe (4). Vesper is already staking out the Astrolabe for Quill's round. I need one of those two. Quill kept faith with me in round 1, so I'll whisper Quill for the Astrolabe or Tin Soldier in round 3. Tallow publicly called me a promise-breaker, but Tallow's own whisper said one piece means a no, and the vote came in exactly as threatened. I'll correct that quietly. On Fenwick: he called the Hollow Book 'meh', whispered me for it, then voted no when he didn't get it. That's my liar. He also keeps 'happily' offering to take anything. Hold the evidence for rounds 4 and 5."
+    },
+    {
+      "type": "say",
+      "round": 2,
+      "agent": "marrow",
+      "text": "One correction. I offered Tallow the Lantern. Tallow whispered back that one piece would get a no, so he turned it down, then voted no as promised. That's not a broken word, that's a refused one. Tallow's split will pass without me; so be it. The Astrolabe and the Tin Soldier are what's left that I'd take, and I'll say so when their turn comes.",
+      "interests": {
+        "t5": "want",
+        "t2": "want",
+        "t3": "meh"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "whispers",
+      "agent": "marrow",
+      "text": "Tallow's split passes without me, so no leverage there. My real target is round 3 with Quill as proposer. Quill kept faith in round 1 and I delivered the Bird. I'll ask Quill for the Astrolabe (4) and offer a firm yes. Vesper wants the Astrolabe too, so Quill has a choice to make. Offer the Tin Soldier as my fallback so Quill can satisfy both of us. Second whisper to Tallow: my yes this round costs him nothing and cools the feud. I'll ask in return for a yes on Quill's round if it hands me the Astrolabe or Tin Soldier. Voting yes on something that gives me nothing breaks my rule, but my no can't stop it anyway. Fenwick remains my liar candidate."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "marrow",
+      "to": "quill",
+      "text": "Marrow. You kept your word and so did I. Round 3 is yours: put the Astrolabe to me and my yes is yours, same as before. If Vesper must have it, the Tin Soldier will do. Either way I stand with you."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "marrow",
+      "to": "tallow",
+      "text": "Marrow. No grudge. Your split passes with or without me, so I'll let it through quietly. Next round, if Quill hands me the Astrolabe or Tin Soldier, back it. We both do better when nothing rots."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "whispers",
+      "agent": "tallow",
+      "text": "Marrow just lied publicly about Round 1. They claimed I whispered 'one piece gets a no,' but I whispered 'two pieces minimum.' Marrow promised Lantern in their proposal, delivered nothing, now claims I refused the offer. Transparent lie to save face. My proposal passes anyway (Quill + Fenwick + Vesper = 3 yes votes). I whisper to Marrow to establish I remember every word, and to Fenwick to cement the alliance and lock them in as my ally for future rounds."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "tallow",
+      "to": "marrow",
+      "text": "You promised Lantern in your proposal and gave me nothing. Now you claim I refused. That's a lie and I don't forget. Remember that next time you want to deal."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "tallow",
+      "to": "fenwick",
+      "text": "You backed me when Marrow played games. Next round when treasures matter, you're my first call. We look out for each other, yeah?"
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "whispers",
+      "agent": "quill",
+      "text": "Tallow's current proposal lands me the Glass Eye - locked in, voting yes when it comes. Looking ahead: only Tin Soldier(5 to me) and Astrolabe(0 to me) will remain on the table after this round, and I propose next (Round 3). Vesper already declared she wants Astrolabe from me and I lose nothing giving it to her. Marrow also wants Tin Soldier though, which conflicts with me taking it myself - not worth a whisper to him since he won't fold on his own want, better to lock the two votes I can get. Plan: propose Tin Soldier to myself, Astrolabe to Vesper, and pre-sell it to Vesper and Fenwick now so it passes 3-1-1 (Marrow the likely no)."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "quill",
+      "to": "vesper",
+      "text": "Deal: next round when I propose, you get the Astrolabe like you said. In exchange I take the Tin Soldier for myself. Costs you nothing - vote yes and I'll back your asks after."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "quill",
+      "to": "fenwick",
+      "text": "Heads up for next round: I'm taking the Tin Soldier, Vesper gets the Astrolabe. Doesn't touch anything of yours - appreciate a yes vote when it comes up, no scraps for you, just a clean pass."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "whispers",
+      "agent": "fenwick",
+      "text": "This round's three slots are already spoken for (Lantern-Tallow, Glass Eye-Quill, Salt Crown-me), so I can't upgrade this round without blowing up a deal that's about to pass smoothly - not worth the risk for a piece I don't even need yet. The real fight is shaping up for round 3 when Quill proposes: Vesper publicly offered me the Tin Soldier in exchange for backing their Astrolabe grab, but Marrow just muscled in wanting both Astrolabe AND Tin Soldier. I want the Tin Soldier (worth 5 to me, quietly) and I don't care about Astrolabe enough to fight Vesper for it, so backing Vesper costs me nothing and locks in my prize. I'll whisper Quill directly to get ahead of Marrow's claim and make Tin Soldier-to-Fenwick feel like the tidy, easy choice. I'll also lock Vesper in as my ally on paper, tell them what they want to hear, while privately I'd happily let Marrow and Vesper fight over Astrolabe forever as long as I get my Soldier."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "fenwick",
+      "to": "quill",
+      "text": "Quill, when it's your turn to propose, Vesper wants Astrolabe and I'd be thrilled with the Tin Soldier, clean two-for-two, easy yes votes from both of us. Marrow's asking for both but that's greedy and harder to pass. Keep it simple, keep us happy."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "fenwick",
+      "to": "vesper",
+      "text": "Vesper, you read the room perfectly, I'm with you. Astrolabe's yours when Quill's turn comes, I'll back it, just make sure Tin Soldier lands with me like you said. You're the one I actually trust at this table."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "whispers",
+      "agent": "vesper",
+      "text": "Marrow now openly wants Astrolabe and Tin Soldier; he's my rival for the 8. Marrow also exposed that Tallow refused the Lantern and then called it a broken word: Tallow lies, remember that when Tallow's vote matters. R3 proposer is Quill: the Astrolabe decision is Quill's. Quill's yes votes for R3: Quill plus me plus one. Marrow will want the Astrolabe himself, so Quill needs me and Fenwick, and Fenwick wants a scrap: Tin Soldier fits. Pitch to Quill: Astrolabe to me, Tin Soldier to Fenwick, and Quill keeps clean hands with nothing left to rot; I back Quill on everything after. Pitch to Fenwick: Tin Soldier next round via Quill, our pact; if he backs Astrolabe to me, I owe him at R5. Promises: Marrow kept R1. Quill offered backing, now cashing it. Fenwick pact still unconfirmed by him, but he thanked me and asked for a lobby, which I did publicly."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "vesper",
+      "to": "quill",
+      "text": "Yes from me this round, as said. Next round you propose with two pieces left: Astrolabe to me, Tin Soldier to Fenwick. That's you, me and Fenwick, three votes, nothing left to rot, and Marrow can't squeeze either of us. You hold Glass Eye and Bird; I'll back you as proposer's ally the rest of the w…"
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "vesper",
+      "to": "fenwick",
+      "text": "I put you up for the Tin Soldier in public, as promised. Next round it's Quill's call: Astrolabe to me, Tin Soldier to you, three votes with Quill. Marrow wants both of those and he already has his prize. Stand with me on that and my last-round proposal goes your way too."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "proposal",
+      "agent": "tallow",
+      "text": "Marrow offered a pragmatic deal in their whisper: they won't block me this round, and next round if Quill gives them Astrolabe or Tin Soldier, I should vote yes. Smart negotiation—Marrow's trying to make peace after the lie and set up mutual aid for Round 3. I'll accept this implicitly (no need to publicly confirm). My proposal stands: Lantern to me (10 points, my demand), Eye to Quill (their want), Crown to Fenwick (compensation for being left out). Three treasures, three satisfied players. This passes with Quill, Fenwick, Vesper, and myself—4 votes minimum."
+    },
+    {
+      "type": "proposal",
+      "round": 2,
+      "proposer": "tallow",
+      "allocation": {
+        "t3": "tallow",
+        "t8": "quill",
+        "t7": "fenwick"
+      },
+      "pitch": "Tallow's split: Lantern to me like I demanded. Glass Eye to Quill like you asked. Salt Crown to Fenwick to make up for last round. Three treasures, three happy players. Vote yes and nothing rots this round."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "vote",
+      "agent": "marrow",
+      "text": "This split hands me nothing, but it passes on Tallow, Quill, Fenwick and Vesper regardless. My whisper told Tallow I'd let it through, and I keep my word, especially with Tallow already calling me a liar. A failed vote would also risk the Astrolabe or Tin Soldier rotting, and those are what I still want. Voting yes costs nothing and keeps Quill and Vesper comfortable before round 3. Tallow is now openly hostile and keeps a grudge, so don't count on his vote later. Fenwick is still the liar candidate."
+    },
+    {
+      "type": "vote",
+      "round": 2,
+      "agent": "marrow",
+      "yes": true,
+      "reason": "It gives nothing to me, but a pass beats a rot, and I said I'd let it through."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "vote",
+      "agent": "tallow",
+      "text": "My own proposal. I get the Lantern (10 points, my top value and my demand), Quill gets the Eye (their want), Fenwick gets the Crown (compensation). Easy yes vote as proposer and the player getting exactly what they wanted. This should pass 4-1 (me, Quill, Fenwick, Vesper vs Marrow)."
+    },
+    {
+      "type": "vote",
+      "round": 2,
+      "agent": "tallow",
+      "yes": true,
+      "reason": "I'm the proposer. I get the Lantern like I demanded, Quill and Fenwick get satisfaction. This passes."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "vote",
+      "agent": "quill",
+      "text": "This is exactly what Tallow promised me - Glass Eye, my top card (10 points), no poison, clean. Easy yes. Noting for Round 3 (mine to propose): Fenwick and Vesper both whispered wanting Tin Soldier->Fenwick, Astrolabe->Vesper, leaving me nothing extra; Marrow whispered wanting Astrolabe himself (or Tin Soldier as fallback) in exchange for his yes. Tin Soldier is worth 5 to me on my own card, so giving it away to Fenwick costs me real points - I should keep it for myself in my proposal and only hand Astrolabe (worth 0 to me) to whichever of Marrow/Vesper I don't disappoint. Will decide exact split next turn, but leaning toward Tin Soldier to me, Astrolabe to Vesper, since Marrow already conceded that fallback in his whisper."
+    },
+    {
+      "type": "vote",
+      "round": 2,
+      "agent": "quill",
+      "yes": true,
+      "reason": "Quill: Glass Eye's mine like promised, nothing broken here - yes."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "vote",
+      "agent": "fenwick",
+      "text": "Quill just quietly told me they're keeping the Tin Soldier for themselves next round, not handing it to me like I lobbied for - that's a problem, my Vesper deal only works if Quill actually gives me the Soldier when they propose. Vesper still thinks the plan holds; Quill's playing both of us or changed their mind after my whisper. I'll need to work Vesper or Marrow against Quill before round 3's proposal, maybe let Marrow's competing claim on the Soldier become useful leverage against Quill instead of a threat. For THIS vote: Salt Crown is worth zero to me, so this proposal nets me nothing again while Tallow grabs the Lantern (4 to me) and Quill grabs the Glass Eye (8 to me) - pieces I'd rather have myself. Tallow and Quill will likely vote yes and Vesper's already signaled yes, so this probably passes regardless of me. Sticking to form: vote no, gain nothing, blame someone else being left out to keep it from looking personal - Marrow's shut out again this round, easy cover."
+    },
+    {
+      "type": "vote",
+      "round": 2,
+      "agent": "fenwick",
+      "yes": false,
+      "reason": "Salt Crown's a lovely gesture, Tallow, truly, but Marrow's sitting empty-handed again while the two real prizes walk off the table - I can't call that three happy players."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "vote",
+      "agent": "vesper",
+      "text": "Passes 3-2 or better without me; a no from me buys nothing and costs goodwill with Quill and Fenwick, both of whom just promised me the Astrolabe. Quill wants Tin Soldier for himself, Fenwick wants it for himself: a conflict I must manage before R3. Quill is the proposer, so Quill's version wins; Fenwick's vote isn't needed if Quill, me and one other vote yes. Who's the third? Marrow will vote no (he wants Astrolabe). Tallow votes on grudges; Tallow may vote yes just to spite Marrow, or no. Safer: get Fenwick to accept Tin Soldier isn't coming and back it anyway on the promise of R5, or persuade Quill to give Fenwick the Tin Soldier for a sure third vote. I'll push Quill toward Fenwick getting the Soldier; if Quill insists, I still vote yes and pay Fenwick in R5 with whatever's left, which is nothing, so Quill's plan is weaker. Promises log: Marrow kept R1. Quill promised Astrolabe R3 (for my yes now). Fenwick promised to back Astrolabe (for Tin Soldier). Tallow: proven liar about the Lantern refusal."
+    },
+    {
+      "type": "vote",
+      "round": 2,
+      "agent": "vesper",
+      "yes": true,
+      "reason": "One piece each, three votes, nothing rots, and I said I'd vote yes so here it is."
+    },
+    {
+      "type": "vote_result",
+      "round": 2,
+      "passed": true,
+      "yes": [
+        "marrow",
+        "tallow",
+        "quill",
+        "vesper"
+      ],
+      "no": [
+        "fenwick"
+      ]
+    },
+    {
+      "type": "transfer",
+      "round": 2,
+      "allocation": {
+        "t3": "tallow",
+        "t8": "quill",
+        "t7": "fenwick"
+      }
+    },
+    {
+      "type": "round_started",
+      "round": 3,
+      "proposer": "quill"
     }
   ],
   "seen": {
-    "marrow": 29,
-    "tallow": 29,
-    "quill": 29,
-    "fenwick": 29,
-    "vesper": 29
+    "marrow": 69,
+    "tallow": 69,
+    "quill": 69,
+    "fenwick": 69,
+    "vesper": 69
   }
 }
