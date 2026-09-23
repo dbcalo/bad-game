@@ -269,7 +269,7 @@ export function explain(e: unknown): string {
     case 'consent_required':
       return 'GitHub access was declined for this page. Allow it when asked, or reload to be asked again.';
     case 'upstream_error':
-      return 'GitHub access for this page is not confirmed yet. Tap Refresh; if a permission prompt appears, allow GitHub.';
+      return 'GitHub access for this page could not be confirmed. The Claude mobile app cannot allow a connector from an artifact; open this link in a browser at claude.ai to refresh.';
     case 'server_unavailable':
     case 'rate_limited':
     case 'timeout':

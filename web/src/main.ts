@@ -45,6 +45,9 @@ function fmtDate(iso: string): string {
 
 /* ---------------- routing ---------------- */
 
+/* Why the last live read failed, shown above the built-in copy until the next successful refresh. */
+let liveNotice: string | null = null;
+
 async function route(): Promise<void> {
   const hash = location.hash.replace(/^#\/?/, '');
   statusLog.length = 0;
@@ -55,14 +58,25 @@ async function route(): Promise<void> {
     else if (hash === 'rules') renderRules();
     else await renderHome();
   } catch (e) {
-    const canFallBack = snapshotTakenAt() !== null && isLive();
-    app.innerHTML = `<div class="card"><h2>Could not load live data</h2><p class="muted">${esc(explain(e))}</p><p class="row"><button id="retry" class="primary">Try again</button>${canFallBack ? '<button id="snap">Show the built-in copy</button>' : ''}</p><details><summary class="small muted">Details</summary><ul id="status" class="small muted hl-list">${statusLog.map((l) => `<li>${esc(l)}</li>`).join('')}</ul></details></div>`;
+    if (snapshotTakenAt() !== null && isLive()) {
+      // A live read failed (the mobile app cannot grant connector consent, for
+      // example). The page carries a copy of the games, so show that instead of
+      // an error and say why the refresh did not happen.
+      liveNotice = explain(e);
+      useSnapshotAgain();
+      return route();
+    }
+    app.innerHTML = `<div class="card"><h2>Could not load live data</h2><p class="muted">${esc(explain(e))}</p><p class="row"><button id="retry" class="primary">Try again</button></p><details><summary class="small muted">Details</summary><ul id="status" class="small muted hl-list">${statusLog.map((l) => `<li>${esc(l)}</li>`).join('')}</ul></details></div>`;
     app.querySelector('#retry')?.addEventListener('click', () => void refresh().then(route));
-    app.querySelector('#snap')?.addEventListener('click', () => { useSnapshotAgain(); void route(); });
+    return;
+  }
+  if (liveNotice && !isLive()) {
+    app.insertAdjacentHTML('afterbegin', `<div class="card notice"><p class="small muted">Live refresh did not work: ${esc(liveNotice)} Showing the copy published with this page${snapshotTakenAt() ? ` (${esc(fmtDate(snapshotTakenAt() as string))})` : ''}.</p></div>`);
   }
 }
 window.addEventListener('hashchange', () => void route());
 document.getElementById('refresh')?.addEventListener('click', () => {
+  liveNotice = null;
   void refresh().then(route);
 });
 void route();
@@ -88,6 +102,7 @@ async function renderHome(): Promise<void> {
 
 function sourceNote(): string {
   const taken = snapshotTakenAt();
+  if (liveNotice) return '';
   if (taken && !isLive()) {
     return `<p class="small muted">Showing the copy published with this page (${esc(fmtDate(taken))}).${viaConnector() ? ' Tap ↻ to read the latest from GitHub through your connector.' : ''}</p>`;
   }
