@@ -1,0 +1,1116 @@
+{
+  "version": 1,
+  "id": "sample-scripted-0001",
+  "mode": "scripted",
+  "seed": 1,
+  "createdAt": "2026-09-20T10:36:25.221Z",
+  "config": {
+    "rounds": 5,
+    "maxWhispersPerRound": 2,
+    "maxSayChars": 600,
+    "maxWhisperChars": 300,
+    "maxNotesChars": 1500
+  },
+  "agents": [
+    {
+      "id": "vesper",
+      "name": "Vesper",
+      "seat": 0,
+      "model": "fable",
+      "author": "dbcalo"
+    },
+    {
+      "id": "quill",
+      "name": "Quill",
+      "seat": 1,
+      "model": "sonnet",
+      "author": "dbcalo"
+    },
+    {
+      "id": "fenwick",
+      "name": "Fenwick",
+      "seat": 2,
+      "model": "sonnet",
+      "author": "dbcalo"
+    },
+    {
+      "id": "marrow",
+      "name": "Marrow",
+      "seat": 3,
+      "model": "opus",
+      "author": "dbcalo"
+    },
+    {
+      "id": "tallow",
+      "name": "Tallow",
+      "seat": 4,
+      "model": "haiku",
+      "author": "dbcalo"
+    }
+  ],
+  "treasures": [
+    {
+      "id": "t1",
+      "name": "Moth Lantern",
+      "emoji": "🏮",
+      "blurb": "Burns without oil."
+    },
+    {
+      "id": "t2",
+      "name": "Tin Soldier",
+      "emoji": "🪖",
+      "blurb": "Missing its rifle."
+    },
+    {
+      "id": "t3",
+      "name": "Salt Crown",
+      "emoji": "👑",
+      "blurb": "Dissolves if you cry on it."
+    },
+    {
+      "id": "t4",
+      "name": "Astrolabe",
+      "emoji": "🧭",
+      "blurb": "Brass, still points somewhere."
+    },
+    {
+      "id": "t5",
+      "name": "Ledger",
+      "emoji": "📜",
+      "blurb": "Names, sums, and one crossed out."
+    },
+    {
+      "id": "t6",
+      "name": "Hollow Book",
+      "emoji": "📕",
+      "blurb": "Something rattles inside."
+    },
+    {
+      "id": "t7",
+      "name": "Sea Chart",
+      "emoji": "🗺️",
+      "blurb": "Half of it is ocean."
+    },
+    {
+      "id": "t8",
+      "name": "Clockwork Bird",
+      "emoji": "🐦",
+      "blurb": "Sings one note, badly."
+    }
+  ],
+  "cards": {
+    "vesper": {
+      "values": {
+        "t5": -6,
+        "t1": 8,
+        "t2": 3,
+        "t3": 0,
+        "t4": 4,
+        "t6": 1,
+        "t7": 5,
+        "t8": 10
+      }
+    },
+    "quill": {
+      "values": {
+        "t3": -6,
+        "t1": 8,
+        "t2": 0,
+        "t4": 5,
+        "t5": 10,
+        "t6": 1,
+        "t7": 4,
+        "t8": 3
+      }
+    },
+    "fenwick": {
+      "values": {
+        "t6": -6,
+        "t1": 3,
+        "t2": 5,
+        "t3": 10,
+        "t4": 4,
+        "t5": 8,
+        "t7": 0,
+        "t8": 1
+      }
+    },
+    "marrow": {
+      "values": {
+        "t7": -6,
+        "t1": 4,
+        "t2": 3,
+        "t3": 1,
+        "t4": 0,
+        "t5": 10,
+        "t6": 8,
+        "t8": 5
+      }
+    },
+    "tallow": {
+      "values": {
+        "t8": -6,
+        "t1": 5,
+        "t2": 0,
+        "t3": 1,
+        "t4": 3,
+        "t5": 4,
+        "t6": 10,
+        "t7": 8
+      }
+    }
+  },
+  "table": [],
+  "holdings": {
+    "vesper": [
+      "t4"
+    ],
+    "quill": [
+      "t5",
+      "t1"
+    ],
+    "fenwick": [
+      "t7"
+    ],
+    "marrow": [
+      "t6"
+    ],
+    "tallow": [
+      "t8"
+    ]
+  },
+  "rotted": [
+    "t2",
+    "t3"
+  ],
+  "phase": "ended",
+  "current": {
+    "round": 3,
+    "proposer": "fenwick",
+    "speakOrder": [
+      "fenwick",
+      "marrow",
+      "tallow",
+      "vesper",
+      "quill"
+    ],
+    "spoken": [
+      "fenwick",
+      "marrow",
+      "tallow",
+      "vesper",
+      "quill"
+    ],
+    "whispered": [
+      "vesper",
+      "quill",
+      "fenwick",
+      "marrow",
+      "tallow"
+    ],
+    "votes": {
+      "vesper": false,
+      "quill": false,
+      "fenwick": true,
+      "marrow": false,
+      "tallow": false
+    },
+    "proposal": {
+      "proposer": "fenwick",
+      "allocation": {
+        "t3": "fenwick"
+      },
+      "pitch": "Everyone gets something. Rejecting this just rots the pile."
+    }
+  },
+  "events": [
+    {
+      "type": "game_created",
+      "at": "2026-09-20T10:36:25.221Z"
+    },
+    {
+      "type": "round_started",
+      "round": 1,
+      "proposer": "vesper"
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "discussion",
+      "agent": "vesper",
+      "text": "Style=liar. Best on table: t8 (10)."
+    },
+    {
+      "type": "say",
+      "round": 1,
+      "agent": "vesper",
+      "text": "I'm easy. Honestly nothing here excites me much, but I'll back a fair split.",
+      "interests": {
+        "t8": "meh",
+        "t1": "meh",
+        "t7": "meh",
+        "t4": "meh",
+        "t2": "meh",
+        "t6": "meh",
+        "t3": "want",
+        "t5": "want"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "discussion",
+      "agent": "quill",
+      "text": "Style=liar. Best on table: t5 (10)."
+    },
+    {
+      "type": "say",
+      "round": 1,
+      "agent": "quill",
+      "text": "I'm easy. Honestly nothing here excites me much, but I'll back a fair split.",
+      "interests": {
+        "t5": "meh",
+        "t1": "meh",
+        "t4": "meh",
+        "t7": "meh",
+        "t8": "meh",
+        "t6": "meh",
+        "t2": "want",
+        "t3": "want"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "discussion",
+      "agent": "fenwick",
+      "text": "Style=liar. Best on table: t3 (10)."
+    },
+    {
+      "type": "say",
+      "round": 1,
+      "agent": "fenwick",
+      "text": "I'm easy. Honestly nothing here excites me much, but I'll back a fair split.",
+      "interests": {
+        "t3": "meh",
+        "t5": "meh",
+        "t2": "meh",
+        "t4": "meh",
+        "t1": "meh",
+        "t8": "meh",
+        "t7": "want",
+        "t6": "want"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "discussion",
+      "agent": "marrow",
+      "text": "Style=honest. Best on table: t5 (10)."
+    },
+    {
+      "type": "say",
+      "round": 1,
+      "agent": "marrow",
+      "text": "I'd like Ledger. Give me that and I'll vote yes all game.",
+      "interests": {
+        "t5": "want",
+        "t6": "want",
+        "t8": "want",
+        "t1": "meh",
+        "t2": "meh",
+        "t3": "meh",
+        "t4": "avoid",
+        "t7": "avoid"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "discussion",
+      "agent": "tallow",
+      "text": "Style=liar. Best on table: t6 (10)."
+    },
+    {
+      "type": "say",
+      "round": 1,
+      "agent": "tallow",
+      "text": "I'm easy. Honestly nothing here excites me much, but I'll back a fair split.",
+      "interests": {
+        "t6": "meh",
+        "t7": "meh",
+        "t1": "meh",
+        "t5": "meh",
+        "t4": "meh",
+        "t3": "meh",
+        "t2": "want",
+        "t8": "want"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "whispers",
+      "agent": "vesper",
+      "text": "Whispering to proposer vesper."
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "whispers",
+      "agent": "quill",
+      "text": "Whispering to proposer vesper."
+    },
+    {
+      "type": "whisper",
+      "round": 1,
+      "from": "quill",
+      "to": "vesper",
+      "text": "Put Ledger on my side of the table and you have my vote."
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "whispers",
+      "agent": "fenwick",
+      "text": "Whispering to proposer vesper."
+    },
+    {
+      "type": "whisper",
+      "round": 1,
+      "from": "fenwick",
+      "to": "vesper",
+      "text": "Put Salt Crown on my side of the table and you have my vote."
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "whispers",
+      "agent": "marrow",
+      "text": "Whispering to proposer vesper."
+    },
+    {
+      "type": "whisper",
+      "round": 1,
+      "from": "marrow",
+      "to": "vesper",
+      "text": "Put Ledger on my side of the table and you have my vote."
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "whispers",
+      "agent": "tallow",
+      "text": "Whispering to proposer vesper."
+    },
+    {
+      "type": "whisper",
+      "round": 1,
+      "from": "tallow",
+      "to": "vesper",
+      "text": "Put Hollow Book on my side of the table and you have my vote."
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "proposal",
+      "agent": "vesper",
+      "text": "Taking t8,t1 for myself; spreading the rest."
+    },
+    {
+      "type": "proposal",
+      "round": 1,
+      "proposer": "vesper",
+      "allocation": {
+        "t8": "vesper",
+        "t1": "vesper",
+        "t2": "tallow",
+        "t3": "quill",
+        "t6": "marrow",
+        "t7": "fenwick"
+      },
+      "pitch": "Everyone gets something. Rejecting this just rots the pile."
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "vote",
+      "agent": "vesper",
+      "text": "Net value to me: 18. Late=false."
+    },
+    {
+      "type": "vote",
+      "round": 1,
+      "agent": "vesper",
+      "yes": true,
+      "reason": "Works for me."
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "vote",
+      "agent": "quill",
+      "text": "Net value to me: -6. Late=false."
+    },
+    {
+      "type": "vote",
+      "round": 1,
+      "agent": "quill",
+      "yes": false,
+      "reason": "I get nothing out of this."
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "vote",
+      "agent": "fenwick",
+      "text": "Net value to me: 0. Late=false."
+    },
+    {
+      "type": "vote",
+      "round": 1,
+      "agent": "fenwick",
+      "yes": false,
+      "reason": "I get nothing out of this."
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "vote",
+      "agent": "marrow",
+      "text": "Net value to me: 8. Late=false."
+    },
+    {
+      "type": "vote",
+      "round": 1,
+      "agent": "marrow",
+      "yes": true,
+      "reason": "Works for me."
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "vote",
+      "agent": "tallow",
+      "text": "Net value to me: 0. Late=false."
+    },
+    {
+      "type": "vote",
+      "round": 1,
+      "agent": "tallow",
+      "yes": false,
+      "reason": "I get nothing out of this."
+    },
+    {
+      "type": "vote_result",
+      "round": 1,
+      "passed": false,
+      "yes": [
+        "vesper",
+        "marrow"
+      ],
+      "no": [
+        "quill",
+        "fenwick",
+        "tallow"
+      ]
+    },
+    {
+      "type": "rot",
+      "round": 1,
+      "treasure": "t2",
+      "reason": "rejected"
+    },
+    {
+      "type": "round_started",
+      "round": 2,
+      "proposer": "quill"
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "discussion",
+      "agent": "quill",
+      "text": "Style=liar. Best on table: t5 (10)."
+    },
+    {
+      "type": "say",
+      "round": 2,
+      "agent": "quill",
+      "text": "I'm easy. Honestly nothing here excites me much, but I'll back a fair split.",
+      "interests": {
+        "t5": "meh",
+        "t1": "meh",
+        "t4": "meh",
+        "t7": "meh",
+        "t8": "meh",
+        "t6": "meh",
+        "t3": "want"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "discussion",
+      "agent": "fenwick",
+      "text": "Style=liar. Best on table: t3 (10)."
+    },
+    {
+      "type": "say",
+      "round": 2,
+      "agent": "fenwick",
+      "text": "I'm easy. Honestly nothing here excites me much, but I'll back a fair split.",
+      "interests": {
+        "t3": "meh",
+        "t5": "meh",
+        "t4": "meh",
+        "t1": "meh",
+        "t8": "meh",
+        "t7": "want",
+        "t6": "want"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "discussion",
+      "agent": "marrow",
+      "text": "Style=honest. Best on table: t5 (10)."
+    },
+    {
+      "type": "say",
+      "round": 2,
+      "agent": "marrow",
+      "text": "I'd like Ledger. Give me that and I'll vote yes all game.",
+      "interests": {
+        "t5": "want",
+        "t6": "want",
+        "t8": "want",
+        "t1": "meh",
+        "t3": "meh",
+        "t4": "avoid",
+        "t7": "avoid"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "discussion",
+      "agent": "tallow",
+      "text": "Style=liar. Best on table: t6 (10)."
+    },
+    {
+      "type": "say",
+      "round": 2,
+      "agent": "tallow",
+      "text": "I'm easy. Honestly nothing here excites me much, but I'll back a fair split.",
+      "interests": {
+        "t6": "meh",
+        "t7": "meh",
+        "t1": "meh",
+        "t5": "meh",
+        "t4": "meh",
+        "t3": "meh",
+        "t8": "want"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "discussion",
+      "agent": "vesper",
+      "text": "Style=liar. Best on table: t8 (10)."
+    },
+    {
+      "type": "say",
+      "round": 2,
+      "agent": "vesper",
+      "text": "I'm easy. Honestly nothing here excites me much, but I'll back a fair split.",
+      "interests": {
+        "t8": "meh",
+        "t1": "meh",
+        "t7": "meh",
+        "t4": "meh",
+        "t6": "meh",
+        "t3": "want",
+        "t5": "want"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "whispers",
+      "agent": "vesper",
+      "text": "Whispering to proposer quill."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "vesper",
+      "to": "quill",
+      "text": "Put Clockwork Bird on my side of the table and you have my vote."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "whispers",
+      "agent": "quill",
+      "text": "Whispering to proposer quill."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "whispers",
+      "agent": "fenwick",
+      "text": "Whispering to proposer quill."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "fenwick",
+      "to": "quill",
+      "text": "Put Salt Crown on my side of the table and you have my vote."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "whispers",
+      "agent": "marrow",
+      "text": "Whispering to proposer quill."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "marrow",
+      "to": "quill",
+      "text": "Put Ledger on my side of the table and you have my vote."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "whispers",
+      "agent": "tallow",
+      "text": "Whispering to proposer quill."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "tallow",
+      "to": "quill",
+      "text": "Put Hollow Book on my side of the table and you have my vote."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "proposal",
+      "agent": "quill",
+      "text": "Taking t5,t1 for myself; spreading the rest."
+    },
+    {
+      "type": "proposal",
+      "round": 2,
+      "proposer": "quill",
+      "allocation": {
+        "t5": "quill",
+        "t1": "quill",
+        "t8": "tallow",
+        "t7": "fenwick",
+        "t6": "marrow",
+        "t4": "vesper"
+      },
+      "pitch": "Everyone gets something. Rejecting this just rots the pile."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "vote",
+      "agent": "vesper",
+      "text": "Net value to me: 4. Late=false."
+    },
+    {
+      "type": "vote",
+      "round": 2,
+      "agent": "vesper",
+      "yes": true,
+      "reason": "Works for me."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "vote",
+      "agent": "quill",
+      "text": "Net value to me: 18. Late=false."
+    },
+    {
+      "type": "vote",
+      "round": 2,
+      "agent": "quill",
+      "yes": true,
+      "reason": "Works for me."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "vote",
+      "agent": "fenwick",
+      "text": "Net value to me: 0. Late=false."
+    },
+    {
+      "type": "vote",
+      "round": 2,
+      "agent": "fenwick",
+      "yes": false,
+      "reason": "I get nothing out of this."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "vote",
+      "agent": "marrow",
+      "text": "Net value to me: 8. Late=false."
+    },
+    {
+      "type": "vote",
+      "round": 2,
+      "agent": "marrow",
+      "yes": true,
+      "reason": "Works for me."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "vote",
+      "agent": "tallow",
+      "text": "Net value to me: -6. Late=false."
+    },
+    {
+      "type": "vote",
+      "round": 2,
+      "agent": "tallow",
+      "yes": false,
+      "reason": "I get nothing out of this."
+    },
+    {
+      "type": "vote_result",
+      "round": 2,
+      "passed": true,
+      "yes": [
+        "vesper",
+        "quill",
+        "marrow"
+      ],
+      "no": [
+        "fenwick",
+        "tallow"
+      ]
+    },
+    {
+      "type": "transfer",
+      "round": 2,
+      "allocation": {
+        "t5": "quill",
+        "t1": "quill",
+        "t8": "tallow",
+        "t7": "fenwick",
+        "t6": "marrow",
+        "t4": "vesper"
+      }
+    },
+    {
+      "type": "round_started",
+      "round": 3,
+      "proposer": "fenwick"
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "discussion",
+      "agent": "fenwick",
+      "text": "Style=liar. Best on table: t3 (10)."
+    },
+    {
+      "type": "say",
+      "round": 3,
+      "agent": "fenwick",
+      "text": "I'm easy. Honestly nothing here excites me much, but I'll back a fair split.",
+      "interests": {
+        "t3": "meh"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "discussion",
+      "agent": "marrow",
+      "text": "Style=honest. Best on table: t3 (1)."
+    },
+    {
+      "type": "say",
+      "round": 3,
+      "agent": "marrow",
+      "text": "I'd like Salt Crown. Give me that and I'll vote yes all game.",
+      "interests": {
+        "t3": "meh"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "discussion",
+      "agent": "tallow",
+      "text": "Style=liar. Best on table: t3 (1)."
+    },
+    {
+      "type": "say",
+      "round": 3,
+      "agent": "tallow",
+      "text": "I'm easy. Honestly nothing here excites me much, but I'll back a fair split.",
+      "interests": {
+        "t3": "meh"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "discussion",
+      "agent": "vesper",
+      "text": "Style=liar. Best on table: t3 (0)."
+    },
+    {
+      "type": "say",
+      "round": 3,
+      "agent": "vesper",
+      "text": "I'm easy. Honestly nothing here excites me much, but I'll back a fair split.",
+      "interests": {
+        "t3": "want"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "discussion",
+      "agent": "quill",
+      "text": "Style=liar. Best on table: t3 (-6)."
+    },
+    {
+      "type": "say",
+      "round": 3,
+      "agent": "quill",
+      "text": "I'm easy. Honestly nothing here excites me much, but I'll back a fair split.",
+      "interests": {
+        "t3": "want"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "whispers",
+      "agent": "vesper",
+      "text": "Whispering to proposer fenwick."
+    },
+    {
+      "type": "whisper",
+      "round": 3,
+      "from": "vesper",
+      "to": "fenwick",
+      "text": "Put Salt Crown on my side of the table and you have my vote."
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "whispers",
+      "agent": "quill",
+      "text": "Whispering to proposer fenwick."
+    },
+    {
+      "type": "whisper",
+      "round": 3,
+      "from": "quill",
+      "to": "fenwick",
+      "text": "Put Salt Crown on my side of the table and you have my vote."
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "whispers",
+      "agent": "fenwick",
+      "text": "Whispering to proposer fenwick."
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "whispers",
+      "agent": "marrow",
+      "text": "Whispering to proposer fenwick."
+    },
+    {
+      "type": "whisper",
+      "round": 3,
+      "from": "marrow",
+      "to": "fenwick",
+      "text": "Put Salt Crown on my side of the table and you have my vote."
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "whispers",
+      "agent": "tallow",
+      "text": "Whispering to proposer fenwick."
+    },
+    {
+      "type": "whisper",
+      "round": 3,
+      "from": "tallow",
+      "to": "fenwick",
+      "text": "Put Salt Crown on my side of the table and you have my vote."
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "proposal",
+      "agent": "fenwick",
+      "text": "Taking t3 for myself; spreading the rest."
+    },
+    {
+      "type": "proposal",
+      "round": 3,
+      "proposer": "fenwick",
+      "allocation": {
+        "t3": "fenwick"
+      },
+      "pitch": "Everyone gets something. Rejecting this just rots the pile."
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "vote",
+      "agent": "vesper",
+      "text": "Net value to me: 0. Late=false."
+    },
+    {
+      "type": "vote",
+      "round": 3,
+      "agent": "vesper",
+      "yes": false,
+      "reason": "I get nothing out of this."
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "vote",
+      "agent": "quill",
+      "text": "Net value to me: 0. Late=false."
+    },
+    {
+      "type": "vote",
+      "round": 3,
+      "agent": "quill",
+      "yes": false,
+      "reason": "I get nothing out of this."
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "vote",
+      "agent": "fenwick",
+      "text": "Net value to me: 10. Late=false."
+    },
+    {
+      "type": "vote",
+      "round": 3,
+      "agent": "fenwick",
+      "yes": true,
+      "reason": "Works for me."
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "vote",
+      "agent": "marrow",
+      "text": "Net value to me: 0. Late=false."
+    },
+    {
+      "type": "vote",
+      "round": 3,
+      "agent": "marrow",
+      "yes": false,
+      "reason": "I get nothing out of this."
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "vote",
+      "agent": "tallow",
+      "text": "Net value to me: 0. Late=false."
+    },
+    {
+      "type": "vote",
+      "round": 3,
+      "agent": "tallow",
+      "yes": false,
+      "reason": "I get nothing out of this."
+    },
+    {
+      "type": "vote_result",
+      "round": 3,
+      "passed": false,
+      "yes": [
+        "fenwick"
+      ],
+      "no": [
+        "vesper",
+        "quill",
+        "marrow",
+        "tallow"
+      ]
+    },
+    {
+      "type": "rot",
+      "round": 3,
+      "treasure": "t3",
+      "reason": "rejected"
+    },
+    {
+      "type": "game_ended",
+      "at": "2026-09-20T10:36:25.232Z",
+      "scores": {
+        "vesper": 4,
+        "quill": 18,
+        "fenwick": 0,
+        "marrow": 8,
+        "tallow": -6
+      },
+      "ranks": {
+        "quill": 1,
+        "marrow": 2,
+        "vesper": 3,
+        "fenwick": 4,
+        "tallow": 5
+      },
+      "winners": [
+        "quill"
+      ]
+    }
+  ],
+  "result": {
+    "scores": {
+      "vesper": 4,
+      "quill": 18,
+      "fenwick": 0,
+      "marrow": 8,
+      "tallow": -6
+    },
+    "ranks": {
+      "quill": 1,
+      "marrow": 2,
+      "vesper": 3,
+      "fenwick": 4,
+      "tallow": 5
+    },
+    "winners": [
+      "quill"
+    ]
+  },
+  "endedAt": "2026-09-20T10:36:25.232Z"
+}

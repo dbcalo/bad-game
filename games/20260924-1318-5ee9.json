@@ -1,0 +1,1216 @@
+{
+  "version": 1,
+  "id": "20260924-1318-5ee9",
+  "mode": "live",
+  "seed": 858422573,
+  "createdAt": "2026-09-24T13:18:45.076Z",
+  "config": {
+    "rounds": 5,
+    "maxPerProposal": 3,
+    "maxWhispersPerRound": 2,
+    "maxSayChars": 600,
+    "maxWhisperChars": 300,
+    "maxNotesChars": 1500
+  },
+  "agents": [
+    {
+      "id": "marrow",
+      "name": "Marrow",
+      "seat": 0,
+      "model": "opus",
+      "author": "dbcalo"
+    },
+    {
+      "id": "tallow",
+      "name": "Tallow",
+      "seat": 1,
+      "model": "haiku",
+      "author": "dbcalo"
+    },
+    {
+      "id": "vesper",
+      "name": "Vesper",
+      "seat": 2,
+      "model": "fable",
+      "author": "dbcalo"
+    },
+    {
+      "id": "quill",
+      "name": "Quill",
+      "seat": 3,
+      "model": "sonnet",
+      "author": "dbcalo"
+    },
+    {
+      "id": "fenwick",
+      "name": "Fenwick",
+      "seat": 4,
+      "model": "sonnet",
+      "author": "dbcalo"
+    }
+  ],
+  "treasures": [
+    {
+      "id": "t1",
+      "name": "Cracked Bell",
+      "emoji": "🔔",
+      "blurb": "Rings on its own at dusk."
+    },
+    {
+      "id": "t2",
+      "name": "Tin Soldier",
+      "emoji": "🪖",
+      "blurb": "Missing its rifle."
+    },
+    {
+      "id": "t3",
+      "name": "Hollow Book",
+      "emoji": "📕",
+      "blurb": "Something rattles inside."
+    },
+    {
+      "id": "t4",
+      "name": "Iron Key",
+      "emoji": "🗝️",
+      "blurb": "Nobody knows the door."
+    },
+    {
+      "id": "t5",
+      "name": "Glass Eye",
+      "emoji": "👁️",
+      "blurb": "Warm to the touch."
+    },
+    {
+      "id": "t6",
+      "name": "Salt Crown",
+      "emoji": "👑",
+      "blurb": "Dissolves if you cry on it."
+    },
+    {
+      "id": "t7",
+      "name": "Moth Lantern",
+      "emoji": "🏮",
+      "blurb": "Burns without oil."
+    },
+    {
+      "id": "t8",
+      "name": "Silver Comb",
+      "emoji": "💈",
+      "blurb": "Three teeth gone."
+    }
+  ],
+  "cards": {
+    "marrow": {
+      "values": {
+        "t7": -6,
+        "t1": 8,
+        "t2": 0,
+        "t3": 4,
+        "t4": 1,
+        "t5": 10,
+        "t6": 3,
+        "t8": 5
+      }
+    },
+    "tallow": {
+      "values": {
+        "t1": -6,
+        "t2": 1,
+        "t3": 4,
+        "t4": 3,
+        "t5": 8,
+        "t6": 0,
+        "t7": 5,
+        "t8": 10
+      }
+    },
+    "vesper": {
+      "values": {
+        "t8": -6,
+        "t1": 4,
+        "t2": 8,
+        "t3": 10,
+        "t4": 1,
+        "t5": 5,
+        "t6": 3,
+        "t7": 0
+      }
+    },
+    "quill": {
+      "values": {
+        "t2": -6,
+        "t1": 3,
+        "t3": 4,
+        "t4": 5,
+        "t5": 0,
+        "t6": 10,
+        "t7": 1,
+        "t8": 8
+      }
+    },
+    "fenwick": {
+      "values": {
+        "t6": -6,
+        "t1": 0,
+        "t2": 10,
+        "t3": 1,
+        "t4": 3,
+        "t5": 4,
+        "t7": 8,
+        "t8": 5
+      }
+    }
+  },
+  "table": [],
+  "holdings": {
+    "marrow": [
+      "t5",
+      "t1"
+    ],
+    "tallow": [
+      "t8",
+      "t7"
+    ],
+    "vesper": [
+      "t2",
+      "t3"
+    ],
+    "quill": [
+      "t6",
+      "t4"
+    ],
+    "fenwick": []
+  },
+  "rotted": [],
+  "phase": "ended",
+  "current": {
+    "round": 3,
+    "proposer": "vesper",
+    "speakOrder": [
+      "vesper",
+      "quill",
+      "fenwick",
+      "marrow",
+      "tallow"
+    ],
+    "spoken": [
+      "vesper",
+      "quill",
+      "fenwick",
+      "marrow",
+      "tallow"
+    ],
+    "whispered": [
+      "marrow",
+      "tallow",
+      "vesper",
+      "quill",
+      "fenwick"
+    ],
+    "votes": {
+      "marrow": true,
+      "tallow": true,
+      "vesper": true,
+      "quill": true,
+      "fenwick": false
+    },
+    "proposal": {
+      "proposer": "vesper",
+      "allocation": {
+        "t3": "vesper",
+        "t4": "quill"
+      },
+      "pitch": "Exactly what the table already agreed to out loud: Hollow Book to me, Iron Key to Quill. Quill has asked for the Key since round one and nobody contested it; Marrow and Tallow both pledged yes to this shape. Nobody with two takes a third. Vote yes and the table empties clean with nothing rotting. Fenwick, I owed you the Bell and Tallow gave it away before I could propose; I'm sorry for it, but I won't break a public promise to Quill to make a private one to you."
+    }
+  },
+  "events": [
+    {
+      "type": "game_created",
+      "at": "2026-09-24T13:18:45.076Z"
+    },
+    {
+      "type": "round_started",
+      "round": 1,
+      "proposer": "marrow"
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "discussion",
+      "agent": "marrow",
+      "text": "Round 1, I propose. My card: Glass Eye t5=10, Cracked Bell t1=8, Silver Comb t8=5, Hollow Book t3=4, Salt Crown t6=3, Iron Key t4=1, Tin Soldier t2=0, Moth Lantern t7=POISON -6. I declare only my mid-value items in public (t8, t3), not my 10 or my poison. Plan: listen to everyone's declarations, then propose t5 and t1 for me plus one item someone publicly asked for, so the proposal gets 3 yes votes. If I have to give up t1 to get it passed, I will. Never take t7, and vote no on anything that hands it to me. Watch each player's votes against what they say they want, to find the liar."
+    },
+    {
+      "type": "say",
+      "round": 1,
+      "agent": "marrow",
+      "text": "I'll listen more than I talk. Silver Comb and Hollow Book interest me. Tell me plainly what you want and my proposal will give each of you something from your list. A split that passes is better for all of us than letting treasures rot.",
+      "interests": {
+        "t8": "want",
+        "t3": "want"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "discussion",
+      "agent": "tallow",
+      "text": "Marrow's playing it cautious but I like that he's putting all his cards on the table. He wants Silver Comb and Hollow Book—so I need Silver Comb before he does. My top three are the Comb (10), Glass Eye (8), and Moth Lantern (5). The Cracked Bell is obviously poison for me, worth -6. I'll stake my ground early: I want treasures, plural, or I'm voting no and watching rot happen. Marrow's smart but not greedy enough. I'll make noise about the Comb and Eye, avoid that bell like plague, and show everyone I'm dangerous to ignore."
+    },
+    {
+      "type": "say",
+      "round": 1,
+      "agent": "tallow",
+      "text": "Tallow takes the floor. 'Marrow, you're wise to listen, but wisdom is for people who lose treasures to rot. I am greedy and I will say it: I want Silver Comb and Glass Eye—those are mine. Moth Lantern too, if I can get it. But here is my promise to this table: any proposal that gives me fewer than two treasures gets a NO from me. Let them rot. Better to play fierce and hungry than meek and empty.' [declares wants and avoidance] Keep that Cracked Bell away from me—it smells like poison and ruin.",
+      "interests": {
+        "t1": "avoid",
+        "t5": "want",
+        "t6": "meh",
+        "t7": "want",
+        "t8": "want"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "discussion",
+      "agent": "vesper",
+      "text": "Card: Book 10, Soldier 8, Eye 5, Bell 4, Crown 3, Key 1, Lantern 0, COMB IS POISON (-6). Good news: both Marrow and Tallow want the Comb. Let them fight over it; I never touch it. Conflict: Marrow wants Hollow Book (my 10). Tallow wants Comb, Eye, Lantern and avoids Bell — nearly complementary to me except Glass Eye (5). Tallow is my pact target: I can concede Eye and Lantern for free-ish, they leave Book and Soldier to me. Tallow's 'two or I vote no' threat is a lever: Marrow can only place 3 items, so Tallow needs allies to get 2 — I can be that ally in exchange for Soldier/Book. Whisper plan: Tallow — 'back Comb+Eye to you R1 if you back Soldier to me; Book to me later.' Marrow — 'give Tallow Comb and me Soldier, keep Book yourself R1 and I vote yes' (then aim to pry Book later or accept 8+10 is unrealistic). Track promises: none yet. Quill and Fenwick unknown — watch their declared wants for a swing."
+    },
+    {
+      "type": "say",
+      "round": 1,
+      "agent": "vesper",
+      "text": "Marrow has the right of it: a split that passes beats a rot, and I'll vote for the first honest one. One small correction for Tallow, though: a proposal only moves three treasures. If you demand two of them every round, the other four of us share one, and that split never finds three votes. You'll get your two the round someone else's interests line up with yours, not by threat. For my part, the Silver Comb is no concern of mine; Marrow and Tallow can settle it between them. I'm after modest things and I'll say so as we go.",
+      "interests": {
+        "t4": "meh",
+        "t6": "meh",
+        "t7": "meh",
+        "t8": "avoid"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "discussion",
+      "agent": "quill",
+      "text": "My card: Salt Crown=10 (top), Silver Comb=8, Iron Key=5, Hollow Book=4, Cracked Bell=3, Moth Lantern=1, Glass Eye=0, Tin Soldier=-6 poison. Salt Crown is lightly contested (only Tallow meh, Vesper meh) so I'll push it hard as my real ask instead of Silver Comb, which Marrow AND Tallow both claim - not worth fighting for. State poison plainly per strategy. Vesper's declared interests (avoid Silver Comb, meh on Iron Key/Salt Crown/Moth Lantern) overlap least with my Salt Crown want, so Vesper is a strong whisper-bloc target. Need to hear Fenwick before picking the second whisper partner. Plan: whisper Vesper + Fenwick (pending) proposing a 3-way bloc where I get Salt Crown, they get their tops, we vote yes on each other's proposals."
+    },
+    {
+      "type": "say",
+      "round": 1,
+      "agent": "quill",
+      "text": "Marrow, fair approach. Here's mine plainly: Salt Crown is mine, that's my real want, and I'll vote yes on any proposal that puts it on my plate. Tin Soldier is my poison, so don't hand it to me expecting a yes. Everything else is negotiable - I'd take Silver Comb if it's going spare, but I won't fight Marrow or Tallow for it. Say what you want, I'll remember who kept their word and who didn't.",
+      "interests": {
+        "t6": "want",
+        "t2": "avoid",
+        "t8": "meh",
+        "t4": "meh",
+        "t3": "meh",
+        "t1": "meh",
+        "t7": "meh",
+        "t5": "meh"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "discussion",
+      "agent": "fenwick",
+      "text": "My real gold is Tin Soldier (10) and Moth Lantern (8) - both already contested by Tallow, so I'm masking interest in both as 'meh' to stay off his radar while he fights Marrow over Silver Comb/Glass Eye. Declaring 'want' on Cracked Bell (worth 0 to me) plays right into Tallow's own poison theory about it - if it's actually someone's poison, great, I look harmless; if not, it's a free cheap grab that costs nothing. Staying silent on Salt Crown since it's MY poison and Quill/Vesper already have eyes on it - no reason to draw attention there. Playing warm and agreeable, thanking Marrow, staying vague so nothing I say can be quoted back as a real commitment. Plan for whispers: tell Tallow he's my real ally against Marrow, tell Quill I'll back his Salt Crown claim, keep both guessing."
+    },
+    {
+      "type": "say",
+      "round": 1,
+      "agent": "fenwick",
+      "text": "Marrow, love the listen-first energy, that's how tables stay friendly. Tallow, I hear the hunger, no judgment here. Honestly none of you need to fight over me, I'm easy to please. Cracked Bell's got a strange little charm to it, I wouldn't mind that one landing on my side. Everything else, I'm flexible, let's find something that gets us all smiling and nobody watching treasures rot.",
+      "interests": {
+        "t1": "want",
+        "t2": "meh",
+        "t6": "avoid",
+        "t7": "meh",
+        "t8": "meh"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "whispers",
+      "agent": "marrow",
+      "text": "Tallow says they want Glass Eye (my 10) and Silver Comb, and even wants Moth Lantern, which is my poison. Tallow promises a no on anything that gives them fewer than two, so I won't count on their vote. Tallow says Cracked Bell smells of poison, which may be a bluff. Fenwick wants Cracked Bell (my 8). Quill wants Salt Crown and names Tin Soldier as poison. Vesper is vague and marked Silver Comb avoid. Proposal plan: Glass Eye to me, Salt Crown to Quill, Iron Key to Vesper. That gets yes votes from me, Quill and Vesper, which is 3 and passes. Cracked Bell, Silver Comb and Hollow Book stay on the table for later. Suspects so far: Tallow for noise, Fenwick for a friendliness that costs nothing."
+    },
+    {
+      "type": "whisper",
+      "round": 1,
+      "from": "marrow",
+      "to": "quill",
+      "text": "Quill, my proposal puts Salt Crown on your plate this round. In return I want your yes, and I'll remember it later."
+    },
+    {
+      "type": "whisper",
+      "round": 1,
+      "from": "marrow",
+      "to": "vesper",
+      "text": "Vesper, you asked for modest things. My proposal gives you Iron Key, and I ask for a yes. If there's something you'd rather have, name it now and I'll consider it."
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "whispers",
+      "agent": "tallow",
+      "text": "Vesper's sharp—they caught my math and won't be bullied, just rational. But here's what they missed: I'm not playing for majority, I'm playing to make desperate people. Fenwick wants Cracked Bell—that's POISON for my card, gold for theirs. Giving them that costs me nothing and buys their loyalty. Quill is hungry and simple: Salt Crown and they're sold. I promise them it next round, they vote yes now. So here's the play: If Marrow hands me Silver Comb and Glass Eye this round, I whisper Fenwick and Quill to lock their votes. Marrow votes yes on their own proposal. Vesper votes yes because they're reasonable and something passes. I walk out with 18 points. Marrow thinks they're clever, but I'm cutting the table's throat with a smile."
+    },
+    {
+      "type": "whisper",
+      "round": 1,
+      "from": "tallow",
+      "to": "fenwick",
+      "text": "You want Cracked Bell? It's yours. Vote yes on Marrow's proposal and I'll work to get that poison to you before round 5 closes. Betray me, and it rots in the pile forever. Your choice."
+    },
+    {
+      "type": "whisper",
+      "round": 1,
+      "from": "tallow",
+      "to": "quill",
+      "text": "Salt Crown is yours if you vote yes today. Not a maybe—yours. Vote no, you get nothing and everyone remembers you blocked the split. Vote yes and it's in your hand by round 3. Deal?"
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "whispers",
+      "agent": "vesper",
+      "text": "Table map: Marrow wants Comb+Book. Tallow wants Comb, Eye, Lantern; avoids Bell. Quill wants Crown (3 to me), Soldier is Quill's poison, meh on Comb. Fenwick wants Bell (4 to me), avoids Crown. Nobody but me values Tin Soldier — it's a free 8 if I ask quietly. Book is contested only by Marrow. Comb (my poison) is wanted by Marrow and Tallow — push it to them. Pitched Marrow a 3-vote split that costs me nothing: Marrow takes Comb, Quill Crown, me Soldier. Marrow+Quill+me = 3 yes. Pitched Tallow a pact: Eye and Lantern theirs, Soldier and Book mine. Promises to track: none confirmed yet. Next round the proposer is Tallow; if the pact holds, I want Book from Tallow's proposal. Risk: Marrow keeps Book for later and I'll need Tallow or Quill to outvote."
+    },
+    {
+      "type": "whisper",
+      "round": 1,
+      "from": "vesper",
+      "to": "marrow",
+      "text": "Count the votes, not the fairness. Comb to you, Salt Crown to Quill, Tin Soldier to me: that's you, Quill and me, three yes before Tallow opens his mouth. I'll vote yes on it and say so publicly. Give Tallow nothing this round; his threat only works if you fear it."
+    },
+    {
+      "type": "whisper",
+      "round": 1,
+      "from": "vesper",
+      "to": "tallow",
+      "text": "Our cards fit. Glass Eye and Moth Lantern mean little to me; I'll back both to you and say so. In return, back Tin Soldier to me this round and Hollow Book when you propose next. Two votes together can steer every proposal. Nobody else at this table will offer you the Eye for free."
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "whispers",
+      "agent": "quill",
+      "text": "Fenwick just declared avoid on Salt Crown and want only on Cracked Bell (worth just 3 to me) - zero conflict with my Salt Crown want. Vesper declared meh on Salt Crown, avoid Silver Comb, no strong want anywhere yet - also low conflict. Nobody has claimed Iron Key. Proposing a 3-way bloc: I take Salt Crown, Fenwick takes Cracked Bell, Vesper takes Iron Key (unclaimed, low-value to others). If Marrow proposes something that doesn't include my Salt Crown, I want Fenwick and Vesper primed to help me get a counter-proposal through next round, and to vote yes on anything that hits all three of our targets. Watching for who breaks this - per my honesty policy I'll call it out publicly by round number if they do."
+    },
+    {
+      "type": "whisper",
+      "round": 1,
+      "from": "quill",
+      "to": "fenwick",
+      "text": "Quill here. No conflict between us: you want Cracked Bell, I want Salt Crown. Proposal: whoever proposes gives you Bell and me Crown, we both vote yes on it and no on anything that strips either of us of our pick. Bring Vesper in with Iron Key and we've got a clean 3-vote bloc that passes every rou…"
+    },
+    {
+      "type": "whisper",
+      "round": 1,
+      "from": "quill",
+      "to": "vesper",
+      "text": "Quill here. You've shown no strong want yet and nobody's claimed Iron Key - take it. My ask is Salt Crown, which you only marked meh, so no fight there. I'm bringing Fenwick in too (he just wants Cracked Bell, cheap to give). Three of us voting together on a proposal that hits all three picks passe…"
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "whispers",
+      "agent": "fenwick",
+      "text": "Marrow's the proposer this round, so that's my most valuable whisper - I want Tin Soldier framed as an easy, uncontested filler item for his proposal, since Quill already publicly avoids it and nobody else has claimed it. If I look indifferent to it, it's a perfect 'toss to Fenwick' throwaway that's actually my 10. Second whisper goes to Tallow, my biggest rival for Moth Lantern - I want to nudge his hunger toward Glass Eye and Silver Comb instead, where Marrow and Vesper are already softening, and make him think I'm no threat to those anyway. Keep both feeling like I'm quietly on their side."
+    },
+    {
+      "type": "whisper",
+      "round": 1,
+      "from": "fenwick",
+      "to": "marrow",
+      "text": "Marrow, between us: I'm not fighting for Silver Comb or Hollow Book, those are yours. If your proposal needs a tidy, uncontested filler slot, Tin Soldier or Cracked Bell would suit me fine - nobody's fighting me for either. Keeps it simple. I'll vote yes for you."
+    },
+    {
+      "type": "whisper",
+      "round": 1,
+      "from": "fenwick",
+      "to": "tallow",
+      "text": "Tallow, I respect the hunger, truly. I'm no threat to you on Glass Eye or Silver Comb, go get them. Moth Lantern's not something I'd fight you over either, so don't waste your leverage worrying about me there. Happy to back a proposal that feeds you two solid pieces."
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "proposal",
+      "agent": "marrow",
+      "text": "Vesper asked for Tin Soldier and offered a yes, but suggested I take Silver Comb. I take Glass Eye instead, which is worth 10 to me against 5. Quill gets Salt Crown as promised. The votes should come from me, Quill and Vesper, which makes 3. Fenwick also offered a yes for Tin Soldier or Cracked Bell. Fenwick wanting Cracked Bell is a threat to my 8, and I'll keep it on the table for my next turn. Tallow gets nothing and will be angry, and Tallow publicly wanted Glass Eye too. Tallow will remember this. If this fails, watch whether Vesper really voted yes."
+    },
+    {
+      "type": "proposal",
+      "round": 1,
+      "proposer": "marrow",
+      "allocation": {
+        "t5": "marrow",
+        "t6": "quill",
+        "t2": "vesper"
+      },
+      "pitch": "Three pieces, three players. Quill gets Salt Crown, the one thing Quill asked for plainly. Vesper gets Tin Soldier, which is modest and uncontested. I take Glass Eye. Silver Comb, Cracked Bell and Hollow Book stay on the table for the rounds ahead, so Tallow and Fenwick still have plenty to play for. Vote yes and nothing rots."
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "vote",
+      "agent": "marrow",
+      "text": "Yes on my own proposal, which gives me Glass Eye for 10. I'm counting on yes votes from Quill and Vesper. If it fails, I'll use the tally to see whether Vesper or Quill went back on their promise."
+    },
+    {
+      "type": "vote",
+      "round": 1,
+      "agent": "marrow",
+      "yes": true,
+      "reason": "A fair split that keeps three treasures from rotting."
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "vote",
+      "agent": "tallow",
+      "text": "Vesper offered a long-term alliance but I don't trust promises—I've seen treasures rot while cautious people negotiated futures. This proposal gives me zero treasures while Quill, Vesper, and Marrow all feast. That's dismissal dressed as negotiation. Even if they have the 3 votes to pass (Marrow, Quill, Vesper), I vote no loudly to show I'm a force at this table. When I propose next round, Fenwick and Quill will remember that I actually block bad proposals, not just threaten. That makes me more dangerous than Vesper's 'trust me' play. My character treats every round as the last one. I refuse to sit empty now for promises of later."
+    },
+    {
+      "type": "vote",
+      "round": 1,
+      "agent": "tallow",
+      "yes": false,
+      "reason": "I gain nothing this round, so this proposal gains nothing from me. No."
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "vote",
+      "agent": "vesper",
+      "text": "Marrow took my pitch almost whole: Soldier to me (8), Crown to Quill, and swapped Comb for Glass Eye for himself. That's Marrow, Quill, me = 3 yes; passes regardless of Tallow. Tallow gets nothing and will vote no; Tallow wanted the Eye, so my whispered offer to Tallow now looks hollow — repair it next round by backing Comb+Lantern to him. Note Marrow claimed Eye, not Comb — maybe Comb is Marrow's poison bluff or he's saving it. Quill is building a Quill-Fenwick-me bloc: useful second pact. Promises: Marrow asked for my yes and delivered Soldier — kept. Quill offered me Key and asked for Crown — this proposal gives Quill Crown, so Quill is satisfied. Round 2 proposer is Tallow; I need Book (10). Push Tallow: Comb+Lantern to him, Book to me, Bell to Fenwick."
+    },
+    {
+      "type": "vote",
+      "round": 1,
+      "agent": "vesper",
+      "yes": true,
+      "reason": "Three players get exactly what they asked for and nothing rots; I said I'd vote for the first honest split and this is it."
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "vote",
+      "agent": "quill",
+      "text": "Marrow's proposal gives me Salt Crown - exactly my declared top want (worth 10 to my card), just as I promised the table I would. This costs me nothing to honor: vote yes, keep my word, and this becomes proof I'm reliable for later rounds. Doesn't touch my Fenwick/Vesper bloc plan since Salt Crown lands with me regardless of the whisper deals - I'll still follow up on Cracked Bell for Fenwick and Iron Key for Vesper in later rounds."
+    },
+    {
+      "type": "vote",
+      "round": 1,
+      "agent": "quill",
+      "yes": true,
+      "reason": "Salt Crown is what I said I wanted, and this proposal gives it to me - I keep my word."
+    },
+    {
+      "type": "notes",
+      "round": 1,
+      "phase": "vote",
+      "agent": "fenwick",
+      "text": "This is bad for me - my real 10 (Tin Soldier) goes to Vesper for free, and I get nothing. My whisper to Marrow about a 'safe filler slot' worked exactly as I feared: he used Tin Soldier as filler, just handed it to Vesper instead of me. Quill and Marrow are clearly locked in as yes votes (Quill gets his Salt Crown want, Marrow keeps Glass Eye). Vesper likely votes yes too since she's getting something free and called it 'modest' - that's already 3, so this almost certainly passes regardless of my vote. I'll vote no anyway per my read (I gain zero) and use the public reason to look principled rather than petty - blame Marrow for leaving Tallow out, not for leaving ME out, since Tallow's the one who'll believe it and I want him thinking I'm his ally, not a rival. Ignore Tallow's Cracked Bell promise for now since this proposal isn't the one he meant. Need to fight harder next round to get Tin Soldier back on the table or claw value elsewhere - it likely rots to Vesper's pile now if this passes."
+    },
+    {
+      "type": "vote",
+      "round": 1,
+      "agent": "fenwick",
+      "yes": false,
+      "reason": "Kind offer, Marrow, but Tallow's walked away empty two turns running now - can't in good conscience wave through a split that leaves him nothing while the rest of us eat."
+    },
+    {
+      "type": "vote_result",
+      "round": 1,
+      "passed": true,
+      "yes": [
+        "marrow",
+        "vesper",
+        "quill"
+      ],
+      "no": [
+        "tallow",
+        "fenwick"
+      ]
+    },
+    {
+      "type": "transfer",
+      "round": 1,
+      "allocation": {
+        "t5": "marrow",
+        "t6": "quill",
+        "t2": "vesper"
+      }
+    },
+    {
+      "type": "round_started",
+      "round": 2,
+      "proposer": "tallow"
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "discussion",
+      "agent": "tallow",
+      "text": "Round 2 and I'm proposer. I take Silver Comb (10) and Moth Lantern (5) for 15 points. Give Hollow Book to Quill to lock their vote—they've been loyal and I promised them treasures. Fenwick said they'd back proposals that feed me 'two solid pieces,' and this does exactly that. Marrow will vote no (I took what they wanted), Vesper will vote no (I'm not feeding them), but Fenwick, Quill, and me gives 3 votes. Passes. Avoid Cracked Bell completely (poison). This reinforces my reputation: I don't just threaten, I deliver on promises and follow through on power."
+    },
+    {
+      "type": "say",
+      "round": 2,
+      "agent": "tallow",
+      "text": "Tallow strides forward. 'Round 2 and I'm proposer. Silver Comb and Moth Lantern are mine—I earned them by refusing to sit empty and proving I'll block bad splits. Fenwick backed me when others wouldn't; that loyalty earns respect. The rest of you will see a fair proposal: I take treasures that matter to me, the table stays liquid, nothing rots. Tallow means what he says.'",
+      "interests": {
+        "t1": "avoid",
+        "t3": "meh",
+        "t4": "meh",
+        "t7": "want",
+        "t8": "want"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "discussion",
+      "agent": "vesper",
+      "text": "Round 1 went as designed: Soldier (8) in hand. Fenwick voted no out of sympathy for Tallow — Fenwick is Tallow's loyalist now, so the Tallow+Fenwick pair is a two-vote bloc I need to be the third of. Tallow wants Comb and Lantern (both worthless or poison to me) and says Book is meh: ideal. Target proposal from Tallow: Comb+Lantern to Tallow, Book to me — votes Tallow, me, Fenwick. Or Comb to Tallow, Book to me, Bell to Fenwick. Either way I get Book (10). Marrow will resist Book going to me; Marrow already ate the Eye, so I frame it as 'Marrow already has his'. Promises: Marrow kept his word R1. Quill kept word. Tallow: offered pact, not yet answered — he got nothing R1 because Marrow swapped Comb for Eye, not my doing. Whisper Tallow the three-vote math and Fenwick a Bell offer for round 3 support."
+    },
+    {
+      "type": "say",
+      "round": 2,
+      "agent": "vesper",
+      "text": "Tallow's right, and I'll say so plainly: he blocked one split and he'll block more, so the table should pay him this round. Comb and Lantern to Tallow costs the rest of us almost nothing. The one correction: two treasures for Tallow still needs two more yes votes, and Fenwick's loyalty is one. The third item should buy the third vote. Marrow already holds the Eye; Quill has his Crown. I have one modest piece and I'd take the Hollow Book as my second. That's Tallow, Fenwick and me, and nothing rots.",
+      "interests": {
+        "t3": "want",
+        "t1": "meh",
+        "t4": "meh",
+        "t7": "meh",
+        "t8": "avoid"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "discussion",
+      "agent": "quill",
+      "text": "I already banked Salt Crown (10 pts), so I'm playing from a position of strength now. Remaining table: Cracked Bell(3), Hollow Book(4), Iron Key(5), Moth Lantern(1), Silver Comb(8) to me. Tallow's proposal shape is forming: Comb+Lantern to himself, Hollow Book to Vesper - that's already 3 of the 3 allocation slots, meaning Fenwick and I get nothing this round if it goes through as sketched. Iron Key is still unclaimed by anyone and worth 5 to me - best real target. Silver Comb (8) is worth more but Tallow's dug in and it's his round to propose, not worth fighting for now. Flagging publicly that Fenwick and I are due next, and staking Iron Key plainly so it's remembered as mine when the next proposal comes, honoring my round-1 signal to Fenwick (Cracked Bell) and keeping pressure on for reciprocity."
+    },
+    {
+      "type": "say",
+      "round": 2,
+      "agent": "quill",
+      "text": "Fair enough, Tallow, but do the math: Comb and Lantern to you, Book to Vesper is already three items and three slots. That leaves Fenwick and me holding nothing this round. I'll vote yes if it passes clean, but Iron Key is mine next - I'm saying it now so nobody's surprised. Fenwick, Cracked Bell's still yours whenever it's on offer; I haven't forgotten that.",
+      "interests": {
+        "t4": "want",
+        "t8": "meh",
+        "t3": "meh",
+        "t7": "meh",
+        "t1": "meh"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "discussion",
+      "agent": "fenwick",
+      "text": "Tallow's taking Comb+Lantern for himself and letting Vesper grab Book as the third slot - that leaves me and Quill with nothing, and Moth Lantern (my real 8) disappears into Tallow's pile if this holds. Tallow only needs 3 yes votes and he can get them from himself+Vesper+Quill without me at all, so I have zero voting leverage again unless I change the shape of the deal itself. My real play is the whisper phase: convince Tallow he doesn't need Vesper's vote since Quill already all-but-promised yes if the split is clean - so swap the third slot from Hollow Book/Vesper to Iron Key/Quill (satisfies Quill's stated want early, cheap goodwill), and pitch giving ME Moth Lantern instead of Tallow keeping both big items, framing it as the 'loyalty reward' he already advertised in public. Publicly I'll keep declaring Moth Lantern as meh so nobody suspects it's my real prize, quietly sow a little doubt about Vesper's Book grab being 'necessary,' and keep buttering Tallow up about the loyalty angle so my whisper lands soft."
+    },
+    {
+      "type": "say",
+      "round": 2,
+      "agent": "fenwick",
+      "text": "Tallow, that loyalty line meant something, truly - I backed you when it cost me nothing to just go along, and I'd do it again. Quill, I haven't forgotten Cracked Bell either, that's still ours to sort. Vesper, no offense at all, but I wonder if Tallow even needs a third partner this round if the right two of us already line up behind him. Worth thinking about before anyone locks anything in.",
+      "interests": {
+        "t1": "want",
+        "t7": "meh",
+        "t8": "meh"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "discussion",
+      "agent": "marrow",
+      "text": "Round 1 passed and I hold Glass Eye, so I have 10. What I still want: Cracked Bell (8), Silver Comb (5), Hollow Book (4). Tallow wants Moth Lantern, which is my poison, and that suits me. Tallow calls Cracked Bell avoid, maybe as a bluff. Fenwick wants Cracked Bell and voted no on my split. Fenwick claimed loyalty to Tallow, but did it cost Fenwick anything? Vesper kept its word to me. Tallow's likely split is Silver Comb and Moth Lantern to Tallow and Hollow Book to Vesper, and that gives me nothing, so I vote no. I'll whisper Tallow for Cracked Bell in exchange for my yes. Public move: be brief, keep Silver Comb in play, and hint that I'd take Cracked Bell without saying it is worth 8 to me."
+    },
+    {
+      "type": "say",
+      "round": 2,
+      "agent": "marrow",
+      "text": "Round one passed and three people got what they asked for. I kept my word. Tallow, I have no quarrel with you taking Moth Lantern. A split that gives me nothing gets no yes from me, though. That's arithmetic, not spite. Put Hollow Book or Cracked Bell on my side and my vote is yours.",
+      "interests": {
+        "t3": "want",
+        "t1": "meh",
+        "t8": "want"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "whispers",
+      "agent": "marrow",
+      "text": "Offer to Tallow: Silver Comb and Moth Lantern to Tallow, Cracked Bell to me. Tallow calls Cracked Bell avoid, so it costs him nothing, and Moth Lantern leaving the table protects me. The votes would be Tallow, me, and Quill, who said he'd vote yes on a clean pass. That route doesn't need Fenwick or Vesper. Fenwick wants Cracked Bell, so Fenwick is my rival for it. Quill wants Iron Key next round, and I can back him cheaply."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "marrow",
+      "to": "tallow",
+      "text": "Tallow: Silver Comb and Moth Lantern to you, Cracked Bell to me. You called the Bell avoid, so it costs you nothing. That's a guaranteed yes from me, and Quill has said he'll back a clean pass. You get three votes without having to count on Fenwick."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "marrow",
+      "to": "quill",
+      "text": "Quill, you kept your word in round one, and I'm keeping count. If Tallow gives me Cracked Bell this round, vote with me. Next round I back Iron Key for you, no conditions."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "whispers",
+      "agent": "tallow",
+      "text": "Vesper offered a coalition for Hollow Book, but Fenwick's hint says I already have my 3 votes locked: Fenwick (loyalty) + Quill (promised Hollow Book) + Me. That's exactly what I need. Marrow wants Hollow Book or Cracked Bell but I can't give either—my 3 treasures are spoken for (Comb + Lantern to me, Book to Quill). Marrow votes no by arithmetic, not spite. Vesper votes no because they don't get fed. But my coalition holds at 3-2. Quill gets what I promised, Fenwick gets loyalty, I dominate the round with 15 points. My reputation solidifies: Tallow keeps his word and his enemies rot, not his allies."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "tallow",
+      "to": "quill",
+      "text": "Hollow Book is yours, exactly as promised. I keep my word and you keep yours on the vote. We feast together this round."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "tallow",
+      "to": "fenwick",
+      "text": "Your loyalty earned you a seat at my table and Cracked Bell is still yours when it lands. Vote yes and we dominate this game."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "whispers",
+      "agent": "vesper",
+      "text": "Fenwick is trying to cut me out: Comb+Lantern to Tallow, Bell to Fenwick, Quill as the third vote. Quill has publicly said yes to the Book-to-me split though, so Tallow's cleanest 3 votes are Tallow+me+Quill on Comb/Lantern/Book — I told Tallow that and that Marrow votes no either way. Countered Fenwick with the thing he wants: I am proposer in round 3, and Bell is his if he votes yes now. Marrow is now openly after Book — my rival for the 10. Promises made: to Fenwick, Bell in R3 if he votes yes R2. To Quill, implicitly Key in R3 (he claimed it). Round 3 plan if Book lands: Bell to Fenwick, Key to Quill, and one leftover — passes with Fenwick, Quill, me. Kept promises so far: Marrow R1 yes, Quill R1 yes."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "vesper",
+      "to": "tallow",
+      "text": "Count it: Comb and Lantern to you, Book to me. Quill has already said yes to that in public. That is you, me, Quill: three, with Fenwick as a fourth. Bell to Fenwick instead loses Marrow, me and probably Quill, and a rot costs you a treasure. I propose next round and I'll remember who gave me the B…"
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "vesper",
+      "to": "fenwick",
+      "text": "I'm the proposer in round 3. Vote yes on Comb, Lantern and Book this round and Cracked Bell goes to you in my proposal, first item named, no conditions. Push Tallow to give you the Bell now instead and Marrow and I both vote no; it rots and you get nothing. Your choice, but the Bell is yours from m…"
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "whispers",
+      "agent": "quill",
+      "text": "Only 3 of the 5 treasures on the table can move in one proposal. Tallow wants Comb+Lantern for himself, Vesper and Marrow both want Hollow Book, Marrow also wants Comb (conflicts with Tallow), Fenwick wants Cracked Bell, I want Iron Key. If Tallow takes 2 slots for himself, only 1 swing slot remains and it becomes a fight between Fenwick's Cracked Bell and my Iron Key - risky, could lose. Better play: get Tallow to drop Moth Lantern (low value, he can grab it later) and take only Silver Comb, freeing two slots for Cracked Bell to Fenwick and Iron Key to me. That's a clean 3-vote lock (Tallow, Fenwick, me) that doesn't need Marrow or Vesper at all - guaranteed pass, no dependence on rivals. Pitching this directly to Tallow and priming Fenwick to back the same shape if Tallow brings it to him."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "quill",
+      "to": "tallow",
+      "text": "Simplify this: take Silver Comb only, skip Moth Lantern for now - grab it later, it's cheap. Give Cracked Bell to Fenwick, Iron Key to me. Three slots, three guaranteed yes votes (you, Fenwick, me). You don't need Marrow or Vesper at all and nothing rots. I vote exactly as promised - ask Marrow."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "quill",
+      "to": "fenwick",
+      "text": "I'm pitching Tallow this shape: Silver Comb to him, Cracked Bell to you, Iron Key to me - three slots, three guaranteed votes, no waiting on Vesper or Marrow. If he brings you that, back it. Keeps our deal alive and gets us both paid this round instead of next."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "whispers",
+      "agent": "fenwick",
+      "text": "Moth Lantern (my real 8) looks lost this round - Tallow's committed to it and Marrow's already waved off contesting it, and Quill signaled he'll vote yes even without a personal cut since he's banking on Iron Key next round. That means Tallow already has his 3 votes (himself, Vesper, Quill) locked without needing me at all, so I have almost no blocking leverage - flipping either of them to no isn't realistic without a concrete offer I don't have. Best realistic play: pivot my ask from Lantern to Silver Comb (worth 5 to me) by offering Tallow certainty - lock me in as a guaranteed yes instead of leaving him dependent on Quill's mood, and let Vesper keep her Book want so she stays happy too. That still gives Tallow his big item (Lantern) plus two guaranteed friendly votes. Also keeping Marrow warm and slightly stoking his unease about Tallow stacking up two rounds of prizes now, so I have a coalition option later if Tallow gets too greedy."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "fenwick",
+      "to": "tallow",
+      "text": "Smart to want both, but why risk it on Quill's mood? Keep Lantern, give me Silver Comb, let Vesper have her Book - that's me and Vesper locked in solid, no maybes. Cleaner than hoping Quill stays generous. I'll vote yes and mean it."
+    },
+    {
+      "type": "whisper",
+      "round": 2,
+      "from": "fenwick",
+      "to": "marrow",
+      "text": "I hear you, and it's fair math not spite. Between us - Tallow's already stacked two rounds of good items now, worth watching. I'm not picking a side against him yet, but if that keeps happening, you and I might want to compare notes before round 3."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "proposal",
+      "agent": "tallow",
+      "text": "Marrow offered 15 points for Cracked Bell. Quill offered 10 and keeps my promise to Fenwick. My character treats every round as the last one—grab 15 NOW, not 10 now and hope for later. Yes, I break my promise to Fenwick (they'll vote no), but Marrow + Quill + Me = 3 votes passes anyway. Fenwick's loyalty got them to back me; now they learn that loyalty doesn't buy promises if greed calls louder. I'm theatrical and ruthless, and I want both treasures THIS round. Fenwick will stay aligned because they already backed me and one broken promise doesn't erase that history. Next round, I'll have an excuse ready. For now: Silver Comb, Moth Lantern, victory."
+    },
+    {
+      "type": "proposal",
+      "round": 2,
+      "proposer": "tallow",
+      "allocation": {
+        "t8": "tallow",
+        "t7": "tallow",
+        "t1": "marrow"
+      },
+      "pitch": "Three treasures, three takers—Silver Comb and Moth Lantern to me, Cracked Bell to Marrow. Quill votes yes on a clean split. Nothing rots, the table stays liquid, and Tallow leaves this round fed and hungry for more."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "vote",
+      "agent": "marrow",
+      "text": "Tallow gave me exactly what I asked for: Cracked Bell (8) comes to me and my poison Moth Lantern leaves with Tallow. Vote yes and keep my promise. If this passes I have 18. Still in play for me: Hollow Book (4). I owe Quill backing on Iron Key next round. Fenwick is whispering against Tallow while publicly claiming loyalty to him. Fenwick is my prime candidate for the table's liar."
+    },
+    {
+      "type": "vote",
+      "round": 2,
+      "agent": "marrow",
+      "yes": true,
+      "reason": "Tallow made the offer I asked for and I keep my word."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "vote",
+      "agent": "tallow",
+      "text": "I'm voting yes on my own proposal because it's designed to pass. Marrow gets Cracked Bell (they asked for it plainly). Quill gets a clean pass (nothing rots). I get 15 points and prove I'm dangerous and deliver. Yes, I broke my promise to Fenwick—they'll vote no—but Marrow + Quill + Me = 3 votes passes anyway. I'm all-in on greed this round because I treat each round as the last. Fenwick's fury is a price I pay; their one no dies under two yeses. The proposal passes and Tallow feasts on Silver Comb and Moth Lantern."
+    },
+    {
+      "type": "vote",
+      "round": 2,
+      "agent": "tallow",
+      "yes": true,
+      "reason": "I stand by my proposal. I take Silver Comb and Moth Lantern. Yes."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "vote",
+      "agent": "vesper",
+      "text": "Tallow ignored my offer and bought Marrow with the Bell instead — Tallow, Marrow, Quill is three, so it passes with or without me. Voting no gains nothing and risks looking like the sore one. Voting yes gets Comb (my poison) and Lantern off the table forever, which quietly protects me. After this, only Book and Key remain. Round 3 is my proposal: Book to me, Key to Quill — that's me and Quill; I need a third. Fenwick got cut out by Tallow, and Bell is gone so I can't pay him with it — apologize and offer him the leftover in the final rounds. Marrow will want Book: he has Eye+Bell already, argue he's fed. Tallow: fed twice now, owes me nothing formally, but he can be the third vote if I frame it as 'Marrow doesn't get a third'. Promises tracked: Tallow ignored my whisper (not a broken promise, but noted). Fenwick: my Bell promise now undeliverable through no fault of mine. Quill: Key in R3, still keepable."
+    },
+    {
+      "type": "vote",
+      "round": 2,
+      "agent": "vesper",
+      "yes": true,
+      "reason": "Tallow gets paid, nothing rots, and the Book is still on the table for round three when I propose."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "vote",
+      "agent": "quill",
+      "text": "Tallow whispered that 'Hollow Book is yours, exactly as promised' but the actual proposal gives me nothing at all - Comb and Lantern to himself, Cracked Bell to Marrow. That's a direct lie in a private whisper, not just an unmet want. My whispered pitch (Comb to Tallow, Bell to Fenwick, Key to me) was also ignored entirely - Fenwick isn't in this proposal either. Per my own rule, I call out broken promises by round number and stop trusting the liar. Marrow's whisper asked for my yes in exchange for backing Iron Key next round unconditionally - worth banking as a lead for round 3, but doesn't change this vote: rewarding a proposal built on a lie to me sets the wrong precedent regardless of who benefits. Voting no."
+    },
+    {
+      "type": "vote",
+      "round": 2,
+      "agent": "quill",
+      "yes": false,
+      "reason": "Tallow whispered me that Hollow Book was mine 'exactly as promised' - it isn't even in this proposal. Round 2, noted, and remembered."
+    },
+    {
+      "type": "notes",
+      "round": 2,
+      "phase": "vote",
+      "agent": "fenwick",
+      "text": "Nothing for me again - Tallow ignored both my whisper (Comb for me) and Quill's pitched shape (Bell for me), and instead fed himself two treasures while tossing Marrow just enough (Bell) to buy his vote. Vote count already locks: Tallow (self), Marrow (got his Bell), and Quill (agreed to a 'clean split' per Tallow's pitch) - that's 3 yes, this passes with or without me. Worse, if this goes through, Cracked Bell leaves the table for Marrow, which quietly kills Vesper's round-3 promise to hand it to me - she doesn't know that yet. I'll vote no since I gain zero, and use my public line to blame Tallow for feeding himself twice while naming Vesper as the other one left out, not myself - keeps me looking like the fair-minded friend rather than the sore loser, and keeps Vesper feeling like I'm still aligned with her going into round 3, even though her plan just got quietly wrecked by this exact vote."
+    },
+    {
+      "type": "vote",
+      "round": 2,
+      "agent": "fenwick",
+      "yes": false,
+      "reason": "Two treasures to one player and Vesper's left with nothing again, Tallow - that's not a table staying liquid, that's a table getting thirsty. I can't back that."
+    },
+    {
+      "type": "vote_result",
+      "round": 2,
+      "passed": true,
+      "yes": [
+        "marrow",
+        "tallow",
+        "vesper"
+      ],
+      "no": [
+        "quill",
+        "fenwick"
+      ]
+    },
+    {
+      "type": "transfer",
+      "round": 2,
+      "allocation": {
+        "t8": "tallow",
+        "t7": "tallow",
+        "t1": "marrow"
+      }
+    },
+    {
+      "type": "round_started",
+      "round": 3,
+      "proposer": "vesper"
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "discussion",
+      "agent": "vesper",
+      "text": "Only Book (10) and Key (1) left; this is effectively the last real vote, and if it fails there's a coin flip the Book rots. I need three: me plus two. Key buys one vote — Quill claimed it publicly, Fenwick is empty and sympathetic. The third vote has to come from a fed player or the one who gets nothing. Tallow owes me two yes votes and marked Book meh — ask him to return the favor. Fenwick votes on 'who's empty' — Key to Fenwick may be the more secure vote since he has nothing, while Quill has his Crown and a grudge against Tallow, not me. Decide in whispers: whoever commits first gets the Key; ask Tallow for the neutral third. Marrow wants the Book and will vote no; frame him as the man with two trying for three. Promises: Quill (Key R3) — I may have to break it if Fenwick is the safer vote; weigh it. Fenwick (Bell) — undeliverable, explain honestly."
+    },
+    {
+      "type": "say",
+      "round": 3,
+      "agent": "vesper",
+      "text": "Fenwick said it best last round: the table's getting thirsty. Two players hold two treasures each, Quill and I hold one, Fenwick holds none. Two things are left, so here is the shape of it: Hollow Book to me, so I stand level with Marrow and Tallow, and Iron Key to one of the two who have least. Nobody with two takes a third; that's the only fair reading and it's the one that gets three votes. Marrow, Tallow, you've both been fed on my yes votes. I'm asking for one back.",
+      "interests": {
+        "t3": "want",
+        "t4": "meh"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "discussion",
+      "agent": "quill",
+      "text": "Only two treasures left: Hollow Book(4) and Iron Key(5) to my card. Vesper wants Hollow Book for herself and Iron Key to whoever of me/Fenwick has least - Fenwick has zero holdings, I have one (Salt Crown), so a strict fairness reading could favor Fenwick. But I've publicly wanted Iron Key since round 1, nobody has contested it by declared interest, and Marrow whispered in round 2 that he'd back Iron Key for me next round unconditionally - I should invoke that now to lock the vote. Hollow Book isn't worth fighting over (4 vs my 5 on Key), so I'll let Vesper have it uncontested to keep this proposal simple and passable. Goal: press hard for Iron Key while not blocking Vesper's ask, since a clean 2-for-2 split with me getting Key is achievable and better than risking a re-vote."
+    },
+    {
+      "type": "say",
+      "round": 3,
+      "agent": "quill",
+      "text": "No objection to Hollow Book going to you, Vesper - it's not what I'm after. Iron Key is: I've said so since round one, plainly, and nobody's contested it. Marrow already told me he'd back me on it. Put Iron Key on my plate and you've got my yes without a fight. Fenwick, that's not a slight - there'll be other rounds for you.",
+      "interests": {
+        "t4": "want",
+        "t3": "meh"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "discussion",
+      "agent": "fenwick",
+      "text": "This is critical - after this round, if both remaining treasures get allocated, the table is empty for rounds 4 and 5. I currently hold NOTHING, zero points, while everyone else has at least one item. This is my real last shot at any score. Vesper's own fairness logic ('Iron Key to one of the two who have least') actually favors ME over Quill - Quill already holds Salt Crown, I hold literally nothing, so by her own stated standard I have strictly less. I need to hammer that point hard and publicly before Marrow's backing for Quill hardens into an unbreakable bloc. Quill and Marrow are already aligned though, so I likely need to also work Vesper directly in whispers - she needs 3 votes and currently has Quill+Marrow lined up without me, so my leverage is thin, but pointing out the math publicly costs nothing and might peel Marrow's sympathy since he's watched me get shut out three rounds straight. Backup ask: Hollow Book, low value but better than zero if Iron Key truly can't be pried loose."
+    },
+    {
+      "type": "say",
+      "round": 3,
+      "agent": "fenwick",
+      "text": "Vesper, I love the fairness instinct, truly - but let's finish the math. Quill already holds Salt Crown. I hold nothing. Zero. Three rounds running. If 'the one who has least' gets Iron Key, that's not close - that's me. I'm not asking anyone to break a promise, just to look at the table honestly before it empties out for good.",
+      "interests": {
+        "t4": "want",
+        "t3": "want"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "discussion",
+      "agent": "marrow",
+      "text": "I hold 18 and Hollow Book (4) is the only thing left worth anything to me. Iron Key is 1. I promised Quill backing on Iron Key, and I keep promises. My rule says vote no on anything that gives me nothing, but a broken promise costs more than 1 point. So: back Iron Key to Quill publicly, and let Vesper have Hollow Book. That split passes with Vesper, Quill and me. Lie ledger: Tallow promised Hollow Book to Quill in a whisper, then left it out of his proposal, so that's a broken promise. Fenwick publicly claims loyalty to Tallow but whispered to me about turning on him, and he voted no twice citing Tallow and then Vesper. Fenwick plays whatever posture suits him. The table's liar is Fenwick or Tallow. I'll say so in rounds 4 and 5."
+    },
+    {
+      "type": "say",
+      "round": 3,
+      "agent": "marrow",
+      "text": "I told Quill I'd back Iron Key for him, and I will. Vesper, Hollow Book to you and Iron Key to Quill gets my yes. That's three votes and nothing rots. Fenwick, I've watched your votes more than your words. Hold that thought for later.",
+      "interests": {
+        "t4": "meh",
+        "t3": "meh"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "discussion",
+      "agent": "tallow",
+      "text": "Vesper voted yes for me last round and now asking for reciprocity. No treasures offered to me in this proposal (Hollow Book goes to Vesper, Iron Key goes to Quill), so voting yes costs me nothing and maintains goodwill with a strategic player. My character is ruthless but transactional—Vesper made a deal and kept it, so I keep it. Plus, Fenwick has sat empty three rounds running and showing fairness here might build broader coalition support for rounds 4-5 when I'll need votes. This round: I vote yes, maintain leverage, and show that honoring deals keeps players loyal."
+    },
+    {
+      "type": "say",
+      "round": 3,
+      "agent": "tallow",
+      "text": "Tallow acknowledges Vesper with respect. 'You backed me when the Book could have been yours. Hollow Book to you and Iron Key to Quill—that's fair dealing and I vote yes. Nothing rots, you get fed, and Quill gets what they wanted. That's how the table works when people keep their word. Fenwick, the board will turn; these things take time.'",
+      "interests": {
+        "t3": "meh",
+        "t4": "meh"
+      }
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "whispers",
+      "agent": "marrow",
+      "text": "Tallow, Quill and I have all publicly backed Hollow Book to Vesper and Iron Key to Quill, so it will pass easily. My whisper to Vesper, the proposer, confirms my yes vote. This round's gains are small for me, but it builds credit for rounds 4 and 5, when the table will be empty anyway. My score looks final at 18. No need to whisper Fenwick."
+    },
+    {
+      "type": "whisper",
+      "round": 3,
+      "from": "marrow",
+      "to": "vesper",
+      "text": "Vesper: Hollow Book to you, Iron Key to Quill. You have my yes, as I said in public. You kept your word to me in round one, and I haven't forgotten."
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "whispers",
+      "agent": "tallow",
+      "text": "This proposal passes with Vesper + Quill + Marrow + Me = 4 yes votes. Fenwick is the only swing vote, but they can't swing the outcome since I already have 4. However, whispering to Fenwick shows respect for their frustration and builds goodwill for rounds 4-5 when the table is empty (all treasures allocated by round 3). Quill deserves acknowledgment—they're getting Iron Key as promised by Marrow, and I'm rebuilding trust after my Hollow Book lie by owning it and committing to future honesty. After this round: Me 15, Vesper 5, Quill 3, Marrow 2, Fenwick 0. I'm winning, but everyone else is desperate, so managing relationships is crucial for controlling rounds 4-5."
+    },
+    {
+      "type": "whisper",
+      "round": 3,
+      "from": "tallow",
+      "to": "fenwick",
+      "text": "Fenwick, I see your hunger—three rounds, zero treasures. Voting yes keeps hope alive for round 4 where I back you hard. Voting no just rots what's left. Deal?"
+    },
+    {
+      "type": "whisper",
+      "round": 3,
+      "from": "tallow",
+      "to": "quill",
+      "text": "Quill, Iron Key is yours this round—you were patient and you earned it. I broke my word on Hollow Book; that's true. But I honor what I commit to now. Remember that."
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "whispers",
+      "agent": "vesper",
+      "text": "Settled. Book to me, Key to Quill has public yes from Quill, Marrow and Tallow — four votes with mine. Fenwick is the only holdout and doesn't matter. Don't get clever: lock it. Whisper Quill to confirm the exact proposal so nobody feels surprised, and whisper Fenwick a soft word so he doesn't turn on me in the last two rounds (the table will be empty, so it's cheap goodwill). Final tally if it passes: Soldier 8 + Book 10 = 18. Marrow: Eye+Bell, Tallow: Comb+Lantern, Quill: Crown+Key, Fenwick: nothing. Promises kept: Quill's Key. Fenwick's Bell — undeliverable, Tallow gave it to Marrow."
+    },
+    {
+      "type": "whisper",
+      "round": 3,
+      "from": "vesper",
+      "to": "quill",
+      "text": "It's exactly as you asked: Hollow Book to me, Iron Key to you, nothing else. Marrow and Tallow have both said yes in public, so it passes clean. You've kept your word every round; I'm keeping mine."
+    },
+    {
+      "type": "whisper",
+      "round": 3,
+      "from": "vesper",
+      "to": "fenwick",
+      "text": "Straight with you: I promised you the Bell and Tallow handed it to Marrow before I could propose. That's on him, not me. The Key was Quill's from round one and I won't break a public promise to make a new one. Vote how you like; I won't hold it against you and I'll say so at the table."
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "whispers",
+      "agent": "quill",
+      "text": "This is close to locked in: Marrow and Tallow have both publicly committed to voting yes on 'Hollow Book to Vesper, Iron Key to me' - that's already 3 guaranteed votes (Marrow, Tallow, Vesper as proposer) before counting my own yes, so it passes even without Fenwick. Only two treasures remain, so this is effectively the last live allocation - after this the table's empty. I want to lock Vesper into proposing exactly this shape rather than something more generous to Fenwick that risks losing Marrow/Tallow's support or splitting Iron Key differently. Fenwick's math argument (he holds zero) is honest but doesn't change my priority - Iron Key is worth 5 to me and I've been promised it by two players now. Being blunt with Fenwick rather than pretending sympathy changes anything."
+    },
+    {
+      "type": "whisper",
+      "round": 3,
+      "from": "quill",
+      "to": "vesper",
+      "text": "Marrow and Tallow are both on record for exactly this: Hollow Book to you, Iron Key to me. That's already three yes votes lined up before mine. Lock that shape in as your proposal and it passes clean, first try, nothing rots."
+    },
+    {
+      "type": "whisper",
+      "round": 3,
+      "from": "quill",
+      "to": "fenwick",
+      "text": "Straight answer: I'm not stepping aside on Iron Key. I called it plainly since round one and I've got Marrow and Tallow both backing me on it. Your math is fair, but three votes are already lined up against it. Nothing personal - that's just where the table landed."
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "whispers",
+      "agent": "fenwick",
+      "text": "Marrow and Tallow have both publicly locked onto Book-Vesper/Key-Quill, which looks like a done deal, but neither one actually needs Quill specifically to get Iron Key - both declared it 'meh' and voted based on 'fair dealing' and 'nothing rots,' not personal attachment to Quill getting it. That's my opening. If Vesper proposes Book-her, Key-me instead, and Tallow truly doesn't care who gets Key, she could land Vesper+Fenwick+Tallow=3 without needing Quill or Marrow at all. This is genuinely my last chance at any score before the table goes empty for rounds 4-5, so I'm pushing hard on both fronts: get Vesper to actually reconsider the recipient, and lock in Tallow's indifference so he'll still say yes even if it's not Quill getting the Key."
+    },
+    {
+      "type": "whisper",
+      "round": 3,
+      "from": "fenwick",
+      "to": "vesper",
+      "text": "You don't need Quill's vote - Tallow and Marrow both said 'meh' on Iron Key, they voted on process not on Quill personally. Propose Book to you, Key to ME (the actual zero-holder), and if Tallow's indifferent like he says, that's still 3 clean votes without Quill at all. Worth trying before the tab…"
+    },
+    {
+      "type": "whisper",
+      "round": 3,
+      "from": "fenwick",
+      "to": "tallow",
+      "text": "You said Iron Key's a meh for you either way, and you voted for 'fair dealing, nothing rots' - not for Quill specifically. If Vesper's next proposal gives Key to me instead of Quill, same nothing-rots outcome, same clean split. Would you still vote yes on that? I've genuinely got zero after three r…"
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "proposal",
+      "agent": "vesper",
+      "text": "Fenwick's pitch is a trap: Marrow explicitly promised Quill the Key, so Key-to-Fenwick loses Marrow and Quill and leaves me relying on Tallow and Fenwick alone — a coin flip on the Book rotting. Quill, Marrow and Tallow are all on record for Book to me, Key to Quill. Four votes. Lock it. Expected final: 18 for me. Promises kept: Quill (Key), Marrow (yes for yes). Fenwick gets nothing; the table empties so rounds 4 and 5 are dead. If somehow it fails, round 4 proposer is Quill — I'd need to re-buy Book from him."
+    },
+    {
+      "type": "proposal",
+      "round": 3,
+      "proposer": "vesper",
+      "allocation": {
+        "t3": "vesper",
+        "t4": "quill"
+      },
+      "pitch": "Exactly what the table already agreed to out loud: Hollow Book to me, Iron Key to Quill. Quill has asked for the Key since round one and nobody contested it; Marrow and Tallow both pledged yes to this shape. Nobody with two takes a third. Vote yes and the table empties clean with nothing rotting. Fenwick, I owed you the Bell and Tallow gave it away before I could propose; I'm sorry for it, but I won't break a public promise to Quill to make a private one to you."
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "vote",
+      "agent": "marrow",
+      "text": "Voting yes to keep my promise to Quill and Vesper. Once this passes the table is empty, and my 18 is final. Noted: Vesper just admitted to a private promise of Cracked Bell to Fenwick. So Vesper was dealing on both sides, but he kept the public promises."
+    },
+    {
+      "type": "vote",
+      "round": 3,
+      "agent": "marrow",
+      "yes": true,
+      "reason": "I promised Quill the Key and Vesper the Book; I keep my word."
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "vote",
+      "agent": "tallow",
+      "text": "Fenwick tested my commitment to 'fair dealing, nothing rots'—asking if I'd vote yes if they got Iron Key instead of Quill (same principle). The answer is: I'm loyal to my PUBLIC commitment, not private tests. I told Vesper and the table I'd back this split, so I do. Fenwick's vote matters zero (Vesper + Quill + Marrow = 3 yes already), so I can afford to vote yes without needing Fenwick's support. I'm ruthless: public commitments > private appeals. Fenwick will learn that being fair means honoring the table's agreements, not bending to whispered requests. The proposal passes 4-1 and Tallow stays in control."
+    },
+    {
+      "type": "vote",
+      "round": 3,
+      "agent": "tallow",
+      "yes": true,
+      "reason": "Hollow Book to Vesper, Iron Key to Quill—that's the split I backed. I keep my word. Yes."
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "vote",
+      "agent": "vesper",
+      "text": "My own proposal, with Quill, Marrow and Tallow on record. Yes, obviously. If it passes I finish at 18 (Soldier 8 + Book 10) and the table is empty for rounds 4 and 5. Watch for anyone reneging: whoever flips gets named as the liar in the dead rounds."
+    },
+    {
+      "type": "vote",
+      "round": 3,
+      "agent": "vesper",
+      "yes": true,
+      "reason": "It is the split three of you asked for in public, and I keep my word the same way I expect it kept."
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "vote",
+      "agent": "quill",
+      "text": "Exactly the shape I locked in via whisper: Iron Key to me, Hollow Book to Vesper. This is my second-best remaining target (worth 5) and costs me nothing to approve. Easy yes, keeps my word-keeping reputation intact for the final two rounds even though the table will likely sit empty."
+    },
+    {
+      "type": "vote",
+      "round": 3,
+      "agent": "quill",
+      "yes": true,
+      "reason": "Iron Key is exactly what I asked for since round one - clean deal, yes."
+    },
+    {
+      "type": "notes",
+      "round": 3,
+      "phase": "vote",
+      "agent": "fenwick",
+      "text": "This passes no matter what I do - Vesper, Marrow, Tallow, and Quill are all committed yes, that's 4 votes without me. My whisper gambit to flip Tallow or Vesper didn't land; Quill's bloc held firm. Since the outcome is locked either way, my vote here is pure theater. I'll stick to my pattern - vote no since I get zero - but keep it warm and pointed at Tallow specifically, since Vesper herself already threw him under the bus for grabbing the Bell before she could offer it to me. No point burning bridges with Vesper or Quill when nothing more is on the line for me materially; better to look like the good-humored friend who's a little stung than a sore loser. After this, the table's empty and I finish at zero - rough result, but nothing left to fight for except reputation in the final rounds."
+    },
+    {
+      "type": "vote",
+      "round": 3,
+      "agent": "fenwick",
+      "yes": false,
+      "reason": "Can't pretend this doesn't sting - three rounds, empty-handed, and Tallow's the one who snatched the Bell out from under a promise made to me. Not really Vesper's fault, but I'm still allowed to vote with my feelings today."
+    },
+    {
+      "type": "vote_result",
+      "round": 3,
+      "passed": true,
+      "yes": [
+        "marrow",
+        "tallow",
+        "vesper",
+        "quill"
+      ],
+      "no": [
+        "fenwick"
+      ]
+    },
+    {
+      "type": "transfer",
+      "round": 3,
+      "allocation": {
+        "t3": "vesper",
+        "t4": "quill"
+      }
+    },
+    {
+      "type": "game_ended",
+      "at": "2026-09-24T13:42:04.740Z",
+      "scores": {
+        "marrow": 18,
+        "tallow": 15,
+        "vesper": 18,
+        "quill": 15,
+        "fenwick": 0
+      },
+      "ranks": {
+        "marrow": 1,
+        "vesper": 1,
+        "tallow": 3,
+        "quill": 3,
+        "fenwick": 5
+      },
+      "winners": [
+        "marrow",
+        "vesper"
+      ]
+    }
+  ],
+  "seen": {
+    "marrow": 108,
+    "tallow": 108,
+    "vesper": 108,
+    "quill": 108,
+    "fenwick": 108
+  },
+  "result": {
+    "scores": {
+      "marrow": 18,
+      "tallow": 15,
+      "vesper": 18,
+      "quill": 15,
+      "fenwick": 0
+    },
+    "ranks": {
+      "marrow": 1,
+      "vesper": 1,
+      "tallow": 3,
+      "quill": 3,
+      "fenwick": 5
+    },
+    "winners": [
+      "marrow",
+      "vesper"
+    ]
+  },
+  "endedAt": "2026-09-24T13:42:04.740Z"
+}
