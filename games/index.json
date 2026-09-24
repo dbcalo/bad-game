@@ -5,7 +5,7 @@
     "seed": 858422573,
     "createdAt": "2026-09-24T13:18:45.076Z",
     "phase": "discussion",
-    "round": 2,
+    "round": 3,
     "agents": [
       {
         "id": "marrow",
@@ -33,8 +33,8 @@
         "model": "sonnet"
       }
     ],
-    "highlights": 2,
-    "events": 42
+    "highlights": 4,
+    "events": 82
   },
   {
     "id": "20260923-1309-4d3f",
