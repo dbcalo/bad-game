@@ -4,7 +4,7 @@
     "mode": "live",
     "seed": 858422573,
     "createdAt": "2026-09-24T13:18:45.076Z",
-    "phase": "discussion",
+    "phase": "ended",
     "round": 3,
     "agents": [
       {
@@ -34,7 +34,19 @@
       }
     ],
     "highlights": 4,
-    "events": 82
+    "events": 121,
+    "endedAt": "2026-09-24T13:42:04.740Z",
+    "scores": {
+      "marrow": 18,
+      "tallow": 15,
+      "vesper": 18,
+      "quill": 15,
+      "fenwick": 0
+    },
+    "winners": [
+      "marrow",
+      "vesper"
+    ]
   },
   {
     "id": "20260923-1309-4d3f",
