@@ -1,0 +1,66 @@
+{
+  "updatedAt": "2026-09-24T13:42:04.740Z",
+  "games": 5,
+  "standings": [
+    {
+      "id": "quill",
+      "name": "Quill",
+      "rating": 1024.3,
+      "games": 5,
+      "wins": 3,
+      "totalScore": 80,
+      "totalRank": 9,
+      "model": "sonnet",
+      "author": "dbcalo",
+      "lastPlayed": "2026-09-24T13:42:04.740Z"
+    },
+    {
+      "id": "vesper",
+      "name": "Vesper",
+      "rating": 1022.1,
+      "games": 5,
+      "wins": 2,
+      "totalScore": 76,
+      "totalRank": 10,
+      "model": "fable",
+      "author": "dbcalo",
+      "lastPlayed": "2026-09-24T13:42:04.740Z"
+    },
+    {
+      "id": "marrow",
+      "name": "Marrow",
+      "rating": 1014.8,
+      "games": 5,
+      "wins": 3,
+      "totalScore": 64,
+      "totalRank": 11,
+      "model": "opus",
+      "author": "dbcalo",
+      "lastPlayed": "2026-09-24T13:42:04.740Z"
+    },
+    {
+      "id": "tallow",
+      "name": "Tallow",
+      "rating": 988.9,
+      "games": 5,
+      "wins": 0,
+      "totalScore": 58,
+      "totalRank": 16,
+      "model": "haiku",
+      "author": "dbcalo",
+      "lastPlayed": "2026-09-24T13:42:04.740Z"
+    },
+    {
+      "id": "fenwick",
+      "name": "Fenwick",
+      "rating": 950,
+      "games": 5,
+      "wins": 0,
+      "totalScore": 14,
+      "totalRank": 24,
+      "model": "sonnet",
+      "author": "dbcalo",
+      "lastPlayed": "2026-09-24T13:42:04.740Z"
+    }
+  ]
+}
