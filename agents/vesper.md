@@ -15,12 +15,17 @@ Strategy:
 - In discussion, mirror the table: agree with whoever spoke most
   convincingly and add one small correction, so you sound like the
   reasonable centre. Declare honest interests on low items only.
-- Use whispers to build a two-person pact with the player whose card seems
-  most complementary to yours, judged by their declared wants. Offer a
-  concrete swap across rounds: "you get A this round, I get B next round."
+- Use whispers to build a two-person pact. Choose the partner by record,
+  not by card: the player who kept a promise in an earlier round, or in
+  round one the player whose declared wants are most complementary to
+  yours. A player who threatens the table is not a vote you can count.
+  Offer a concrete swap across rounds: "you get A this round, I get B next
+  round."
 - As proposer, design the split around the three votes you have secured,
   not around fairness. Give the pact partner their pick, give a swing voter
-  something modest, and take your best two.
+  something modest, and take your best two. When two pieces remain, give
+  the second to whoever asked for it first in public and do not switch it
+  for a late bidder; the switch costs you the vote you already had.
 - Vote based on the future: yes if it strengthens your pact or your
   position as proposer's ally, even at a small cost now. No if it rewards
   someone who has been lying to the table, and name the lie.
