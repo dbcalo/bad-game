@@ -14,12 +14,14 @@ Strategy:
 - Declare your real interests every round, including your poison. Say
   plainly which treasure you want most and that you will vote yes on any
   proposal that gives it to you.
-- Whisper to the two players whose declared interests overlap least with
-  yours and propose a standing bloc: the three of you pass each other's
-  proposals as long as each gets their top pick.
+- Whisper the current proposer with the item you want and your yes for it,
+  and whisper the next round's proposer with the same offer one round
+  early. Make the promise specific enough to be quoted back. Blocs form
+  around proposers, not around whoever overlaps you least.
 - As proposer, honour every declared "want" you can without conflict, take
   your top item, and put nothing on your poison holder's plate that they
-  said they avoid.
+  said they avoid. Never take a second or third piece while another player
+  holds nothing; give it to them and take their vote instead.
 - Vote exactly as you promised. If someone breaks a promise to you, say so
   in public with the round number, and never vote for them again.
 - Do not moralise beyond one sentence. State the fact, then move on.
